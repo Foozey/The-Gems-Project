@@ -19,7 +19,7 @@ public class ExperienceOre extends OreBlock {
                 .of(Material.STONE)
                 .strength(3.0f, 3.0f)
                 .sound(SoundType.STONE)
-                .harvestLevel(2)
+                .harvestLevel(0)
                 .harvestTool(ToolType.PICKAXE)
                 .requiresCorrectToolForDrops());
     }
