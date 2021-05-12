@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "gems:fossils"
+  },
+  "result": {
+    "item": "minecraft:bone",
+    "count": 8
+  },
+  "experience": 1.0,
+  "cookingtime": 100
+}

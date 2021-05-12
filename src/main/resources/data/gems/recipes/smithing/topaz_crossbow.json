@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:netherite_crossbow"
+  },
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "result": {
+    "item": "gems:topaz_crossbow"
+  }
+}

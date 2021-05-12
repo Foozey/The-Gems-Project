@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "gems:gemspark_ore"
+  },
+  "result": "gems:gemspark",
+  "experience": 1.0,
+  "cookingtime": 100
+}

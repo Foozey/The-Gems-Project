@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:ruby_bow"
+  },
+  "addition": {
+    "item": "gems:plated_onyx_ingot"
+  },
+  "result": {
+    "item": "gems:plated_onyx_bow"
+  }
+}

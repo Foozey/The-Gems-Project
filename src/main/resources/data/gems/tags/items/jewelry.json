@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "gems:golden_amulet",
+    "gems:golden_ring",
+    "gems:gemspark_amulet",
+    "gems:gemspark_ring",
+    "gems:emerald_amulet",
+    "gems:emerald_ring",
+    "gems:diamond_amulet",
+    "gems:diamond_ring",
+    "gems:topaz_amulet",
+    "gems:topaz_ring",
+    "gems:sapphire_amulet",
+    "gems:sapphire_ring",
+    "gems:ruby_amulet",
+    "gems:ruby_ring"
+  ]
+}

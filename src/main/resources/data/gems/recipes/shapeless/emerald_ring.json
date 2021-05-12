@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:golden_ring"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:emerald_ring",
+    "count": 1
+  }
+}

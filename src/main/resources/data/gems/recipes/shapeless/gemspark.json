@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:gemspark_block"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:gemspark",
+    "count": 9
+  }
+}

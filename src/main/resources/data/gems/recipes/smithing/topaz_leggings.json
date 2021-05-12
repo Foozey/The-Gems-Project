@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "result": {
+    "item": "gems:topaz_leggings"
+  }
+}

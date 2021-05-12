@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "result": {
+    "item": "gems:topaz_sword"
+  }
+}

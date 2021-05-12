@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:ruby_sword"
+  },
+  "addition": {
+    "item": "gems:plated_onyx_ingot"
+  },
+  "result": {
+    "item": "gems:plated_onyx_sword"
+  }
+}

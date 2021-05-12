@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:onyx_block"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:onyx",
+    "count": 9
+  }
+}

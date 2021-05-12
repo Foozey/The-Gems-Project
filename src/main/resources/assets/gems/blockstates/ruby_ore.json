@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "gems:block/ruby_ore" }
+  }
+}

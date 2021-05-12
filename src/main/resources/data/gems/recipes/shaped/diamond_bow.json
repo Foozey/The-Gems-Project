@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " yx",
+    "y x",
+    " yx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:string"
+    },
+    "y":
+    {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result":
+  {
+    "item": "gems:diamond_bow",
+    "count": 1
+  }
+}

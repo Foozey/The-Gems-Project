@@ -1,0 +1,48 @@
+modLoader="javafml"
+
+loaderVersion="[36,)"
+
+license="GNU GPLv3"
+
+issueTrackerURL="https://github.com/foozey/The-Gems-Project/issues"
+
+[[mods]]
+
+modId="gems"
+
+version="1.16.5-1.7.0"
+
+displayName="The Gems Project"
+
+displayURL="https://www.curseforge.com/minecraft/mc-mods/the-gems-project"
+
+logoFile="Header.png"
+
+credits="Thanks to the Forge community, modding servers on Discord, and Mojang!"
+
+authors="Fooze"
+
+description='''
+A mod that focuses on adding more progression to Minecraft.
+'''
+
+[[dependencies.gems]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gems]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gems]]
+	modId="curios"
+    mandatory=true
+    versionRange="[1.16.5-4.0.5.1,)"
+    ordering="NONE"
+    side="BOTH"

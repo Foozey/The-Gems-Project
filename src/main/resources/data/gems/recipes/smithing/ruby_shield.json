@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:sapphire_shield"
+  },
+  "addition": {
+    "item": "gems:ruby"
+  },
+  "result": {
+    "item": "gems:ruby_shield"
+  }
+}

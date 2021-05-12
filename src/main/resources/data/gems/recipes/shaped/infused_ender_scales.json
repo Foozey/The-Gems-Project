@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "zxz",
+    "xyx",
+    "zxz"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "gems:gemspark"
+    },
+    "y":
+    {
+      "item": "gems:ender_scales"
+    },
+    "z":
+    {
+      "item": "gems:ender_bones"
+    }
+  },
+  "result":
+  {
+    "item": "gems:infused_ender_scales",
+    "count": 1
+  }
+}

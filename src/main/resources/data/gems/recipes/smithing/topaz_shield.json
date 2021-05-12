@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:netherite_shield"
+  },
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "result": {
+    "item": "gems:topaz_shield"
+  }
+}

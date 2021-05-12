@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:sapphire_crossbow"
+  },
+  "addition": {
+    "item": "gems:ruby"
+  },
+  "result": {
+    "item": "gems:ruby_crossbow"
+  }
+}

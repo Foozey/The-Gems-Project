@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ywy",
+    "xzx",
+    " y "
+  ],
+  "key":
+  {
+    "w":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "x":
+    {
+      "item": "minecraft:string"
+    },
+    "y":
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    "z":
+    {
+      "item": "minecraft:tripwire_hook"
+    }
+  },
+  "result":
+  {
+    "item": "gems:golden_crossbow",
+    "count": 1
+  }
+}

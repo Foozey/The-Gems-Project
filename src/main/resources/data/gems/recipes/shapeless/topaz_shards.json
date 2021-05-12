@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:topaz"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:topaz_shards",
+    "count": 9
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "gems:topaz_ore"
+  },
+  "result": "gems:topaz_shards",
+  "experience": 1.0,
+  "cookingtime": 100
+}

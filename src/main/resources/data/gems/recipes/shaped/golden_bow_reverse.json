@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xy ",
+    "x y",
+    "xy "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:string"
+    },
+    "y":
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "gems:golden_bow",
+    "count": 1
+  }
+}

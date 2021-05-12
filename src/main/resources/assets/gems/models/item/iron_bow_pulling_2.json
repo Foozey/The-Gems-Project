@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "gems:items/iron_bow_pulling_2"
+    }
+}

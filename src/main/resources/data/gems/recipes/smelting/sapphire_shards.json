@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "gems:sapphire_ore"
+  },
+  "result": "gems:sapphire_shards",
+  "experience": 1.0,
+  "cookingtime": 200
+}

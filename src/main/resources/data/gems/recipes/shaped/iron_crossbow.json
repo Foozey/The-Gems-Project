@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "yyy",
+    "xzx",
+    " y "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:string"
+    },
+    "y":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "z":
+    {
+      "item": "minecraft:tripwire_hook"
+    }
+  },
+  "result":
+  {
+    "item": "gems:iron_crossbow",
+    "count": 1
+  }
+}

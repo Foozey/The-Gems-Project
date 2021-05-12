@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "gems:ruby_ore"
+  },
+  "result": "gems:ruby_shards",
+  "experience": 1.0,
+  "cookingtime": 100
+}

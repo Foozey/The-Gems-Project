@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:topaz_helmet"
+  },
+  "addition": {
+    "item": "gems:sapphire"
+  },
+  "result": {
+    "item": "gems:sapphire_helmet"
+  }
+}
