@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "z  ",
+    "wxw",
+    "y y"
+  ],
+  "key":
+  {
+    "w":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "x":
+    {
+      "tag": "minecraft:wool"
+    },
+    "y":
+    {
+      "item": "minecraft:iron_leggings"
+    },
+    "z":
+    {
+      "item": "minecraft:iron_helmet"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:iron_horse_armor",
+    "count": 1
+  }
+}

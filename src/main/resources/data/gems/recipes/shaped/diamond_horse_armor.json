@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "  z",
+    "wxw",
+    "y y"
+  ],
+  "key":
+  {
+    "w":
+    {
+      "item": "minecraft:diamond"
+    },
+    "x":
+    {
+      "tag": "minecraft:wool"
+    },
+    "y":
+    {
+      "item": "minecraft:diamond_leggings"
+    },
+    "z":
+    {
+      "item": "minecraft:diamond_helmet"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:diamond_horse_armor",
+    "count": 1
+  }
+}

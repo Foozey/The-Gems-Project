@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "z  ",
+    "wxw",
+    "y y"
+  ],
+  "key":
+  {
+    "w":
+    {
+      "item": "minecraft:leather"
+    },
+    "x":
+    {
+      "tag": "minecraft:wool"
+    },
+    "y":
+    {
+      "item": "minecraft:leather_leggings"
+    },
+    "z":
+    {
+      "item": "minecraft:leather_helmet"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:leather_horse_armor",
+    "count": 1
+  }
+}
