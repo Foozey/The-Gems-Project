@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:iron_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:diamond_horse_armor",
+    "gems:chainmail_horse_armor",
+    "gems:netherite_horse_armor",
+    "gems:topaz_horse_armor",
+    "gems:sapphire_horse_armor",
+    "gems:ruby_horse_armor",
+    "gems:plated_onyx_horse_armor"
+  ]
+}

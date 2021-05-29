@@ -1,5 +1,6 @@
 package com.foozey.gems.items.rings;
 
+import com.foozey.gems.items.ModTab;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +26,10 @@ import java.util.UUID;
 public class DiamondRing extends Item {
 
     public DiamondRing(Properties properties) {
-        super(properties.stacksTo(1).durability(250));
+        super(properties
+                .stacksTo(1)
+                .durability(250)
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

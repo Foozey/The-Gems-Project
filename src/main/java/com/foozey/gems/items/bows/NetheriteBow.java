@@ -1,5 +1,6 @@
 package com.foozey.gems.items.bows;
 
+import com.foozey.gems.items.ModTab;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
@@ -8,7 +9,11 @@ import net.minecraft.item.Items;
 public class NetheriteBow extends BowItem {
 
     public NetheriteBow(Properties properties) {
-        super(properties.stacksTo(1).durability(2031));
+        super(properties
+                .stacksTo(1)
+                .durability(2031)
+                .fireResistant()
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

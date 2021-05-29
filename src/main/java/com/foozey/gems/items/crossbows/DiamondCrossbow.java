@@ -1,5 +1,6 @@
 package com.foozey.gems.items.crossbows;
 
+import com.foozey.gems.items.ModTab;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -7,7 +8,10 @@ import net.minecraft.item.Items;
 public class DiamondCrossbow extends CrossbowItem {
 
     public DiamondCrossbow(Properties properties) {
-        super(properties.stacksTo(1).durability(1561));
+        super(properties
+                .stacksTo(1)
+                .durability(1561)
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

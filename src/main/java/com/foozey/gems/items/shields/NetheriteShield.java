@@ -1,5 +1,7 @@
 package com.foozey.gems.items.shields;
 
+import com.foozey.gems.items.ModTab;
+import com.foozey.gems.util.ProvideISTER;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -8,7 +10,12 @@ import net.minecraft.item.ShieldItem;
 public class NetheriteShield extends ShieldItem {
 
     public NetheriteShield(Properties properties) {
-        super(properties.stacksTo(1).durability(2031));
+        super(properties
+                .stacksTo(1)
+                .durability(2031)
+                .setISTER(ProvideISTER::shield)
+                .fireResistant()
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

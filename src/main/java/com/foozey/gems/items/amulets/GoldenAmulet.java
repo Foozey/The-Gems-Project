@@ -1,5 +1,6 @@
 package com.foozey.gems.items.amulets;
 
+import com.foozey.gems.items.ModTab;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +26,10 @@ import java.util.UUID;
 public class GoldenAmulet extends Item {
 
     public GoldenAmulet(Properties properties) {
-        super(properties.stacksTo(1).durability(250));
+        super(properties
+                .stacksTo(1)
+                .durability(250)
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

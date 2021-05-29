@@ -1,13 +1,18 @@
 package com.foozey.gems.items.crossbows;
 
 import com.foozey.gems.init.ModItems;
+import com.foozey.gems.items.ModTab;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 
 public class RubyCrossbow extends CrossbowItem {
 
     public RubyCrossbow(Properties properties) {
-        super(properties.stacksTo(1).durability(2750));
+        super(properties
+                .stacksTo(1)
+                .durability(2750)
+                .fireResistant()
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

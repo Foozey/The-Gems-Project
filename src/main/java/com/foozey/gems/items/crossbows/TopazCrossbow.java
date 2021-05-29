@@ -1,13 +1,18 @@
 package com.foozey.gems.items.crossbows;
 
 import com.foozey.gems.init.ModItems;
+import com.foozey.gems.items.ModTab;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
 
 public class TopazCrossbow extends CrossbowItem {
 
     public TopazCrossbow(Properties properties) {
-        super(properties.stacksTo(1).durability(2250));
+        super(properties
+                .stacksTo(1)
+                .durability(2250)
+                .fireResistant()
+                .tab(ModTab.TAB_GEMS));
     }
 
     @Override

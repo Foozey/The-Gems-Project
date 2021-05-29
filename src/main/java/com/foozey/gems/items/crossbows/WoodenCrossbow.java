@@ -1,13 +1,17 @@
 package com.foozey.gems.items.crossbows;
 
 import net.minecraft.item.CrossbowItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 public class WoodenCrossbow extends CrossbowItem {
 
     public WoodenCrossbow(Properties properties) {
-        super(properties.stacksTo(1).durability(59));
+        super(properties
+                .stacksTo(1)
+                .durability(59)
+                .tab(ItemGroup.TAB_COMBAT));
     }
 
     @Override

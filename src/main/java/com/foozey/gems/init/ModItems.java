@@ -5,9 +5,9 @@ import com.foozey.gems.items.ModTab;
 import com.foozey.gems.items.amulets.*;
 import com.foozey.gems.items.bows.*;
 import com.foozey.gems.items.crossbows.*;
+import com.foozey.gems.items.horse.*;
 import com.foozey.gems.items.rings.*;
 import com.foozey.gems.items.shields.*;
-import com.foozey.gems.util.ProvideISTER;
 import com.foozey.gems.util.tiers.ModArmorMaterial;
 import com.foozey.gems.util.tiers.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -67,6 +67,9 @@ public class ModItems {
 
     // Infused Ender Scales
     public static final RegistryObject<Item> INFUSED_ENDER_SCALES = ITEMS.register("infused_ender_scales", ModItemBase::new);
+
+    // Chainmail
+    public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail", ModItemBase::new);
 
 
 
@@ -398,53 +401,39 @@ public class ModItems {
 
     // Wooden Bow
     public static final RegistryObject<Item> BOW = REPLACE.register("bow", () ->
-            new WoodenBow(new Item.Properties()
-                    .tab(ItemGroup.TAB_COMBAT)));
+            new WoodenBow(new Item.Properties()));
 
     // Iron Bow
     public static final RegistryObject<Item> IRON_BOW = ITEMS.register("iron_bow", () ->
-            new IronBow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new IronBow(new Item.Properties()));
 
     // Golden Bow
     public static final RegistryObject<Item> GOLDEN_BOW = ITEMS.register("golden_bow", () ->
-            new GoldenBow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GoldenBow(new Item.Properties()));
 
     // Diamond Bow
     public static final RegistryObject<Item> DIAMOND_BOW = ITEMS.register("diamond_bow", () ->
-            new DiamondBow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new DiamondBow(new Item.Properties()));
 
     // Netherite Bow
     public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () ->
-            new NetheriteBow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new NetheriteBow(new Item.Properties()));
 
     // Topaz Bow
     public static final RegistryObject<Item> TOPAZ_BOW = ITEMS.register("topaz_bow", () ->
-            new TopazBow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new TopazBow(new Item.Properties()));
 
     // Sapphire Bow
     public static final RegistryObject<Item> SAPPHIRE_BOW = ITEMS.register("sapphire_bow", () ->
-            new SapphireBow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new SapphireBow(new Item.Properties()));
 
     // Ruby Bow
     public static final RegistryObject<Item> RUBY_BOW = ITEMS.register("ruby_bow", () ->
-            new RubyBow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new RubyBow(new Item.Properties()));
 
     // Plated Onyx Bow
     public static final RegistryObject<Item> PLATED_ONYX_BOW = ITEMS.register("plated_onyx_bow", () ->
-            new PlatedOnyxBow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new PlatedOnyxBow(new Item.Properties()));
 
 
 
@@ -453,53 +442,39 @@ public class ModItems {
 
     // Wooden Crossbow
     public static final RegistryObject<Item> CROSSBOW = REPLACE.register("crossbow", () ->
-            new WoodenCrossbow(new Item.Properties()
-                    .tab(ItemGroup.TAB_COMBAT)));
+            new WoodenCrossbow(new Item.Properties()));
 
     // Iron Crossbow
     public static final RegistryObject<Item> IRON_CROSSBOW = ITEMS.register("iron_crossbow", () ->
-            new IronCrossbow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new IronCrossbow(new Item.Properties()));
 
     // Golden Crossbow
     public static final RegistryObject<Item> GOLDEN_CROSSBOW = ITEMS.register("golden_crossbow", () ->
-            new GoldenCrossbow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GoldenCrossbow(new Item.Properties()));
 
     // Diamond Crossbow
     public static final RegistryObject<Item> DIAMOND_CROSSBOW = ITEMS.register("diamond_crossbow", () ->
-            new DiamondCrossbow(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new DiamondCrossbow(new Item.Properties()));
 
     // Netherite Crossbow
     public static final RegistryObject<Item> NETHERITE_CROSSBOW = ITEMS.register("netherite_crossbow", () ->
-            new NetheriteCrossbow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new NetheriteCrossbow(new Item.Properties()));
 
     // Topaz Crossbow
     public static final RegistryObject<Item> TOPAZ_CROSSBOW = ITEMS.register("topaz_crossbow", () ->
-            new TopazCrossbow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new TopazCrossbow(new Item.Properties()));
 
     // Sapphire Crossbow
     public static final RegistryObject<Item> SAPPHIRE_CROSSBOW = ITEMS.register("sapphire_crossbow", () ->
-            new SapphireCrossbow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new SapphireCrossbow(new Item.Properties()));
 
     // Ruby Crossbow
     public static final RegistryObject<Item> RUBY_CROSSBOW = ITEMS.register("ruby_crossbow", () ->
-            new RubyCrossbow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new RubyCrossbow(new Item.Properties()));
 
     // Plated Onyx Crossbow
     public static final RegistryObject<Item> PLATED_ONYX_CROSSBOW = ITEMS.register("plated_onyx_crossbow", () ->
-            new PlatedOnyxCrossbow(new Item.Properties()
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new PlatedOnyxCrossbow(new Item.Properties()));
 
 
 
@@ -508,61 +483,68 @@ public class ModItems {
 
     // Wooden Shield
     public static final RegistryObject<Item> SHIELD = REPLACE.register("shield", () ->
-            new WoodenShield(new Item.Properties()
-                    .tab(ItemGroup.TAB_COMBAT)));
+            new WoodenShield(new Item.Properties()));
 
     // Iron Shield
     public static final RegistryObject<Item> IRON_SHIELD = ITEMS.register("iron_shield", () ->
-            new IronShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .tab(ModTab.TAB_GEMS)));
+            new IronShield(new Item.Properties()));
 
     // Golden Shield
     public static final RegistryObject<Item> GOLDEN_SHIELD = ITEMS.register("golden_shield", () ->
-            new GoldenShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .tab(ModTab.TAB_GEMS)));
+            new GoldenShield(new Item.Properties()));
 
     // Diamond Shield
     public static final RegistryObject<Item> DIAMOND_SHIELD = ITEMS.register("diamond_shield", () ->
-            new DiamondShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .tab(ModTab.TAB_GEMS)));
+            new DiamondShield(new Item.Properties()));
 
     // Netherite Shield
     public static final RegistryObject<Item> NETHERITE_SHIELD = ITEMS.register("netherite_shield", () ->
-            new NetheriteShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new NetheriteShield(new Item.Properties()));
 
     // Topaz Shield
     public static final RegistryObject<Item> TOPAZ_SHIELD = ITEMS.register("topaz_shield", () ->
-            new TopazShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new TopazShield(new Item.Properties()));
 
     // Sapphire Shield
     public static final RegistryObject<Item> SAPPHIRE_SHIELD = ITEMS.register("sapphire_shield", () ->
-            new SapphireShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new SapphireShield(new Item.Properties()));
 
     // Ruby Shield
     public static final RegistryObject<Item> RUBY_SHIELD = ITEMS.register("ruby_shield", () ->
-            new RubyShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new RubyShield(new Item.Properties()));
 
     // Plated Onyx Shield
     public static final RegistryObject<Item> PLATED_ONYX_SHIELD = ITEMS.register("plated_onyx_shield", () ->
-            new PlatedOnyxShield(new Item.Properties()
-                    .setISTER(ProvideISTER::shield)
-                    .fireResistant()
-                    .tab(ModTab.TAB_GEMS)));
+            new PlatedOnyxShield(new Item.Properties()));
+
+
+
+    // Horse Armor
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // Chainmail Horse Armor
+    public static final RegistryObject<Item> CHAINMAIL_HORSE_ARMOR = ITEMS.register("chainmail_horse_armor", () ->
+            new ChainmailHorseArmor(new Item.Properties()));
+
+    // Netherite Horse Armor
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = ITEMS.register("netherite_horse_armor", () ->
+            new NetheriteHorseArmor(new Item.Properties()));
+
+    // Topaz Horse Armor
+    public static final RegistryObject<Item> TOPAZ_HORSE_ARMOR = ITEMS.register("topaz_horse_armor", () ->
+            new TopazHorseArmor(new Item.Properties()));
+
+    // Sapphire Horse Armor
+    public static final RegistryObject<Item> SAPPHIRE_HORSE_ARMOR = ITEMS.register("sapphire_horse_armor", () ->
+            new SapphireHorseArmor(new Item.Properties()));
+
+    // Ruby Horse Armor
+    public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor", () ->
+            new RubyHorseArmor(new Item.Properties()));
+
+    // Plated Onyx Horse Armor
+    public static final RegistryObject<Item> PLATED_ONYX_HORSE_ARMOR = ITEMS.register("plated_onyx_horse_armor", () ->
+            new PlatedOnyxHorseArmor(new Item.Properties()));
 
 
 
@@ -571,38 +553,31 @@ public class ModItems {
 
     // Golden Amulet
     public static final RegistryObject<Item> GOLDEN_AMULET = ITEMS.register("golden_amulet", () ->
-            new GoldenAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GoldenAmulet(new Item.Properties()));
 
     // Gemspark Amulet
     public static final RegistryObject<Item> GEMSPARK_AMULET = ITEMS.register("gemspark_amulet", () ->
-            new GemsparkAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GemsparkAmulet(new Item.Properties()));
 
     // Emerald Amulet
     public static final RegistryObject<Item> EMERALD_AMULET = ITEMS.register("emerald_amulet", () ->
-            new EmeraldAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new EmeraldAmulet(new Item.Properties()));
 
     // Diamond Amulet
     public static final RegistryObject<Item> DIAMOND_AMULET = ITEMS.register("diamond_amulet", () ->
-            new DiamondAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new DiamondAmulet(new Item.Properties()));
 
     // Topaz Amulet
     public static final RegistryObject<Item> TOPAZ_AMULET = ITEMS.register("topaz_amulet", () ->
-            new TopazAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new TopazAmulet(new Item.Properties()));
 
     // Sapphire Amulet
     public static final RegistryObject<Item> SAPPHIRE_AMULET = ITEMS.register("sapphire_amulet", () ->
-            new SapphireAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new SapphireAmulet(new Item.Properties()));
 
     // Ruby Amulet
     public static final RegistryObject<Item> RUBY_AMULET = ITEMS.register("ruby_amulet", () ->
-            new RubyAmulet(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new RubyAmulet(new Item.Properties()));
 
 
 
@@ -611,37 +586,30 @@ public class ModItems {
 
     // Golden Ring
     public static final RegistryObject<Item> GOLDEN_RING = ITEMS.register("golden_ring", () ->
-            new GoldenRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GoldenRing(new Item.Properties()));
 
     // Gemspark Ring
     public static final RegistryObject<Item> GEMSPARK_RING = ITEMS.register("gemspark_ring", () ->
-            new GemsparkRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new GemsparkRing(new Item.Properties()));
 
     // Emerald Ring
     public static final RegistryObject<Item> EMERALD_RING = ITEMS.register("emerald_ring", () ->
-            new EmeraldRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new EmeraldRing(new Item.Properties()));
 
     // Diamond Ring
     public static final RegistryObject<Item> DIAMOND_RING = ITEMS.register("diamond_ring", () ->
-            new DiamondRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new DiamondRing(new Item.Properties()));
 
     // Topaz Ring
     public static final RegistryObject<Item> TOPAZ_RING = ITEMS.register("topaz_ring", () ->
-            new TopazRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new TopazRing(new Item.Properties()));
 
     // Sapphire Ring
     public static final RegistryObject<Item> SAPPHIRE_RING = ITEMS.register("sapphire_ring", () ->
-            new SapphireRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new SapphireRing(new Item.Properties()));
 
     // Ruby Ring
     public static final RegistryObject<Item> RUBY_RING = ITEMS.register("ruby_ring", () ->
-            new RubyRing(new Item.Properties()
-                    .tab(ModTab.TAB_GEMS)));
+            new RubyRing(new Item.Properties()));
 
 }

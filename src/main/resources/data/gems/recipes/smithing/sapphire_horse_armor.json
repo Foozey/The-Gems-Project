@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:topaz_horse_armor"
+  },
+  "addition": {
+    "item": "gems:sapphire"
+  },
+  "result": {
+    "item": "gems:sapphire_horse_armor"
+  }
+}

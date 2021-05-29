@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shield",
+    "gems:iron_shield",
+    "gems:golden_shield",
+    "gems:diamond_shield",
+    "gems:netherite_shield",
+    "gems:topaz_shield",
+    "gems:sapphire_shield",
+    "gems:ruby_shield",
+    "gems:plated_onyx_shield"
+  ]
+}

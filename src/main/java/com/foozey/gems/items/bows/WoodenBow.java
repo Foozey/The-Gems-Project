@@ -2,13 +2,17 @@ package com.foozey.gems.items.bows;
 
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.BowItem;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
 public class WoodenBow extends BowItem {
 
     public WoodenBow(Properties properties) {
-        super(properties.stacksTo(1).durability(59));
+        super(properties
+                .stacksTo(1)
+                .durability(59)
+                .tab(ItemGroup.TAB_COMBAT));
     }
 
     @Override

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:sapphire_horse_armor"
+  },
+  "addition": {
+    "item": "gems:ruby"
+  },
+  "result": {
+    "item": "gems:ruby_horse_armor"
+  }
+}
