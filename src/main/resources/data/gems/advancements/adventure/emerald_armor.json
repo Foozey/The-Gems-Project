@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "gems:emerald_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.adventure.emerald_armor.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.emerald_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "emerald_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "gems:emerald_helmet"
+          },
+          {
+            "item": "gems:emerald_chestplate"
+          },
+          {
+            "item": "gems:emerald_leggings"
+          },
+          {
+            "item": "gems:emerald_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "emerald_armor"
+    ]
+  ]
+}

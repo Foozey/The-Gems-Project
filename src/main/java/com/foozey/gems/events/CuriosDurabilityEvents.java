@@ -15,6 +15,8 @@ import top.theillusivec4.curios.api.CuriosApi;
 
 public class CuriosDurabilityEvents {
 
+    // TODO: Clean this up
+
     // Golden Amulet
     @SubscribeEvent
     public static void onGoldenAmuletDamaged(LivingDamageEvent event) {

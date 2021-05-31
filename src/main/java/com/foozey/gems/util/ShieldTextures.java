@@ -14,7 +14,8 @@ public enum ShieldTextures {
     TOPAZ("topaz"),
     SAPPHIRE("sapphire"),
     RUBY("ruby"),
-    PLATED_ONYX("plated_onyx");
+    PLATED_ONYX("plated_onyx"),
+    EMERALD("emerald");
 
     private final RenderMaterial base;
 

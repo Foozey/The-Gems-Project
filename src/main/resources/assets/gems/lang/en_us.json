@@ -58,6 +58,11 @@
   "item.gems.plated_onyx_axe": "Plated Onyx Axe",
   "item.gems.plated_onyx_shovel": "Plated Onyx Shovel",
   "item.gems.plated_onyx_hoe": "Plated Onyx Hoe",
+  "item.gems.emerald_sword": "Emerald Sword",
+  "item.gems.emerald_pickaxe": "Emerald Pickaxe",
+  "item.gems.emerald_axe": "Emerald Axe",
+  "item.gems.emerald_shovel": "Emerald Shovel",
+  "item.gems.emerald_hoe": "Emerald Hoe",
 
   "item.gems.topaz_helmet": "Topaz Helmet",
   "item.gems.topaz_chestplate": "Topaz Chestplate",
@@ -75,6 +80,10 @@
   "item.gems.plated_onyx_chestplate": "Plated Onyx Chestplate",
   "item.gems.plated_onyx_leggings": "Plated Onyx Leggings",
   "item.gems.plated_onyx_boots": "Plated Onyx Boots",
+  "item.gems.emerald_helmet": "Emerald Helmet",
+  "item.gems.emerald_chestplate": "Emerald Chestplate",
+  "item.gems.emerald_leggings": "Emerald Leggings",
+  "item.gems.emerald_boots": "Emerald Boots",
 
   "item.minecraft.bow": "Wooden Bow",
   "item.gems.iron_bow": "Iron Bow",
@@ -85,6 +94,7 @@
   "item.gems.sapphire_bow": "Sapphire Bow",
   "item.gems.ruby_bow": "Ruby Bow",
   "item.gems.plated_onyx_bow": "Plated Onyx Bow",
+  "item.gems.emerald_bow": "Emerald Bow",
 
   "item.minecraft.crossbow": "Wooden Crossbow",
   "item.gems.iron_crossbow": "Iron Crossbow",
@@ -95,6 +105,7 @@
   "item.gems.sapphire_crossbow": "Sapphire Crossbow",
   "item.gems.ruby_crossbow": "Ruby Crossbow",
   "item.gems.plated_onyx_crossbow": "Plated Onyx Crossbow",
+  "item.gems.emerald_crossbow": "Emerald Crossbow",
 
   "item.minecraft.shield": "Wooden Shield",
   "item.gems.iron_shield": "Iron Shield",
@@ -105,6 +116,7 @@
   "item.gems.sapphire_shield": "Sapphire Shield",
   "item.gems.ruby_shield": "Ruby Shield",
   "item.gems.plated_onyx_shield": "Plated Onyx Shield",
+  "item.gems.emerald_shield": "Emerald Shield",
 
   "item.gems.chainmail_horse_armor": "Chainmail Horse Armor",
   "item.gems.netherite_horse_armor": "Netherite Horse Armor",
@@ -112,6 +124,7 @@
   "item.gems.sapphire_horse_armor": "Sapphire Horse Armor",
   "item.gems.ruby_horse_armor": "Ruby Horse Armor",
   "item.gems.plated_onyx_horse_armor": "Plated Onyx Horse Armor",
+  "item.gems.emerald_horse_armor": "Emerald Horse Armor",
 
   "item.gems.golden_amulet": "Golden Amulet",
   "item.gems.gemspark_amulet": "Gemspark Amulet",
@@ -134,7 +147,9 @@
   "advancements.adventure.jewelry.title": "Blinged Out",
   "advancements.adventure.jewelry.description": "Craft some jewelry",
   "advancements.end.plated_onyx_armor.title": "Overcompensation",
-  "advancements.end.plated_onyx_armor.description": "Get a full suit of Plated Onyx armor",
+  "advancements.end.plated_onyx_armor.description": "Get a full suit of plated onyx armor",
+  "advancements.adventure.emerald_armor.title": "Villager Prestige",
+  "advancements.adventure.emerald_armor.description": "Get a full suit of emerald armor",
   "advancements.adventure.fossils.title": "Unearthed",
   "advancements.adventure.fossils.description": "Discover a fossil",
 

@@ -2,24 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xy ",
-    "x y",
-    "xy "
+    "yy",
+    "x ",
+    "x "
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:string"
+      "item": "minecraft:stick"
     },
     "y":
     {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:emerald"
     }
   },
   "result":
   {
-    "item": "gems:iron_bow",
+    "item": "gems:emerald_hoe",
     "count": 1
   }
 }

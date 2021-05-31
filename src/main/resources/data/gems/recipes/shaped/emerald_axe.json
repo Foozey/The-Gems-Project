@@ -2,24 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "xy ",
-    "x y",
-    "xy "
+    "yy",
+    "xy",
+    "x "
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:string"
+      "item": "minecraft:stick"
     },
     "y":
     {
-      "item": "minecraft:diamond"
+      "item": "minecraft:emerald"
     }
   },
   "result":
   {
-    "item": "gems:diamond_bow",
+    "item": "gems:emerald_axe",
     "count": 1
   }
 }

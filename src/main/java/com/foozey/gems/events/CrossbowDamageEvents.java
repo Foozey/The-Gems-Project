@@ -15,6 +15,8 @@ import net.minecraftforge.fml.common.Mod;
 
 public class CrossbowDamageEvents {
 
+    // TODO: Clean this up
+
     // Wooden Crossbow
     @SubscribeEvent
     public static void WoodenCrossbowEntity(EntityJoinWorldEvent event) {

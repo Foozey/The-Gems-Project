@@ -8,6 +8,8 @@ import net.minecraft.util.ResourceLocation;
 
 public class ModItemModelsOverrides {
 
+    // TODO: Clean this up
+
     public static void BowItemModelsOverrides() {
 
         // Iron Bow
@@ -96,6 +98,17 @@ public class ModItemModelsOverrides {
             }
         });
         ItemModelsProperties.register(ModItems.PLATED_ONYX_BOW.get(), new ResourceLocation("pulling"), (stack, world, wielder) ->
+                wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
+
+        // Emerald Bow
+        ItemModelsProperties.register(ModItems.EMERALD_BOW.get(), new ResourceLocation("pull"), (stack, world, wielder) -> {
+            if (wielder == null) {
+                return 0.0F;
+            } else {
+                return wielder.getUseItem() != stack ? 0.0F : (float)(stack.getUseDuration() - wielder.getUseItemRemainingTicks()) / 20.0F;
+            }
+        });
+        ItemModelsProperties.register(ModItems.EMERALD_BOW.get(), new ResourceLocation("pulling"), (stack, world, wielder) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
     }
@@ -222,6 +235,21 @@ public class ModItemModelsOverrides {
         ItemModelsProperties.register(ModItems.PLATED_ONYX_CROSSBOW.get(), new ResourceLocation("firework"), (stack, world, wielder) ->
                 wielder != null && CrossbowItem.isCharged(stack) && CrossbowItem.containsChargedProjectile(stack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F);
 
+        // Emerald Crossbow
+        ItemModelsProperties.register(ModItems.EMERALD_CROSSBOW.get(), new ResourceLocation("pull"), (stack, world, wielder) -> {
+            if (wielder == null) {
+                return 0.0F;
+            } else {
+                return CrossbowItem.isCharged(stack) ? 0.0F : (float)(stack.getUseDuration() - wielder.getUseItemRemainingTicks()) / (float)CrossbowItem.getChargeDuration(stack);
+            }
+        });
+        ItemModelsProperties.register(ModItems.EMERALD_CROSSBOW.get(), new ResourceLocation("pulling"), (stack, world, wielder) ->
+                wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack && !CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
+        ItemModelsProperties.register(ModItems.EMERALD_CROSSBOW.get(), new ResourceLocation("charged"), (stack, world, wielder) ->
+                wielder != null && CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
+        ItemModelsProperties.register(ModItems.EMERALD_CROSSBOW.get(), new ResourceLocation("firework"), (stack, world, wielder) ->
+                wielder != null && CrossbowItem.isCharged(stack) && CrossbowItem.containsChargedProjectile(stack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F);
+
     }
 
     public static void ShieldItemModelsOverrides() {
@@ -256,6 +284,10 @@ public class ModItemModelsOverrides {
 
         // Plated Onyx Shield
         ItemModelsProperties.register(ModItems.PLATED_ONYX_SHIELD.get(), new ResourceLocation("blocking"), (stack, world, wielder) ->
+                wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
+
+        // Emerald Shield
+        ItemModelsProperties.register(ModItems.EMERALD_SHIELD.get(), new ResourceLocation("blocking"), (stack, world, wielder) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
     }

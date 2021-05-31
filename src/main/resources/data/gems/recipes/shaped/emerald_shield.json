@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "yzy",
+    "yyy",
+    " y "
+  ],
+  "key":
+  {
+    "y":
+    {
+      "item": "minecraft:emerald"
+    },
+    "z":
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "gems:emerald_shield",
+    "count": 1
+  }
+}

@@ -4,6 +4,7 @@ import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -25,8 +26,12 @@ public enum ModArmorMaterial implements IArmorMaterial {
             Ingredient.of(ModItems.RUBY.get())),
 
     // Plated Onyx
-    PLATED_ONYX(Gems.MOD_ID + ":plated_onyx", 50, new int[] { 9, 12, 14, 9}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 8.0F, 0.5F, ()
-            -> Ingredient.of(ModItems.PLATED_ONYX_INGOT.get()));
+    PLATED_ONYX(Gems.MOD_ID + ":plated_onyx", 50, new int[] { 9, 12, 14, 9}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 8.0F, 0.5F, () ->
+            Ingredient.of(ModItems.PLATED_ONYX_INGOT.get())),
+
+    // Emerald
+    EMERALD(Gems.MOD_ID + ":emerald", 15, new int[] { 2, 5, 6, 2}, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () ->
+            Ingredient.of(Items.EMERALD.asItem()));
 
     private static final int[] durabilityBase = new int[] { 13, 15, 16, 11 };
     private final String name;

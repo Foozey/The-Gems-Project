@@ -44,6 +44,8 @@ public class ShieldRender extends ItemStackTileEntityRenderer {
             textures = ShieldTextures.RUBY;
         } else if (item == ModItems.PLATED_ONYX_SHIELD.get()) {
             textures = ShieldTextures.PLATED_ONYX;
+        } else if (item == ModItems.EMERALD_SHIELD.get()) {
+            textures = ShieldTextures.EMERALD;
         } else {
             return;
         }

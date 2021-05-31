@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "z  ",
-    "wxw",
-    "y y"
+    "ywy",
+    "xzx",
+    " y "
   ],
   "key":
   {
@@ -14,20 +14,20 @@
     },
     "x":
     {
-      "tag": "minecraft:wool"
+      "item": "minecraft:string"
     },
     "y":
     {
-      "item": "minecraft:iron_leggings"
+      "item": "minecraft:emerald"
     },
     "z":
     {
-      "item": "minecraft:iron_helmet"
+      "item": "minecraft:tripwire_hook"
     }
   },
   "result":
   {
-    "item": "minecraft:iron_horse_armor",
+    "item": "gems:emerald_crossbow",
     "count": 1
   }
 }

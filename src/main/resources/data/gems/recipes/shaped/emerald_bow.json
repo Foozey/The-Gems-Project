@@ -2,24 +2,24 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "y  ",
-    " x ",
-    "  x"
+    " yx",
+    "y x",
+    " yx"
   ],
   "key":
   {
     "x":
     {
-      "item": "minecraft:paper"
+      "item": "minecraft:string"
     },
     "y":
     {
-      "item": "minecraft:string"
+      "item": "minecraft:emerald"
     }
   },
   "result":
   {
-    "item": "minecraft:name_tag",
+    "item": "gems:emerald_bow",
     "count": 1
   }
 }

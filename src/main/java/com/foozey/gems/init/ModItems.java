@@ -293,6 +293,36 @@ public class ModItems {
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
+    // Emerald Sword
+    public static final RegistryObject<SwordItem>EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
+            new SwordItem(ModItemTier.EMERALD, 5, -2.4F, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Pickaxe
+    public static final RegistryObject<PickaxeItem>EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
+            new PickaxeItem(ModItemTier.EMERALD, 3, -2.8F, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Axe
+    public static final RegistryObject<AxeItem>EMERALD_AXE = ITEMS.register("emerald_axe", () ->
+            new AxeItem(ModItemTier.EMERALD, 5, -3.0F, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Shovel
+    public static final RegistryObject<ShovelItem>EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () ->
+            new ShovelItem(ModItemTier.EMERALD, 3.5F, -3.0F, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Hoe
+    public static final RegistryObject<HoeItem>EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
+            new HoeItem(ModItemTier.EMERALD, 0, -1.0F, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
 
 
     // Armor
@@ -394,6 +424,30 @@ public class ModItems {
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
+    // Emerald Helmet
+    public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Chestplate
+    public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Leggings
+    public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
+    // Emerald Boots
+    public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties()
+                    .fireResistant()
+                    .tab(ModTab.TAB_GEMS)));
+
 
 
     // Bows
@@ -434,6 +488,10 @@ public class ModItems {
     // Plated Onyx Bow
     public static final RegistryObject<Item> PLATED_ONYX_BOW = ITEMS.register("plated_onyx_bow", () ->
             new PlatedOnyxBow(new Item.Properties()));
+
+    // Emerald Bow
+    public static final RegistryObject<Item> EMERALD_BOW = ITEMS.register("emerald_bow", () ->
+            new EmeraldBow(new Item.Properties()));
 
 
 
@@ -476,6 +534,10 @@ public class ModItems {
     public static final RegistryObject<Item> PLATED_ONYX_CROSSBOW = ITEMS.register("plated_onyx_crossbow", () ->
             new PlatedOnyxCrossbow(new Item.Properties()));
 
+    // Emerald Crossbow
+    public static final RegistryObject<Item> EMERALD_CROSSBOW = ITEMS.register("emerald_crossbow", () ->
+            new EmeraldCrossbow(new Item.Properties()));
+
 
 
     // Shields
@@ -517,6 +579,10 @@ public class ModItems {
     public static final RegistryObject<Item> PLATED_ONYX_SHIELD = ITEMS.register("plated_onyx_shield", () ->
             new PlatedOnyxShield(new Item.Properties()));
 
+    // Emerald Shield
+    public static final RegistryObject<Item> EMERALD_SHIELD = ITEMS.register("emerald_shield", () ->
+            new EmeraldShield(new Item.Properties()));
+
 
 
     // Horse Armor
@@ -545,6 +611,10 @@ public class ModItems {
     // Plated Onyx Horse Armor
     public static final RegistryObject<Item> PLATED_ONYX_HORSE_ARMOR = ITEMS.register("plated_onyx_horse_armor", () ->
             new PlatedOnyxHorseArmor(new Item.Properties()));
+
+    // Emerald Horse Armor
+    public static final RegistryObject<Item> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () ->
+            new EmeraldHorseArmor(new Item.Properties()));
 
 
 

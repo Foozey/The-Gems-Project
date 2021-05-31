@@ -2,6 +2,7 @@ package com.foozey.gems.util.tiers;
 
 import com.foozey.gems.init.ModItems;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
@@ -22,7 +23,11 @@ public enum ModItemTier implements IItemTier {
 
     // Plated Onyx
     PLATED_ONYX(6, 4000, 20.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.PLATED_ONYX_INGOT.get()));
+            Ingredient.of(ModItems.PLATED_ONYX_INGOT.get())),
+
+    // Emerald
+    EMERALD(2, 250, 6.0F, 0.0F, 30, () ->
+            Ingredient.of(Items.EMERALD.asItem()));
 
     private final int harvestLevel;
     private final int maxUses;
