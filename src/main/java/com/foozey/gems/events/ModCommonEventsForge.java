@@ -9,6 +9,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -49,9 +50,9 @@ public class ModCommonEventsForge {
         }
     }
 
-    // Emerald Tools
+/*    // Emerald Tools
     @SubscribeEvent
-    public static void emeraldToolBonus(LivingEvent event) {
+    public static void emeraldToolBonus(LivingEvent.LivingUpdateEvent event) {
         if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
         PlayerEntity player = (PlayerEntity) event.getEntityLiving();
         if(player.level.isClientSide) return;
@@ -70,6 +71,6 @@ public class ModCommonEventsForge {
         if(player.getMainHandItem().getItem() == ModItems.EMERALD_HOE.get()) {
             // TODO: Fortune buff
         }
-    }
+    }*/
 
 }
