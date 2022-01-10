@@ -60,7 +60,7 @@ public class TopazAmulet extends Item {
                 @Override
                 public Multimap<Attribute, AttributeModifier> getAttributeModifiers(String identifier) {
                     Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
-                    modifiers.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(AMULET_ATTACK_KNOCKBACK_UUID, "Attack Knockback", 1.00, AttributeModifier.Operation.ADDITION));
+                    modifiers.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(AMULET_ATTACK_KNOCKBACK_UUID, "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
                     return modifiers;
                 }
 

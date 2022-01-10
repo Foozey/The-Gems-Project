@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:infused_ender_scales"
+    },
+    {
+      "item": "gems:infused_ender_scales"
+    },
+    {
+      "item": "gems:infused_ender_scales"
+    },
+    {
+      "item": "gems:infused_ender_scales"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:infused_onyx_ingot",
+    "count": 1
+  }
+}

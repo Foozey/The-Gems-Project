@@ -2,7 +2,7 @@
   "parent": "minecraft:adventure/root",
   "display": {
     "icon": {
-      "item": "gems:diamond_amulet",
+      "item": "gems:topaz_amulet",
       "nbt": "{Damage:0}"
     },
     "title": {

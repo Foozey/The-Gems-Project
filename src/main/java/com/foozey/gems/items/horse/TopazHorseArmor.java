@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 public class TopazHorseArmor extends HorseArmorItem {
 
     public TopazHorseArmor(Properties properties) {
-        super(14, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_topaz.png"), (properties
+        super(13, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_topaz.png"), (properties
                 .stacksTo(1)
                 .fireResistant()
                 .tab(ModTab.TAB_GEMS)));
@@ -16,7 +16,7 @@ public class TopazHorseArmor extends HorseArmorItem {
 
     @Override
     public int getProtection() {
-        return 14;
+        return 13;
     }
 
 }

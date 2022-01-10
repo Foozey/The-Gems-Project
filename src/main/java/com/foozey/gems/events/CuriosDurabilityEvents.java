@@ -45,34 +45,6 @@ public class CuriosDurabilityEvents {
         }
     }
 
-    // Emerald Amulet
-    @SubscribeEvent
-    public static void onEmeraldAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.EMERALD_AMULET.get(), event.getEntityLiving()).isPresent()) {
-            ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.EMERALD_AMULET.get(), event.getEntityLiving()).get().right;
-            necklace.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("necklace", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
-    // Diamond Amulet
-    @SubscribeEvent
-    public static void onDiamondAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.DIAMOND_AMULET.get(), event.getEntityLiving()).isPresent()) {
-            ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.DIAMOND_AMULET.get(), event.getEntityLiving()).get().right;
-            necklace.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("necklace", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
     // Topaz Amulet
     @SubscribeEvent
     public static void onTopazAmuletDamaged(LivingDamageEvent event) {
@@ -136,34 +108,6 @@ public class CuriosDurabilityEvents {
         PlayerEntity player = (PlayerEntity) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntityLiving()).get().right;
-            ring.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("ring", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
-    // Emerald Ring
-    @SubscribeEvent
-    public static void onEmeraldRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.EMERALD_RING.get(), event.getEntityLiving()).isPresent()) {
-            ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.EMERALD_RING.get(), event.getEntityLiving()).get().right;
-            ring.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("ring", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
-    // Diamond Ring
-    @SubscribeEvent
-    public static void onDiamondRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.DIAMOND_RING.get(), event.getEntityLiving()).isPresent()) {
-            ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.DIAMOND_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
                 CuriosApi.getCuriosHelper().onBrokenCurio("ring", 0, player2);
                 player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);

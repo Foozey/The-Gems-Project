@@ -1,5 +1,6 @@
 package com.foozey.gems;
 
+import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModBlocks;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.util.ModItemModelsOverrides;
@@ -40,6 +41,7 @@ public class Gems {
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModItems.REPLACE.register(bus);
+        ModAttributes.ATTRIBUTES.register(bus);
 
         // Generate Ore
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGenHandler::generateOre);

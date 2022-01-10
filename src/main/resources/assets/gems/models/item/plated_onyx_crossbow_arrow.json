@@ -1,6 +1,0 @@
-{
-    "parent": "item/crossbow",
-    "textures": {
-        "layer0": "gems:items/plated_onyx_crossbow_arrow"
-    }
-}

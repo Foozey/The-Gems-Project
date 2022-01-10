@@ -60,7 +60,7 @@ public class RubyAmulet extends Item {
                 @Override
                 public Multimap<Attribute, AttributeModifier> getAttributeModifiers(String identifier) {
                     Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
-                    modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(AMULET_ATTACK_DAMAGE_UUID, "Attack Damage", 2.00, AttributeModifier.Operation.ADDITION));
+                    modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(AMULET_ATTACK_DAMAGE_UUID, "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));
                     return modifiers;
                 }
 

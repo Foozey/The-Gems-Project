@@ -10,20 +10,20 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
 
     // Topaz
-    TOPAZ(5, 2250, 10.0F, 0.0F, 15, () ->
+    TOPAZ(4, 2031, 9.0F, 0.0F, 15, () ->
             Ingredient.of(ModItems.TOPAZ.get())),
 
     // Sapphire
-    SAPPHIRE(5, 2500, 12.0F, 0.0F, 15, () ->
+    SAPPHIRE(4, 2031, 9.0F, 0.0F, 15, () ->
             Ingredient.of(ModItems.SAPPHIRE.get())),
 
     // Ruby
-    RUBY(5, 2750, 14.0F, 0.0F, 15, () ->
+    RUBY(4, 2031, 9.0F, 0.0F, 15, () ->
             Ingredient.of(ModItems.RUBY.get())),
 
-    // Plated Onyx
-    PLATED_ONYX(6, 4000, 20.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.PLATED_ONYX_INGOT.get())),
+    // Infused Onyx
+    INFUSED_ONYX(5, 2031, 9.0F, 0.0F, 15, () ->
+            Ingredient.of(ModItems.INFUSED_ONYX_INGOT.get())),
 
     // Emerald
     EMERALD(2, 250, 6.0F, 0.0F, 30, () ->

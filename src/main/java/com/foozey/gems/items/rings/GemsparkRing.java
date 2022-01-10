@@ -60,7 +60,7 @@ public class GemsparkRing extends Item {
                 @Override
                 public Multimap<Attribute, AttributeModifier> getAttributeModifiers(String identifier) {
                     Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
-                    modifiers.put(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(RING_KNOCKBACK_RESISTANCE_UUID, "Knockback Resistance", 0.1, AttributeModifier.Operation.MULTIPLY_TOTAL));
+                    modifiers.put(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(RING_KNOCKBACK_RESISTANCE_UUID, "Knockback Resistance", 0.10, AttributeModifier.Operation.ADDITION));
                     return modifiers;
                 }
 

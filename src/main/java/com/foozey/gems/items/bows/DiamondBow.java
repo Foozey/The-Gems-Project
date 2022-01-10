@@ -22,7 +22,7 @@ public class DiamondBow extends BowItem {
 
     @Override
     public AbstractArrowEntity customArrow(AbstractArrowEntity arrow) {
-        arrow.setBaseDamage(arrow.getBaseDamage() * 1.0F);
+        arrow.setBaseDamage(arrow.getBaseDamage() * 1.2F);
         return arrow;
     }
 

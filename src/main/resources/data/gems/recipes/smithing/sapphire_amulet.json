@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:gemspark_amulet"
+  },
+  "addition": {
+    "item": "gems:sapphire"
+  },
+  "result": {
+    "item": "gems:sapphire_amulet"
+  }
+}

@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/foozey/The-Gems-Project/issues"
 
 modId="gems"
 
-version="1.16.5-1.8.1"
+version="1.16.5-1.9.0"
 
 displayName="The Gems Project"
 
@@ -43,6 +43,6 @@ A mod that focuses on adding more progression to Minecraft.
 [[dependencies.gems]]
 	modId="curios"
     mandatory=true
-    versionRange="[1.16.5-4.0.5.1,)"
+    versionRange="[1.16.5-4.0.3.5,)"
     ordering="NONE"
     side="BOTH"

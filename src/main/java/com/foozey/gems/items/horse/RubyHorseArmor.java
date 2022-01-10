@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 public class RubyHorseArmor extends HorseArmorItem {
 
     public RubyHorseArmor(Properties properties) {
-        super(16, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_ruby.png"), (properties
+        super(15, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_ruby.png"), (properties
                 .stacksTo(1)
                 .fireResistant()
                 .tab(ModTab.TAB_GEMS)));
@@ -16,7 +16,7 @@ public class RubyHorseArmor extends HorseArmorItem {
 
     @Override
     public int getProtection() {
-        return 16;
+        return 15;
     }
 
 }

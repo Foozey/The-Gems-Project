@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:ruby_leggings"
+  },
+  "addition": {
+    "item": "gems:infused_onyx_ingot"
+  },
+  "result": {
+    "item": "gems:infused_onyx_leggings"
+  }
+}

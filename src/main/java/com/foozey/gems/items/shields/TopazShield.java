@@ -3,16 +3,25 @@ package com.foozey.gems.items.shields;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
 import com.foozey.gems.util.ProvideISTER;
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.attributes.Attribute;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
+
+import java.util.UUID;
 
 public class TopazShield extends ShieldItem {
 
     public TopazShield(Properties properties) {
         super(properties
                 .stacksTo(1)
-                .durability(2250)
+                .durability(2031)
                 .setISTER(ProvideISTER::shield)
                 .fireResistant()
                 .tab(ModTab.TAB_GEMS));
@@ -31,6 +40,20 @@ public class TopazShield extends ShieldItem {
     @Override
     public int getEnchantmentValue() {
         return 15;
+    }
+
+    public static final UUID SHIELD_ATTACK_KNOCKBACK_UUID = UUID.fromString("a7effc43-bc73-4c24-9e8f-1417c121ecba");
+
+    @Override
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
+        Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
+        ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+        builder.putAll(modifiers);
+        Item item = stack.getItem();
+        if (item == ModItems.TOPAZ_SHIELD.get() && equipmentSlot == EquipmentSlotType.OFFHAND) {
+            builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(SHIELD_ATTACK_KNOCKBACK_UUID, "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
+        }
+        return builder.build();
     }
 
 }

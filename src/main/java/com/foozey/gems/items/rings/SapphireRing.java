@@ -60,7 +60,7 @@ public class SapphireRing extends Item {
                 @Override
                 public Multimap<Attribute, AttributeModifier> getAttributeModifiers(String identifier) {
                     Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
-                    modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(RING_ATTACK_SPEED_UUID, "Attack Speed", 1.00, AttributeModifier.Operation.ADDITION));
+                    modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(RING_ATTACK_SPEED_UUID, "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
                     return modifiers;
                 }
 

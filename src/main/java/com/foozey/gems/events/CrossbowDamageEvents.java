@@ -43,7 +43,7 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.IRON_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.1F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.5F);
                 }
             }
         }
@@ -75,7 +75,7 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.DIAMOND_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.2F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.8F);
                 }
             }
         }
@@ -91,7 +91,7 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.NETHERITE_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.3F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }
         }
@@ -107,7 +107,7 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.TOPAZ_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.4F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }
         }
@@ -123,7 +123,7 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.SAPPHIRE_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.5F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }
         }
@@ -139,23 +139,23 @@ public class CrossbowDamageEvents {
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.RUBY_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.6F);
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }
         }
     }
 
-    // Plated Onyx Crossbow
+    // Infused Onyx Crossbow
     @SubscribeEvent
-    public static void PlatedOnyxCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void InfusedOnyxCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrowEntity) {
             AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
-                if (livingShooter.getMainHandItem().getItem() == ModItems.PLATED_ONYX_CROSSBOW.get()) {
-                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.9F);
+                if (livingShooter.getMainHandItem().getItem() == ModItems.INFUSED_ONYX_CROSSBOW.get()) {
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }
         }

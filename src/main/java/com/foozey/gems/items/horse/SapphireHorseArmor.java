@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 public class SapphireHorseArmor extends HorseArmorItem {
 
     public SapphireHorseArmor(Properties properties) {
-        super(15, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_sapphire.png"), (properties
+        super(14, new ResourceLocation(Gems.MOD_ID, "textures/entity/horse/armor/horse_armor_sapphire.png"), (properties
                 .stacksTo(1)
                 .fireResistant()
                 .tab(ModTab.TAB_GEMS)));
@@ -16,7 +16,7 @@ public class SapphireHorseArmor extends HorseArmorItem {
 
     @Override
     public int getProtection() {
-        return 15;
+        return 14;
     }
 
 }

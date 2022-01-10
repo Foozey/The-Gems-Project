@@ -35,9 +35,9 @@ public class OreGenHandler {
 
         // Overworld Generation
         } else {
-            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TOPAZ_ORE.get().getBlock().defaultBlockState(), 6, 1, 16, 1);
-            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.SAPPHIRE_ORE.get().getBlock().defaultBlockState(), 6, 1, 16, 1);
-            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.RUBY_ORE.get().getBlock().defaultBlockState(), 6, 1, 16, 1);
+            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TOPAZ_ORE.get().getBlock().defaultBlockState(), 4, 1, 16, 1);
+            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.SAPPHIRE_ORE.get().getBlock().defaultBlockState(), 4, 1, 16, 1);
+            oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.RUBY_ORE.get().getBlock().defaultBlockState(), 4, 1, 16, 1);
             oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.GEMSPARK_ORE.get().getBlock().defaultBlockState(), 6, 1, 32, 2);
             oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.EXPERIENCE_ORE.get().getBlock().defaultBlockState(), 8, 1, 128, 6);
             oreGen(event.getGeneration(), OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.BONE_FOSSIL.get().getBlock().defaultBlockState(), 4, 1, 128, 1);

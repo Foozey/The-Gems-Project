@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:end/root",
+  "display": {
+    "icon": {
+      "item": "gems:infused_onyx_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.end.infused_onyx_armor.title"
+    },
+    "description": {
+      "translate": "advancements.end.infused_onyx_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "infused_onyx_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "gems:infused_onyx_helmet"
+          },
+          {
+            "item": "gems:infused_onyx_chestplate"
+          },
+          {
+            "item": "gems:infused_onyx_leggings"
+          },
+          {
+            "item": "gems:infused_onyx_boots"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "infused_onyx_armor"
+    ]
+  ]
+}
