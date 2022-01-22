@@ -3,20 +3,19 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import java.util.UUID;
 
 public class InfusedOnyxArmor extends ArmorItem {
 
-    public InfusedOnyxArmor(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+    public InfusedOnyxArmor(ArmorMaterial materialIn, EquipmentSlot slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
 
@@ -49,30 +48,30 @@ public class InfusedOnyxArmor extends ArmorItem {
     };
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(modifiers);
         Item item = stack.getItem();
-        if (item == ModItems.INFUSED_ONYX_HELMET.get() && equipmentSlot == EquipmentSlotType.HEAD) {
+        if (item == ModItems.INFUSED_ONYX_HELMET.get() && equipmentSlot == EquipmentSlot.HEAD) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_ATTACK_KNOCKBACK_UUIDS[equipmentSlot.getIndex()], "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_ATTACK_DAMAGE_UUIDS[equipmentSlot.getIndex()], "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.MAX_HEALTH, new AttributeModifier(COMBINED_MAX_HEALTH_UUIDS[equipmentSlot.getIndex()], "Max Health", 2.00, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.INFUSED_ONYX_CHESTPLATE.get() && equipmentSlot == EquipmentSlotType.CHEST) {
+        else if (item == ModItems.INFUSED_ONYX_CHESTPLATE.get() && equipmentSlot == EquipmentSlot.CHEST) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_ATTACK_KNOCKBACK_UUIDS[equipmentSlot.getIndex()], "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_ATTACK_DAMAGE_UUIDS[equipmentSlot.getIndex()], "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.MAX_HEALTH, new AttributeModifier(COMBINED_MAX_HEALTH_UUIDS[equipmentSlot.getIndex()], "Max Health", 2.00, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.INFUSED_ONYX_LEGGINGS.get() && equipmentSlot == EquipmentSlotType.LEGS) {
+        else if (item == ModItems.INFUSED_ONYX_LEGGINGS.get() && equipmentSlot == EquipmentSlot.LEGS) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_ATTACK_KNOCKBACK_UUIDS[equipmentSlot.getIndex()], "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_ATTACK_DAMAGE_UUIDS[equipmentSlot.getIndex()], "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.MAX_HEALTH, new AttributeModifier(COMBINED_MAX_HEALTH_UUIDS[equipmentSlot.getIndex()], "Max Health", 2.00, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.INFUSED_ONYX_BOOTS.get() && equipmentSlot == EquipmentSlotType.FEET) {
+        else if (item == ModItems.INFUSED_ONYX_BOOTS.get() && equipmentSlot == EquipmentSlot.FEET) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_ATTACK_KNOCKBACK_UUIDS[equipmentSlot.getIndex()], "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_ATTACK_DAMAGE_UUIDS[equipmentSlot.getIndex()], "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));

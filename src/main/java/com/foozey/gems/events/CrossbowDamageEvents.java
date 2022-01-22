@@ -2,10 +2,10 @@ package com.foozey.gems.events;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModItems;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.item.Items;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,8 +21,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void WoodenCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -37,8 +37,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void IronCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -53,8 +53,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void GoldenCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -69,8 +69,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void DiamondCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -85,8 +85,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void NetheriteCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -101,8 +101,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void TopazCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -117,8 +117,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void SapphireCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -133,8 +133,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void RubyCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
@@ -149,8 +149,8 @@ public class CrossbowDamageEvents {
     @SubscribeEvent
     public static void InfusedOnyxCrossbowEntity(EntityJoinWorldEvent event) {
         Entity entity = event.getEntity();
-        if (entity instanceof AbstractArrowEntity) {
-            AbstractArrowEntity arrow = (AbstractArrowEntity) entity;
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;

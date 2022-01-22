@@ -4,23 +4,22 @@ import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.core.BlockPos;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import top.theillusivec4.curios.api.CuriosCapability;
 import top.theillusivec4.curios.api.type.capability.ICurio;
-
 import java.util.UUID;
 
 public class SapphireAmulet extends Item {
@@ -40,9 +39,13 @@ public class SapphireAmulet extends Item {
     public static final UUID AMULET_ATTACK_SPEED_UUID = UUID.fromString("4e2c414c-dbcb-11ea-87d0-0242ac130003");
 
     @Override
-    public ICapabilityProvider initCapabilities(ItemStack stack, CompoundNBT nbt) {
+    public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
         return new ICapabilityProvider() {
-            private final LazyOptional<ICurio> lazyCurio = LazyOptional.of(()-> new ICurio() {
+            private final LazyOptional<ICurio> lazyCurio = LazyOptional.of(() -> new ICurio() {
+
+                public ItemStack getStack() {
+                    return stack;
+                }
 
                 // Right Click Equip
                 @Override
@@ -53,7 +56,7 @@ public class SapphireAmulet extends Item {
                 // Right Click Equip Sound
                 @Override
                 public void playRightClickEquipSound(LivingEntity livingEntity) {
-                    livingEntity.level.playSound(null, new BlockPos(livingEntity.position()), SoundEvents.ARMOR_EQUIP_GOLD, SoundCategory.NEUTRAL, 1.0f, 1.0f);
+                    livingEntity.level.playSound(null, new BlockPos(livingEntity.position()), SoundEvents.ARMOR_EQUIP_GOLD, SoundSource.NEUTRAL, 1.0f, 1.0f);
                 }
 
                 // Wearing Event

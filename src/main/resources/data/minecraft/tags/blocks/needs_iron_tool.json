@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "gems:topaz_block",
+    "gems:topaz_ore",
+    "gems:sapphire_block",
+    "gems:sapphire_ore",
+    "gems:ruby_block",
+    "gems:ruby_ore",
+    "gems:gemspark_block",
+    "gems:gemspark_ore"
+  ]
+}

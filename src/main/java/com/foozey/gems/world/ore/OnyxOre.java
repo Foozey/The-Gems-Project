@@ -1,14 +1,12 @@
 package com.foozey.gems.world.ore;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.OreBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.IWorldReader;
-import net.minecraftforge.common.ToolType;
-
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.Mth;
+import net.minecraft.world.level.LevelReader;
 import java.util.Random;
 
 public class OnyxOre extends OreBlock {
@@ -19,15 +17,13 @@ public class OnyxOre extends OreBlock {
                 .of(Material.STONE)
                 .strength(3.0f, 3.0f)
                 .sound(SoundType.STONE)
-                .harvestLevel(4)
-                .harvestTool(ToolType.PICKAXE)
                 .requiresCorrectToolForDrops());
     }
 
     // Experience Drop
     @Override
-    public int getExpDrop(BlockState state, IWorldReader reader, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? MathHelper.nextInt(new Random(), 5, 15) : 0;
+    public int getExpDrop(BlockState state, LevelReader reader, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? Mth.nextInt(new Random(), 5, 15) : 0;
     }
 
 }

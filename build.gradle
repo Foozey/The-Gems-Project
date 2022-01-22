@@ -3,14 +3,19 @@ buildscript {
         maven {
             url = 'https://maven.minecraftforge.net'
         }
+        maven {
+            url = 'https://maven.parchmentmc.org'
+        }
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.parchmentmc:librarian:1.+'
     }
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
@@ -19,11 +24,11 @@ version = "${mc_version}-${mod_version}"
 group = "com.foozey.${modid}"
 archivesBaseName = "${modid}"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 minecraft {
-    // Forge Mappings
+    // Mappings
     mappings channel: "${mapping_type}", version: "${mapping}"
 
     // Runtime

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "gems:sapphire_ore"
+    "tag": "gems:sapphire_ore"
   },
   "result": "gems:sapphire_shards",
   "experience": 1.0,

@@ -2,8 +2,8 @@ package com.foozey.gems.items.horse;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.items.ModTab;
-import net.minecraft.item.HorseArmorItem;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.HorseArmorItem;
+import net.minecraft.resources.ResourceLocation;
 
 public class InfusedOnyxHorseArmor extends HorseArmorItem {
 

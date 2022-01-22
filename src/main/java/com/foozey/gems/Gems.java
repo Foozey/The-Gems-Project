@@ -49,10 +49,12 @@ public class Gems {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) { }
+    private void setup(final FMLCommonSetupEvent event) {
+        OreGenHandler.registerConfiguredFeatures();
+    }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        DeferredWorkQueue.runLater(Gems::addAllItemModelsOverrides);
+        event.enqueueWork(Gems::addAllItemModelsOverrides);
     }
 
     // Curios Slots

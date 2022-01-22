@@ -12,11 +12,17 @@ import com.foozey.gems.items.shields.*;
 import com.foozey.gems.items.tools.*;
 import com.foozey.gems.util.tiers.ModArmorMaterial;
 import com.foozey.gems.util.tiers.ModItemTier;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
 
@@ -86,6 +92,10 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ_ORE_ITEM = ITEMS.register("topaz_ore", () ->
             new ModBlockBase(ModBlocks.TOPAZ_ORE.get()));
 
+    // Deepslate Topaz Ore
+    public static final RegistryObject<Item> DEEPSLATE_TOPAZ_ORE_ITEM = ITEMS.register("deepslate_topaz_ore", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_TOPAZ_ORE.get()));
+
     // Sapphire Block
     public static final RegistryObject<Item> SAPPHIRE_BLOCK_ITEM = ITEMS.register("sapphire_block", () ->
             new ModBlockBase(ModBlocks.SAPPHIRE_BLOCK.get()));
@@ -93,6 +103,10 @@ public class ModItems {
     // Sapphire Ore
     public static final RegistryObject<Item> SAPPHIRE_ORE_ITEM = ITEMS.register("sapphire_ore", () ->
             new ModBlockBase(ModBlocks.SAPPHIRE_ORE.get()));
+
+    // Deepslate Sapphire Ore
+    public static final RegistryObject<Item> DEEPSLATE_SAPPHIRE_ORE_ITEM = ITEMS.register("deepslate_sapphire_ore", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get()));
 
     // Ruby Block
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () ->
@@ -102,6 +116,10 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_ORE_ITEM = ITEMS.register("ruby_ore", () ->
             new ModBlockBase(ModBlocks.RUBY_ORE.get()));
 
+    // Deepslate Ruby Ore
+    public static final RegistryObject<Item> DEEPSLATE_RUBY_ORE_ITEM = ITEMS.register("deepslate_ruby_ore", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_RUBY_ORE.get()));
+
     // Gemspark Block
     public static final RegistryObject<Item> GEMSPARK_BLOCK_ITEM = ITEMS.register("gemspark_block", () ->
             new ModBlockBase(ModBlocks.GEMSPARK_BLOCK.get()));
@@ -109,6 +127,10 @@ public class ModItems {
     // Gemspark Ore
     public static final RegistryObject<Item> GEMSPARK_ORE_ITEM = ITEMS.register("gemspark_ore", () ->
             new ModBlockBase(ModBlocks.GEMSPARK_ORE.get()));
+
+    // Deepslate Gemspark Ore
+    public static final RegistryObject<Item> DEEPSLATE_GEMSPARK_ORE_ITEM = ITEMS.register("deepslate_gemspark_ore", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_GEMSPARK_ORE.get()));
 
     // Onyx Block
     public static final RegistryObject<Item> ONYX_BLOCK_ITEM = ITEMS.register("onyx_block", () ->
@@ -122,6 +144,10 @@ public class ModItems {
     public static final RegistryObject<Item> EXPERIENCE_ORE_ITEM = ITEMS.register("experience_ore", () ->
             new ModBlockBase(ModBlocks.EXPERIENCE_ORE.get()));
 
+    // Deepslate Experience Ore
+    public static final RegistryObject<Item> DEEPSLATE_EXPERIENCE_ORE_ITEM = ITEMS.register("deepslate_experience_ore", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_EXPERIENCE_ORE.get()));
+
     // Nether Experience Ore
     public static final RegistryObject<Item> NETHER_EXPERIENCE_ORE_ITEM = ITEMS.register("nether_experience_ore", () ->
             new ModBlockBase(ModBlocks.NETHER_EXPERIENCE_ORE.get()));
@@ -134,41 +160,81 @@ public class ModItems {
     public static final RegistryObject<Item> BONE_FOSSIL_ITEM = ITEMS.register("bone_fossil", () ->
             new ModBlockBase(ModBlocks.BONE_FOSSIL.get()));
 
+    // Deepslate Bone Fossil
+    public static final RegistryObject<Item> DEEPSLATE_BONE_FOSSIL_ITEM = ITEMS.register("deepslate_bone_fossil", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_BONE_FOSSIL.get()));
+
     // Nether Bone Fossil
     public static final RegistryObject<Item> NETHER_BONE_FOSSIL_ITEM = ITEMS.register("nether_bone_fossil", () ->
             new ModBlockBase(ModBlocks.NETHER_BONE_FOSSIL.get()));
+
+    // End Bone Fossil
+    public static final RegistryObject<Item> END_BONE_FOSSIL_ITEM = ITEMS.register("end_bone_fossil", () ->
+            new ModBlockBase(ModBlocks.END_BONE_FOSSIL.get()));
 
     // Rib Fossil
     public static final RegistryObject<Item> RIB_FOSSIL_ITEM = ITEMS.register("rib_fossil", () ->
             new ModBlockBase(ModBlocks.RIB_FOSSIL.get()));
 
+    // Deepslate Rib Fossil
+    public static final RegistryObject<Item> DEEPSLATE_RIB_FOSSIL_ITEM = ITEMS.register("deepslate_rib_fossil", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_RIB_FOSSIL.get()));
+
     // Nether Rib Fossil
     public static final RegistryObject<Item> NETHER_RIB_FOSSIL_ITEM = ITEMS.register("nether_rib_fossil", () ->
             new ModBlockBase(ModBlocks.NETHER_RIB_FOSSIL.get()));
+
+    // End Rib Fossil
+    public static final RegistryObject<Item> END_RIB_FOSSIL_ITEM = ITEMS.register("end_rib_fossil", () ->
+            new ModBlockBase(ModBlocks.END_RIB_FOSSIL.get()));
 
     // Skull Fossil
     public static final RegistryObject<Item> SKULL_FOSSIL_ITEM = ITEMS.register("skull_fossil", () ->
             new ModBlockBase(ModBlocks.SKULL_FOSSIL.get()));
 
+    // Deepslate Skull Fossil
+    public static final RegistryObject<Item> DEEPSLATE_SKULL_FOSSIL_ITEM = ITEMS.register("deepslate_skull_fossil", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_SKULL_FOSSIL.get()));
+
     // Nether Skull Fossil
     public static final RegistryObject<Item> NETHER_SKULL_FOSSIL_ITEM = ITEMS.register("nether_skull_fossil", () ->
             new ModBlockBase(ModBlocks.NETHER_SKULL_FOSSIL.get()));
+
+    // End Skull Fossil
+    public static final RegistryObject<Item> END_SKULL_FOSSIL_ITEM = ITEMS.register("end_skull_fossil", () ->
+            new ModBlockBase(ModBlocks.END_SKULL_FOSSIL.get()));
 
     // Fish Fossil
     public static final RegistryObject<Item> FISH_FOSSIL_ITEM = ITEMS.register("fish_fossil", () ->
             new ModBlockBase(ModBlocks.FISH_FOSSIL.get()));
 
+    // Deepslate Fish Fossil
+    public static final RegistryObject<Item> DEEPSLATE_FISH_FOSSIL_ITEM = ITEMS.register("deepslate_fish_fossil", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_FISH_FOSSIL.get()));
+
     // Nether Fish Fossil
     public static final RegistryObject<Item> NETHER_FISH_FOSSIL_ITEM = ITEMS.register("nether_fish_fossil", () ->
             new ModBlockBase(ModBlocks.NETHER_FISH_FOSSIL.get()));
+
+    // End Fish Fossil
+    public static final RegistryObject<Item> END_FISH_FOSSIL_ITEM = ITEMS.register("end_fish_fossil", () ->
+            new ModBlockBase(ModBlocks.END_FISH_FOSSIL.get()));
 
     // Shell Fossil
     public static final RegistryObject<Item> SHELL_FOSSIL_ITEM = ITEMS.register("shell_fossil", () ->
             new ModBlockBase(ModBlocks.SHELL_FOSSIL.get()));
 
+    // Deepslate Shell Fossil
+    public static final RegistryObject<Item> DEEPSLATE_SHELL_FOSSIL_ITEM = ITEMS.register("deepslate_shell_fossil", () ->
+            new ModBlockBase(ModBlocks.DEEPSLATE_SHELL_FOSSIL.get()));
+
     // Nether Shell Fossil
     public static final RegistryObject<Item> NETHER_SHELL_FOSSIL_ITEM = ITEMS.register("nether_shell_fossil", () ->
             new ModBlockBase(ModBlocks.NETHER_SHELL_FOSSIL.get()));
+
+    // End Shell Fossil
+    public static final RegistryObject<Item> END_SHELL_FOSSIL_ITEM = ITEMS.register("end_shell_fossil", () ->
+            new ModBlockBase(ModBlocks.END_SHELL_FOSSIL.get()));
 
 
 
@@ -332,121 +398,121 @@ public class ModItems {
 
     // Topaz Helmet
     public static final RegistryObject<ArmorItem> TOPAZ_HELMET = ITEMS.register("topaz_helmet", () ->
-            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties()
+            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Topaz Chestplate
     public static final RegistryObject<ArmorItem> TOPAZ_CHESTPLATE = ITEMS.register("topaz_chestplate", () ->
-            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties()
+            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Topaz Leggings
     public static final RegistryObject<ArmorItem> TOPAZ_LEGGINGS = ITEMS.register("topaz_leggings", () ->
-            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties()
+            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Topaz Boots
     public static final RegistryObject<ArmorItem> TOPAZ_BOOTS = ITEMS.register("topaz_boots", () ->
-            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties()
+            new TopazArmor(ModArmorMaterial.TOPAZ, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Sapphire Helmet
     public static final RegistryObject<ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () ->
-            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties()
+            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Sapphire Chestplate
     public static final RegistryObject<ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () ->
-            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties()
+            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Sapphire Leggings
     public static final RegistryObject<ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () ->
-            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties()
+            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Sapphire Boots
     public static final RegistryObject<ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () ->
-            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties()
+            new SapphireArmor(ModArmorMaterial.SAPPHIRE, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Ruby Helmet
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet", () ->
-            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties()
+            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Ruby Chestplate
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () ->
-            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties()
+            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Ruby Leggings
     public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () ->
-            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties()
+            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Ruby Boots
     public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots", () ->
-            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties()
+            new RubyArmor(ModArmorMaterial.RUBY, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Infused Onyx Helmet
     public static final RegistryObject<ArmorItem> INFUSED_ONYX_HELMET = ITEMS.register("infused_onyx_helmet", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlotType.HEAD, new Item.Properties()
+            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Infused Onyx Chestplate
     public static final RegistryObject<ArmorItem> INFUSED_ONYX_CHESTPLATE = ITEMS.register("infused_onyx_chestplate", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlotType.CHEST, new Item.Properties()
+            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Infused Onyx Leggings
     public static final RegistryObject<ArmorItem> INFUSED_ONYX_LEGGINGS = ITEMS.register("infused_onyx_leggings", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlotType.LEGS, new Item.Properties()
+            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Infused Onyx Boots
     public static final RegistryObject<ArmorItem> INFUSED_ONYX_BOOTS = ITEMS.register("infused_onyx_boots", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlotType.FEET, new Item.Properties()
+            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Helmet
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties()
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Chestplate
     public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties()
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Leggings
     public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties()
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Boots
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties()
+            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 

@@ -1,11 +1,14 @@
 package com.foozey.gems.items.shields;
 
 import com.foozey.gems.items.ModTab;
-import com.foozey.gems.util.ProvideISTER;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ShieldItem;
+import com.foozey.gems.util.ShieldRenderPropertiesProvider;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ShieldItem;
+import net.minecraftforge.client.IItemRenderProperties;
+import org.checkerframework.checker.nullness.qual.NonNull;
+
+import java.util.function.Consumer;
 
 public class NetheriteShield extends ShieldItem {
 
@@ -13,19 +16,18 @@ public class NetheriteShield extends ShieldItem {
         super(properties
                 .stacksTo(1)
                 .durability(2031)
-                .setISTER(ProvideISTER::shield)
                 .fireResistant()
                 .tab(ModTab.TAB_GEMS));
     }
 
     @Override
-    public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
-        return repairWith.getItem() == Items.NETHERITE_INGOT.asItem() || super.isValidRepairItem(toRepair, repairWith);
+    public void initializeClient(@NonNull Consumer<IItemRenderProperties> consumer) {
+        consumer.accept(ShieldRenderPropertiesProvider.shield());
     }
 
     @Override
-    public boolean isShield(ItemStack stack, LivingEntity entity) {
-        return true;
+    public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
+        return repairWith.getItem() == Items.NETHERITE_INGOT.asItem() || super.isValidRepairItem(toRepair, repairWith);
     }
 
     @Override

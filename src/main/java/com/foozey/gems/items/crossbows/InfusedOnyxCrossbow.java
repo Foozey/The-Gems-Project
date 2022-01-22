@@ -5,14 +5,13 @@ import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.CrossbowItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import java.util.UUID;
 
 public class InfusedOnyxCrossbow extends CrossbowItem {
@@ -46,12 +45,12 @@ public class InfusedOnyxCrossbow extends CrossbowItem {
     public static final UUID COMBINED_CROSSBOW_LIFESTEAL_UUID = UUID.fromString("560d1751-6829-494e-81c0-9b42855e788d");
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(modifiers);
         Item item = stack.getItem();
-        if (item == ModItems.INFUSED_ONYX_CROSSBOW.get() && equipmentSlot == EquipmentSlotType.MAINHAND) {
+        if (item == ModItems.INFUSED_ONYX_CROSSBOW.get() && equipmentSlot == EquipmentSlot.MAINHAND) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_CROSSBOW_ATTACK_KNOCKBACK_UUID, "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_CROSSBOW_ATTACK_SPEED_UUID, "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_CROSSBOW_ATTACK_DAMAGE_UUID, "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));

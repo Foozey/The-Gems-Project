@@ -3,20 +3,19 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import java.util.UUID;
 
 public class SapphireArmor extends ArmorItem {
 
-    public SapphireArmor(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+    public SapphireArmor(ArmorMaterial materialIn, EquipmentSlot slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
 
@@ -28,21 +27,21 @@ public class SapphireArmor extends ArmorItem {
     };
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(modifiers);
         Item item = stack.getItem();
-        if (item == ModItems.SAPPHIRE_HELMET.get() && equipmentSlot == EquipmentSlotType.HEAD) {
+        if (item == ModItems.SAPPHIRE_HELMET.get() && equipmentSlot == EquipmentSlot.HEAD) {
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ARMOR_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.SAPPHIRE_CHESTPLATE.get() && equipmentSlot == EquipmentSlotType.CHEST) {
+        else if (item == ModItems.SAPPHIRE_CHESTPLATE.get() && equipmentSlot == EquipmentSlot.CHEST) {
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ARMOR_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.SAPPHIRE_LEGGINGS.get() && equipmentSlot == EquipmentSlotType.LEGS) {
+        else if (item == ModItems.SAPPHIRE_LEGGINGS.get() && equipmentSlot == EquipmentSlot.LEGS) {
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ARMOR_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
         }
-        else if (item == ModItems.SAPPHIRE_BOOTS.get() && equipmentSlot == EquipmentSlotType.FEET) {
+        else if (item == ModItems.SAPPHIRE_BOOTS.get() && equipmentSlot == EquipmentSlot.FEET) {
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(ARMOR_ATTACK_SPEED_UUIDS[equipmentSlot.getIndex()], "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
         }
         return builder.build();

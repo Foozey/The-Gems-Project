@@ -1,7 +1,7 @@
 package com.foozey.gems.items.shields;
 
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ShieldItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ShieldItem;
 
 public class WoodenShield extends ShieldItem {
 
@@ -9,7 +9,7 @@ public class WoodenShield extends ShieldItem {
         super(properties
                 .stacksTo(1)
                 .durability(59)
-                .tab(ItemGroup.TAB_COMBAT));
+                .tab(CreativeModeTab.TAB_COMBAT));
     }
 
     @Override

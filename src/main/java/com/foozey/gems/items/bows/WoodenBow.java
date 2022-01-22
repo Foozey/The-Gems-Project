@@ -1,10 +1,10 @@
 package com.foozey.gems.items.bows;
 
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class WoodenBow extends BowItem {
 
@@ -12,7 +12,7 @@ public class WoodenBow extends BowItem {
         super(properties
                 .stacksTo(1)
                 .durability(59)
-                .tab(ItemGroup.TAB_COMBAT));
+                .tab(CreativeModeTab.TAB_COMBAT));
     }
 
     @Override
@@ -21,7 +21,7 @@ public class WoodenBow extends BowItem {
     }
 
     @Override
-    public AbstractArrowEntity customArrow(AbstractArrowEntity arrow) {
+    public AbstractArrow customArrow(AbstractArrow arrow) {
         arrow.setBaseDamage(arrow.getBaseDamage() * 0.7F);
         return arrow;
     }

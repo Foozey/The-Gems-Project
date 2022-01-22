@@ -1,9 +1,9 @@
 package com.foozey.gems.items.crossbows;
 
 import com.foozey.gems.items.ModTab;
-import net.minecraft.item.CrossbowItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class DiamondCrossbow extends CrossbowItem {
 

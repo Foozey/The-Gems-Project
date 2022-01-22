@@ -4,20 +4,19 @@ import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import java.util.UUID;
 
 public class InfusedOnyxAxe extends AxeItem {
 
-    public InfusedOnyxAxe(IItemTier p_i48530_1_, float p_i48530_2_, float p_i48530_3_, Properties p_i48530_4_) {
+    public InfusedOnyxAxe(Tier p_i48530_1_, float p_i48530_2_, float p_i48530_3_, Properties p_i48530_4_) {
         super(p_i48530_1_, p_i48530_2_, p_i48530_3_, p_i48530_4_);
     }
 
@@ -27,12 +26,12 @@ public class InfusedOnyxAxe extends AxeItem {
     public static final UUID COMBINED_AXE_HARVEST_AREA_UUID = UUID.fromString("702fe27f-d7ee-4c8b-8b46-fae635de7a54");
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot, ItemStack stack) {
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.putAll(modifiers);
         Item item = stack.getItem();
-        if (item == ModItems.INFUSED_ONYX_AXE.get() && equipmentSlot == EquipmentSlotType.MAINHAND) {
+        if (item == ModItems.INFUSED_ONYX_AXE.get() && equipmentSlot == EquipmentSlot.MAINHAND) {
             builder.put(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(COMBINED_AXE_ATTACK_KNOCKBACK_UUID, "Attack Knockback", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(COMBINED_AXE_ATTACK_SPEED_UUID, "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(COMBINED_AXE_ATTACK_DAMAGE_UUID, "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));

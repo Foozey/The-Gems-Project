@@ -2,12 +2,8 @@ package com.foozey.gems.events;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModAttributes;
-import com.foozey.gems.util.ShieldTextures;
-import net.minecraft.client.renderer.texture.AtlasTexture;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.TextureStitchEvent;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

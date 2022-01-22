@@ -4,26 +4,23 @@ import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.util.PlayerSpawnTeleport;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.common.ToolType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.level.Level;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -33,10 +30,14 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.fml.common.Mod;
-
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.context.UseOnContext;
 
 @Mod.EventBusSubscriber(modid = Gems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 
@@ -45,15 +46,15 @@ public class CommonEventsForge {
     // Infused Onyx Armor Bonus
     @SubscribeEvent
     public static void infusedOnyxArmorBonus(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(player.level.isClientSide) return;
-        World world = event.getEntity().level;
+        Level world = event.getEntity().level;
         if(event.getSource() == DamageSource.OUT_OF_WORLD &&
-                player.getItemBySlot(EquipmentSlotType.HEAD).getItem() == ModItems.INFUSED_ONYX_HELMET.get() &&
-                player.getItemBySlot(EquipmentSlotType.CHEST).getItem() == ModItems.INFUSED_ONYX_CHESTPLATE.get() &&
-                player.getItemBySlot(EquipmentSlotType.LEGS).getItem() == ModItems.INFUSED_ONYX_LEGGINGS.get() &&
-                player.getItemBySlot(EquipmentSlotType.FEET).getItem() == ModItems.INFUSED_ONYX_BOOTS.get()) {
+                player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.INFUSED_ONYX_HELMET.get() &&
+                player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.INFUSED_ONYX_CHESTPLATE.get() &&
+                player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.INFUSED_ONYX_LEGGINGS.get() &&
+                player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.INFUSED_ONYX_BOOTS.get()) {
             player.heal(100);
             PlayerSpawnTeleport.teleportPlayerToSpawn(world, player);
         }
@@ -62,21 +63,21 @@ public class CommonEventsForge {
     // Emerald Armor Bonus
     @SubscribeEvent
     public static void emeraldArmorBonus(LivingEvent.LivingUpdateEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(player.level.isClientSide) return;
-        if(player.getItemBySlot(EquipmentSlotType.HEAD).getItem() == ModItems.EMERALD_HELMET.get() &&
-                player.getItemBySlot(EquipmentSlotType.CHEST).getItem() == ModItems.EMERALD_CHESTPLATE.get() &&
-                player.getItemBySlot(EquipmentSlotType.LEGS).getItem() == ModItems.EMERALD_LEGGINGS.get() &&
-                player.getItemBySlot(EquipmentSlotType.FEET).getItem() == ModItems.EMERALD_BOOTS.get()) {
-            player.addEffect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 39, 0, true, false));
+        if(player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.EMERALD_HELMET.get() &&
+                player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.EMERALD_CHESTPLATE.get() &&
+                player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.EMERALD_LEGGINGS.get() &&
+                player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.EMERALD_BOOTS.get()) {
+            player.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 39, 0, true, false));
         }
     }
 
     // Mining Bonus XP
     @SubscribeEvent
     public static void miningBonusXP(BlockEvent.BreakEvent event) {
-        PlayerEntity player = event.getPlayer();
+        Player player = event.getPlayer();
         if(player.getAttributeValue(ModAttributes.BONUS_XP.get()) > 0) {
             event.setExpToDrop((int) (event.getExpToDrop() * player.getAttributeValue(ModAttributes.BONUS_XP.get())));
         }
@@ -88,7 +89,7 @@ public class CommonEventsForge {
         if (event.getAttackingPlayer() == null) {
             return;
         }
-        PlayerEntity player = event.getAttackingPlayer();
+        Player player = event.getAttackingPlayer();
         if(player.getAttributeValue(ModAttributes.BONUS_XP.get()) > 0) {
             event.setDroppedExperience((int) (event.getDroppedExperience() * player.getAttributeValue(ModAttributes.BONUS_XP.get())));
         }
@@ -97,8 +98,8 @@ public class CommonEventsForge {
     // Mob Lifesteal
     @SubscribeEvent
     public static void mobLifestealEvent(LivingDeathEvent event) {
-        if(event.getSource().getEntity() instanceof PlayerEntity) {
-            PlayerEntity player = (PlayerEntity) event.getSource().getEntity();
+        if(event.getSource().getEntity() instanceof Player) {
+            Player player = (Player) event.getSource().getEntity();
             player.heal((float) player.getAttributeValue(ModAttributes.LIFESTEAL.get()));
         }
     }
@@ -106,30 +107,27 @@ public class CommonEventsForge {
     // Harvest Area
     @SubscribeEvent
     public static void miningAreaEvent(BlockEvent.BreakEvent event) {
-        PlayerEntity player = event.getPlayer();
-        if(!(player instanceof ServerPlayerEntity)) {
+        Player player = event.getPlayer();
+        if(!(player instanceof ServerPlayer)) {
             return;
         }
-        World world = event.getPlayer().getCommandSenderWorld();
+        Level world = event.getPlayer().getCommandSenderWorld();
         if(!world.isClientSide) {
             if(player != null) {
                 ItemStack getTool = player.getItemInHand(player.getUsedItemHand());
-                if(getTool.getItem() instanceof PickaxeItem || getTool.getToolTypes().contains(ToolType.PICKAXE) ||
-                        getTool.getItem() instanceof AxeItem || getTool.getToolTypes().contains(ToolType.AXE) ||
-                        getTool.getItem() instanceof ShovelItem || getTool.getToolTypes().contains(ToolType.SHOVEL) ||
-                        getTool.getItem() instanceof HoeItem || getTool.getToolTypes().contains(ToolType.HOE)) {
+                if(getTool.getItem() instanceof PickaxeItem || getTool.getItem() instanceof AxeItem || getTool.getItem() instanceof ShovelItem || getTool.getItem() instanceof HoeItem) {
                     if(player.getAttributeValue(ModAttributes.HARVEST_AREA.get()) > 1) {
                         BlockPos pos = event.getPos();
                         ItemStack tool = player.getItemInHand(player.getUsedItemHand());
                         if(player.swingingArm == null) {
                             return;
                         }
-                        RayTraceResult result = player.pick(5,0,false);
+                        HitResult result = player.pick(5,0,false);
                         if(result != null) {
                             Direction facing = Direction.UP;
-                            if(result.getType() == RayTraceResult.Type.BLOCK) {
-                                ItemUseContext context = new ItemUseContext(player,player.getUsedItemHand(),((BlockRayTraceResult) result));
-                                BlockRayTraceResult res = new BlockRayTraceResult(context.getClickLocation(), context.getClickedFace(), context.getClickedPos(), false);
+                            if(result.getType() == HitResult.Type.BLOCK) {
+                                UseOnContext context = new UseOnContext(player,player.getUsedItemHand(),((BlockHitResult) result));
+                                BlockHitResult res = new BlockHitResult(context.getClickLocation(), context.getClickedFace(), context.getClickedPos(), false);
                                 facing = res.getDirection();
                             }
                             int lvl = (int) player.getAttributeValue(ModAttributes.HARVEST_AREA.get()) - 1;
@@ -201,11 +199,11 @@ public class CommonEventsForge {
                             if(player.isCrouching()) {}
                             else {
                                 for(int i = 0; i < workQueue.size(); i++) {
-                                    if(world.getBlockEntity(workQueue.get(i)) instanceof TileEntity)continue;
+                                    if(world.getBlockEntity(workQueue.get(i)) instanceof BlockEntity)continue;
                                     BlockState blockToBreak = world.getBlockState(workQueue.get(i));
                                     if(ForgeEventFactory.doPlayerHarvestCheck(player,blockToBreak,true) &&
-                                            !blockToBreak.getBlock().isAir(blockToBreak, world, workQueue.get(i)) &&
-                                            !(blockToBreak.getBlock() instanceof IFluidBlock || blockToBreak.getBlock() instanceof FlowingFluidBlock) &&
+                                            !blockToBreak.isAir() &&
+                                            !(blockToBreak.getBlock() instanceof IFluidBlock || blockToBreak.getBlock() instanceof LiquidBlock) &&
                                             blockToBreak.getDestroySpeed(world, workQueue.get(i)) != -1.0F) {
                                         int maxDur = tool.getMaxDamage();
                                         int damDone = tool.getDamageValue();
@@ -217,7 +215,7 @@ public class CommonEventsForge {
                                                 int expDrop = blockToBreak.getBlock().getExpDrop(blockToBreak,world,workQueue.get(i),
                                                         (EnchantmentHelper.getEnchantments(player.getMainHandItem()).containsKey(Enchantments.BLOCK_FORTUNE))?(EnchantmentHelper.getEnchantmentLevel(Enchantments.BLOCK_FORTUNE,player)):(0),
                                                         (EnchantmentHelper.getEnchantments(player.getMainHandItem()).containsKey(Enchantments.SILK_TOUCH))?(EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,player)):(0));
-                                                if(expDrop>0)blockToBreak.getBlock().popExperience((ServerWorld)world,player.blockPosition().offset(0,1,0),expDrop);
+                                                if(expDrop>0)blockToBreak.getBlock().popExperience((ServerLevel)world,player.blockPosition().offset(0,1,0),expDrop);
                                                 world.removeBlock(workQueue.get(i), false);
                                             }
                                         }

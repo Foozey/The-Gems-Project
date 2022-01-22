@@ -1,9 +1,9 @@
 package com.foozey.gems.items.crossbows;
 
-import net.minecraft.item.CrossbowItem;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class WoodenCrossbow extends CrossbowItem {
 
@@ -11,7 +11,7 @@ public class WoodenCrossbow extends CrossbowItem {
         super(properties
                 .stacksTo(1)
                 .durability(59)
-                .tab(ItemGroup.TAB_COMBAT));
+                .tab(CreativeModeTab.TAB_COMBAT));
     }
 
     @Override

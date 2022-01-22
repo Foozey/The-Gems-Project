@@ -1,10 +1,10 @@
 package com.foozey.gems.items.bows;
 
 import com.foozey.gems.items.ModTab;
-import net.minecraft.entity.projectile.AbstractArrowEntity;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class NetheriteBow extends BowItem {
 
@@ -22,7 +22,7 @@ public class NetheriteBow extends BowItem {
     }
 
     @Override
-    public AbstractArrowEntity customArrow(AbstractArrowEntity arrow) {
+    public AbstractArrow customArrow(AbstractArrow arrow) {
         arrow.setBaseDamage(arrow.getBaseDamage() * 1.4F);
         return arrow;
     }

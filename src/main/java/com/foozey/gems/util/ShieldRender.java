@@ -1,33 +1,43 @@
 package com.foozey.gems.util;
 
 import com.foozey.gems.init.ModItems;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.vertex.IVertexBuilder;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.renderer.ItemRenderer;
-import net.minecraft.client.renderer.entity.model.ShieldModel;
-import net.minecraft.client.renderer.model.ItemCameraTransforms;
-import net.minecraft.client.renderer.model.RenderMaterial;
-import net.minecraft.client.renderer.tileentity.BannerTileEntityRenderer;
-import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
-import net.minecraft.item.DyeColor;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShieldItem;
-import net.minecraft.tileentity.BannerPattern;
-import net.minecraft.tileentity.BannerTileEntity;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.model.ShieldModel;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.renderer.blockentity.BannerRenderer;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShieldItem;
+import net.minecraft.world.level.block.entity.BannerPattern;
+import net.minecraft.world.level.block.entity.BannerBlockEntity;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.List;
 
-public class ShieldRender extends ItemStackTileEntityRenderer {
+public class ShieldRender extends ProvideISTER {
 
-    private final ShieldModel modelShield = new ShieldModel();
+    public static final ShieldRender RENDERER = new ShieldRender();
+
+    private ShieldModel shieldModel;
 
     @Override
-    public void renderByItem(ItemStack stack, ItemCameraTransforms.TransformType transform, MatrixStack matrixStack, IRenderTypeBuffer buffer, int combinedLight, int combinedOverlay) {
+    public void onResourceManagerReload(@NonNull ResourceManager resourceManager) {
+        shieldModel = new ShieldModel(getEntityModels().bakeLayer(ModelLayers.SHIELD));
+    }
+
+    @Override
+    public void renderByItem(@NonNull ItemStack stack, ItemTransforms.@NonNull TransformType transformType, @NonNull PoseStack matrix, @NonNull MultiBufferSource renderer, int light, int overlayLight) {
         Item item = stack.getItem();
         ShieldTextures textures;
+
         if (item == ModItems.IRON_SHIELD.get()) {
             textures = ShieldTextures.IRON;
         } else if (item == ModItems.GOLDEN_SHIELD.get()) {
@@ -49,19 +59,20 @@ public class ShieldRender extends ItemStackTileEntityRenderer {
         } else {
             return;
         }
+
         boolean flag = stack.getTagElement("BlockEntityTag") != null;
-        matrixStack.pushPose();
-        matrixStack.scale(1.0F, -1.0F, -1.0F);
-        RenderMaterial material = textures.getBase();
-        IVertexBuilder ivertexbuilder = material.sprite().wrap(ItemRenderer.getFoilBufferDirect(buffer, this.modelShield.renderType(material.atlasLocation()), true, stack.hasFoil()));
-        this.modelShield.handle().render(matrixStack, ivertexbuilder, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+        Material material = textures.getBase();
+        matrix.pushPose();
+        matrix.scale(1.0F, -1.0F, -1.0F);
+        VertexConsumer buffer = material.sprite().wrap(ItemRenderer.getFoilBufferDirect(renderer, shieldModel.renderType(material.atlasLocation()), true, stack.hasFoil()));
         if (flag) {
-            List<Pair<BannerPattern, DyeColor>> list = BannerTileEntity.createPatterns(ShieldItem.getColor(stack), BannerTileEntity.getItemPatterns(stack));
-            BannerTileEntityRenderer.renderPatterns(matrixStack, buffer, combinedLight, combinedOverlay, this.modelShield.plate(), material, false, list, stack.hasFoil());
+            shieldModel.handle().render(matrix, buffer, light, overlayLight, 1, 1, 1, 1);
+            List<Pair<BannerPattern,DyeColor>> list = BannerBlockEntity.createPatterns(ShieldItem.getColor(stack), BannerBlockEntity.getItemPatterns(stack));
+            BannerRenderer.renderPatterns(matrix, renderer, light, overlayLight, shieldModel.plate(), material, false, list);
         } else {
-            this.modelShield.plate().render(matrixStack, ivertexbuilder, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F);
+            shieldModel.renderToBuffer(matrix, buffer, light, overlayLight, 1, 1, 1, 1);
         }
-        matrixStack.popPose();
+        matrix.popPose();
     }
 
 }

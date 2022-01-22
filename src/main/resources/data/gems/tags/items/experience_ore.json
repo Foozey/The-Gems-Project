@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "gems:experience_ore",
+    "gems:deepslate_experience_ore",
     "gems:nether_experience_ore",
     "gems:end_experience_ore"
   ]

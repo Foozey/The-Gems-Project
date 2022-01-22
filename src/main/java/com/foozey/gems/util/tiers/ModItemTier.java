@@ -1,13 +1,13 @@
 package com.foozey.gems.util.tiers;
 
 import com.foozey.gems.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModItemTier implements IItemTier {
+public enum ModItemTier implements Tier {
 
     // Topaz
     TOPAZ(4, 2031, 9.0F, 0.0F, 15, () ->

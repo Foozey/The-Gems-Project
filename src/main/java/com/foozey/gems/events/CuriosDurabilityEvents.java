@@ -2,9 +2,9 @@ package com.foozey.gems.events;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModItems;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,8 +20,8 @@ public class CuriosDurabilityEvents {
     // Golden Amulet
     @SubscribeEvent
     public static void onGoldenAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_AMULET.get(), event.getEntityLiving()).isPresent()) {
             ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_AMULET.get(), event.getEntityLiving()).get().right;
             necklace.hurtAndBreak(1, player, (player2) -> {
@@ -34,8 +34,8 @@ public class CuriosDurabilityEvents {
     // Gemspark Amulet
     @SubscribeEvent
     public static void onGemsparkAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_AMULET.get(), event.getEntityLiving()).isPresent()) {
             ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_AMULET.get(), event.getEntityLiving()).get().right;
             necklace.hurtAndBreak(1, player, (player2) -> {
@@ -48,8 +48,8 @@ public class CuriosDurabilityEvents {
     // Topaz Amulet
     @SubscribeEvent
     public static void onTopazAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.TOPAZ_AMULET.get(), event.getEntityLiving()).isPresent()) {
             ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.TOPAZ_AMULET.get(), event.getEntityLiving()).get().right;
             necklace.hurtAndBreak(1, player, (player2) -> {
@@ -62,8 +62,8 @@ public class CuriosDurabilityEvents {
     // Sapphire Amulet
     @SubscribeEvent
     public static void onSapphireAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.SAPPHIRE_AMULET.get(), event.getEntityLiving()).isPresent()) {
             ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.SAPPHIRE_AMULET.get(), event.getEntityLiving()).get().right;
             necklace.hurtAndBreak(1, player, (player2) -> {
@@ -76,8 +76,8 @@ public class CuriosDurabilityEvents {
     // Ruby Amulet
     @SubscribeEvent
     public static void onRubyAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.RUBY_AMULET.get(), event.getEntityLiving()).isPresent()) {
             ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.RUBY_AMULET.get(), event.getEntityLiving()).get().right;
             necklace.hurtAndBreak(1, player, (player2) -> {
@@ -90,8 +90,8 @@ public class CuriosDurabilityEvents {
     // Golden Ring
     @SubscribeEvent
     public static void onGoldenRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
@@ -104,8 +104,8 @@ public class CuriosDurabilityEvents {
     // Gemspark Ring
     @SubscribeEvent
     public static void onGemsparkRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
@@ -118,8 +118,8 @@ public class CuriosDurabilityEvents {
     // Topaz Ring
     @SubscribeEvent
     public static void onTopazRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.TOPAZ_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.TOPAZ_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
@@ -132,8 +132,8 @@ public class CuriosDurabilityEvents {
     // Sapphire Ring
     @SubscribeEvent
     public static void onSapphireRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.SAPPHIRE_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.SAPPHIRE_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
@@ -146,8 +146,8 @@ public class CuriosDurabilityEvents {
     // Ruby Ring
     @SubscribeEvent
     public static void onRubyRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof PlayerEntity)) return;
-        PlayerEntity player = (PlayerEntity) event.getEntityLiving();
+        if(!(event.getEntityLiving() instanceof Player)) return;
+        Player player = (Player) event.getEntityLiving();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.RUBY_RING.get(), event.getEntityLiving()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.RUBY_RING.get(), event.getEntityLiving()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {

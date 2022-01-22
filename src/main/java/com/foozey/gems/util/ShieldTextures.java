@@ -1,9 +1,9 @@
 package com.foozey.gems.util;
 
 import com.foozey.gems.Gems;
-import net.minecraft.client.renderer.model.RenderMaterial;
-import net.minecraft.client.renderer.texture.AtlasTexture;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.resources.ResourceLocation;
 
 public enum ShieldTextures {
 
@@ -17,18 +17,18 @@ public enum ShieldTextures {
     INFUSED_ONYX("infused_onyx"),
     EMERALD("emerald");
 
-    private final RenderMaterial base;
+    private final Material base;
 
     ShieldTextures(String name) {
         base = material("entity/" + name + "_shield");
     }
 
-    public RenderMaterial getBase() {
+    public Material getBase() {
         return base;
     }
 
-    private static RenderMaterial material(String path) {
-        return new RenderMaterial(AtlasTexture.LOCATION_BLOCKS, new ResourceLocation(Gems.MOD_ID, path));
+    private static Material material(String path) {
+        return new Material(TextureAtlas.LOCATION_BLOCKS, new ResourceLocation(Gems.MOD_ID, path));
     }
 
 }
