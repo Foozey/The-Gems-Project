@@ -1,9 +1,11 @@
 package com.foozey.gems.events;
 
 import com.foozey.gems.Gems;
+import com.foozey.gems.util.ShieldRender;
 import com.foozey.gems.util.ShieldTextures;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -11,6 +13,12 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Gems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 
 public class ClientEventsMod {
+
+    // Shield Render
+    @SubscribeEvent
+    public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
+        event.registerReloadListener(ShieldRender.RENDERER);
+    }
 
     // Shield Textures
     @SubscribeEvent

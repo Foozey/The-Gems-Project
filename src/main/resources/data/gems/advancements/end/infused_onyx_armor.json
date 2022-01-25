@@ -25,16 +25,24 @@
       "conditions": {
         "items": [
           {
-            "item": "gems:infused_onyx_helmet"
+            "items": [
+              "gems:infused_onyx_helmet"
+            ]
           },
           {
-            "item": "gems:infused_onyx_chestplate"
+            "items": [
+              "gems:infused_onyx_chestplate"
+            ]
           },
           {
-            "item": "gems:infused_onyx_leggings"
+            "items": [
+              "gems:infused_onyx_leggings"
+            ]
           },
           {
-            "item": "gems:infused_onyx_boots"
+            "items": [
+              "gems:infused_onyx_boots"
+            ]
           }
         ]
       }

@@ -1,77 +1,30 @@
 package com.foozey.gems.util.tiers;
 
 import com.foozey.gems.init.ModItems;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.TierSortingRegistry;
+import java.util.List;
 
-import java.util.function.Supplier;
+public class ModItemTier {
 
-public enum ModItemTier implements Tier {
+    public static final Tag.Named<Block> NEEDS_TOPAZ_TOOL = BlockTags.createOptional(new ResourceLocation("tag_based_tool_types:needs_topaz_tool"));
+    public static final Tag.Named<Block> NEEDS_SAPPHIRE_TOOL = BlockTags.createOptional(new ResourceLocation("tag_based_tool_types:needs_sapphire_tool"));
+    public static final Tag.Named<Block> NEEDS_RUBY_TOOL = BlockTags.createOptional(new ResourceLocation("tag_based_tool_types:needs_ruby_tool"));
+    public static final Tag.Named<Block> NEEDS_INFUSED_ONYX_TOOL = BlockTags.createOptional(new ResourceLocation("tag_based_tool_types:needs_infused_onyx_tool"));
+    public static final Tag.Named<Block> NEEDS_EMERALD_TOOL = BlockTags.createOptional(new ResourceLocation("tag_based_tool_types:needs_emerald_tool"));
 
-    // Topaz
-    TOPAZ(4, 2031, 9.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.TOPAZ.get())),
+    public static final Tier TOPAZ = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_TOPAZ_TOOL, () -> Ingredient.of(ModItems.TOPAZ.get())), new ResourceLocation("tag_based_tool_types:topaz"), List.of(Tiers.NETHERITE), List.of());
+    public static final Tier SAPPHIRE = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_SAPPHIRE_TOOL, () -> Ingredient.of(ModItems.SAPPHIRE.get())), new ResourceLocation("tag_based_tool_types:sapphire"), List.of(Tiers.NETHERITE), List.of());
+    public static final Tier RUBY = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_RUBY_TOOL, () -> Ingredient.of(ModItems.RUBY.get())), new ResourceLocation("tag_based_tool_types:ruby"), List.of(Tiers.NETHERITE), List.of());
+    public static final Tier INFUSED_ONYX = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_INFUSED_ONYX_TOOL, () -> Ingredient.of(ModItems.INFUSED_ONYX_INGOT.get())), new ResourceLocation("tag_based_tool_types:infused_onyx"), List.of(Tiers.NETHERITE), List.of());
+    public static final Tier EMERALD = TierSortingRegistry.registerTier(new ForgeTier(2, 250, 6.0F, 0.0F, 30, NEEDS_EMERALD_TOOL, () -> Ingredient.of(Items.EMERALD.asItem())), new ResourceLocation("tag_based_tool_types:emerald"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 
-    // Sapphire
-    SAPPHIRE(4, 2031, 9.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.SAPPHIRE.get())),
-
-    // Ruby
-    RUBY(4, 2031, 9.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.RUBY.get())),
-
-    // Infused Onyx
-    INFUSED_ONYX(5, 2031, 9.0F, 0.0F, 15, () ->
-            Ingredient.of(ModItems.INFUSED_ONYX_INGOT.get())),
-
-    // Emerald
-    EMERALD(2, 250, 6.0F, 0.0F, 30, () ->
-            Ingredient.of(Items.EMERALD.asItem()));
-
-    private final int harvestLevel;
-    private final int maxUses;
-    private final float efficiency;
-    private final float attackDamage;
-    private final int enchantability;
-    private final Ingredient repairIngredient;
-
-    ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient>repairIngredient) {
-        this.harvestLevel = harvestLevel;
-        this.maxUses = maxUses;
-        this.efficiency = efficiency;
-        this.attackDamage = attackDamage;
-        this.enchantability = enchantability;
-        this.repairIngredient = repairIngredient.get();
-    }
-
-    @Override
-    public int getLevel() {
-        return this.harvestLevel;
-    }
-
-    @Override
-    public int getUses() {
-        return this.maxUses;
-    }
-
-    @Override
-    public float getSpeed() {
-        return this.efficiency;
-    }
-
-    @Override
-    public float getAttackDamageBonus() {
-        return this.attackDamage;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return this.enchantability;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredient;
-    }
 }

@@ -25,16 +25,24 @@
       "conditions": {
         "items": [
           {
-            "item": "gems:emerald_helmet"
+            "items": [
+              "gems:emerald_helmet"
+            ]
           },
           {
-            "item": "gems:emerald_chestplate"
+            "items": [
+              "gems:emerald_chestplate"
+            ]
           },
           {
-            "item": "gems:emerald_leggings"
+            "items": [
+              "gems:emerald_leggings"
+            ]
           },
           {
-            "item": "gems:emerald_boots"
+            "items": [
+              "gems:emerald_boots"
+            ]
           }
         ]
       }

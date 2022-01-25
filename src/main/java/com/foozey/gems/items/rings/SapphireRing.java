@@ -3,6 +3,7 @@ package com.foozey.gems.items.rings;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -19,7 +20,10 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import top.theillusivec4.curios.api.CuriosCapability;
+import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurio;
+
+import javax.annotation.Nonnull;
 import java.util.UUID;
 
 public class SapphireRing extends Item {
@@ -36,8 +40,6 @@ public class SapphireRing extends Item {
         return repairWith.getItem() == ModItems.SAPPHIRE.get() || super.isValidRepairItem(toRepair, repairWith);
     }
 
-    public static final UUID RING_ATTACK_SPEED_UUID = UUID.fromString("d09ee3d0-dbd2-11ea-87d0-0242ac130003");
-
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
         return new ICapabilityProvider() {
@@ -49,21 +51,22 @@ public class SapphireRing extends Item {
 
                 // Right Click Equip
                 @Override
-                public boolean canRightClickEquip() {
+                public boolean canEquipFromUse(SlotContext slot) {
                     return true;
                 }
 
                 // Right Click Equip Sound
+                @Nonnull
                 @Override
-                public void playRightClickEquipSound(LivingEntity livingEntity) {
-                    livingEntity.level.playSound(null, new BlockPos(livingEntity.position()), SoundEvents.ARMOR_EQUIP_GOLD, SoundSource.NEUTRAL, 1.0f, 1.0f);
+                public SoundInfo getEquipSound(SlotContext slotContext) {
+                    return new SoundInfo(SoundEvents.ARMOR_EQUIP_GOLD, 1.0f, 1.0f);
                 }
 
                 // Wearing Event
                 @Override
-                public Multimap<Attribute, AttributeModifier> getAttributeModifiers(String identifier) {
-                    Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
-                    modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(RING_ATTACK_SPEED_UUID, "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
+                public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid) {
+                    Multimap<Attribute, AttributeModifier> modifiers = LinkedHashMultimap.create();
+                    modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(uuid, "Attack Speed", 0.50, AttributeModifier.Operation.ADDITION));
                     return modifiers;
                 }
 

@@ -3,11 +3,15 @@
   "values": [
     "gems:topaz_block",
     "gems:topaz_ore",
+    "gems:deepslate_topaz_ore",
     "gems:sapphire_block",
     "gems:sapphire_ore",
+    "gems:deepslate_sapphire_ore",
     "gems:ruby_block",
     "gems:ruby_ore",
+    "gems:deepslate_ruby_ore",
     "gems:gemspark_block",
-    "gems:gemspark_ore"
+    "gems:gemspark_ore",
+    "gems:deepslate_gemspark_ore"
   ]
 }
