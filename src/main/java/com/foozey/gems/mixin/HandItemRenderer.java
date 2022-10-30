@@ -46,15 +46,15 @@ public class HandItemRenderer {
 
       // Check if the item is any of the custom crossbows
       if (
-        pStack.is(ModItems.DIAMOND_CROSSBOW.get())
-          || pStack.is(ModItems.EMERALD_CROSSBOW.get())
+        pStack.is(ModItems.IRON_CROSSBOW.get())
           || pStack.is(ModItems.GOLDEN_CROSSBOW.get())
-          || pStack.is(ModItems.INFUSED_ONYX_CROSSBOW.get())
-          || pStack.is(ModItems.IRON_CROSSBOW.get())
+          || pStack.is(ModItems.DIAMOND_CROSSBOW.get())
           || pStack.is(ModItems.NETHERITE_CROSSBOW.get())
-          || pStack.is(ModItems.RUBY_CROSSBOW.get())
-          || pStack.is(ModItems.SAPPHIRE_CROSSBOW.get())
           || pStack.is(ModItems.TOPAZ_CROSSBOW.get())
+          || pStack.is(ModItems.SAPPHIRE_CROSSBOW.get())
+          || pStack.is(ModItems.RUBY_CROSSBOW.get())
+          || pStack.is(ModItems.INFUSED_ONYX_CROSSBOW.get())
+          || pStack.is(ModItems.EMERALD_CROSSBOW.get())
       ) {
         boolean flag1 = CrossbowItem.isCharged(pStack);
         boolean flag2 = humanoidarm == HumanoidArm.RIGHT;
