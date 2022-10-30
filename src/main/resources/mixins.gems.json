@@ -1,0 +1,8 @@
+{
+    "compatibilityLevel": "JAVA_8",
+    "package": "com.foozey.gems.mixin",
+    "refmap": "",
+    "mixins": [],
+    "client": ["HandItemRenderer"],
+    "server": []
+}
