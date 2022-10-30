@@ -1,23 +1,19 @@
 package com.foozey.gems.mixin;
 
 import com.foozey.gems.init.ModItems;
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CrossbowItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -70,7 +66,7 @@ public class HandItemRenderer {
           pMatrixStack.mulPose(Vector3f.YP.rotationDegrees((float)i * 65.3F));
           pMatrixStack.mulPose(Vector3f.ZP.rotationDegrees((float)i * -9.785F));
           float f9 = (float)pStack.getUseDuration() - ((float)this.minecraft.player.getUseItemRemainingTicks() - pPartialTicks + 1.0F);
-          float f13 = f9 / (float)CrossbowItem.getChargeDuration(pStack);
+          float f13 = f9 / (float) CrossbowItem.getChargeDuration(pStack);
           if (f13 > 1.0F) {
             f13 = 1.0F;
           }
@@ -111,7 +107,6 @@ public class HandItemRenderer {
   @Shadow
   private void applyItemArmAttackTransform(PoseStack matrices, HumanoidArm arm, float swingProgress) {
   }
-
 
   public void renderItem(LivingEntity pLivingEntity, ItemStack pItemStack, ItemTransforms.TransformType pTransformType, boolean pLeftHand, PoseStack pMatrixStack, MultiBufferSource pBuffer, int pCombinedLight) {
     if (!pItemStack.isEmpty()) {
