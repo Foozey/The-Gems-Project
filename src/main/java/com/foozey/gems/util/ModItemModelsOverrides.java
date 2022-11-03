@@ -1,10 +1,10 @@
 package com.foozey.gems.util;
 
 import com.foozey.gems.init.ModItems;
-import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.world.item.Items;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CrossbowItem;
+import net.minecraft.world.item.Items;
 
 public class ModItemModelsOverrides {
 

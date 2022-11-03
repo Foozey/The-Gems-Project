@@ -1,8 +1,8 @@
 package com.foozey.gems.util;
 
 import com.foozey.gems.Gems;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
 
 public enum ShieldTextures {
