@@ -2,9 +2,9 @@ package com.foozey.gems.init;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.world.ore.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +13,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
 
+    // Registers
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Gems.MOD_ID);
+
+
+
+    // Blocks
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Topaz Block
     public static final RegistryObject<Block> TOPAZ_BLOCK = BLOCKS.register("topaz_block", () ->

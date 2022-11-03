@@ -5,6 +5,7 @@ import net.minecraft.world.item.Item;
 
 public class ModItemBase extends Item {
 
+    // Add to creative tab
     public ModItemBase() {
         super(new Item.Properties().tab(ModTab.TAB_GEMS));
     }

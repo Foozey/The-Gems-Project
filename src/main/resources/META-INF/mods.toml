@@ -1,8 +1,8 @@
 modLoader="javafml"
 
-loaderVersion="[39,)"
+loaderVersion="[43,)"
 
-license="GNU GPLv3"
+license="LGPL-3.0-or-later"
 
 issueTrackerURL="https://github.com/foozey/The-Gems-Project/issues"
 
@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/foozey/The-Gems-Project/issues"
 
 modId="gems"
 
-version="1.18.1-2.0.0"
+version="1.19.2-3.0.0"
 
 displayName="The Gems Project"
 
@@ -29,20 +29,20 @@ A mod that focuses on adding more progression to Minecraft.
 [[dependencies.gems]]
     modId="forge"
     mandatory=true
-    versionRange="[39,)"
+    versionRange="[43,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.gems]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,)"
+    versionRange="[1.19,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.gems]]
 	modId="curios"
     mandatory=true
-    versionRange="[1.18.1-5.0.2.1,)"
+    versionRange="[1.19.2-5.1.1.0,)"
     ordering="NONE"
     side="BOTH"

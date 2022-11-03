@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 
 public class CommonEventsMod {
 
+    // Attributes
     @SubscribeEvent
     public static void modifyAttributes(EntityAttributeModificationEvent event) {
         for (EntityType<? extends LivingEntity> type : event.getTypes()) event.add(type, ModAttributes.BONUS_XP.get());

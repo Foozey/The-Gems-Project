@@ -5,6 +5,7 @@ import net.minecraft.world.item.ShieldItem;
 
 public class WoodenShield extends ShieldItem {
 
+    // Properties (stack size, durability, creative tab)
     public WoodenShield(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -12,6 +13,7 @@ public class WoodenShield extends ShieldItem {
                 .tab(CreativeModeTab.TAB_COMBAT));
     }
 
+    // Enchantability
     @Override
     public int getEnchantmentValue() {
         return 15;

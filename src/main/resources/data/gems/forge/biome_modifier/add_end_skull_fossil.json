@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_end",
+  "features":"gems:end_skull_fossil_placed",
+  "step": "underground_ores"
+}

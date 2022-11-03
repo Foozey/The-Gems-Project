@@ -4,50 +4,48 @@ import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.util.PlayerSpawnTeleport;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.LiquidBlock;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.level.Level;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingExperienceDropEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.fml.common.Mod;
+
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.context.UseOnContext;
 
 @Mod.EventBusSubscriber(modid = Gems.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 
 public class CommonEventsForge {
 
-    // Infused Onyx Armor Bonus
+    // Infused Onyx void teleport
     @SubscribeEvent
     public static void infusedOnyxArmorBonus(LivingDamageEvent event) {
-        if(!(event.getEntityLiving() instanceof Player)) return;
-        Player player = (Player) event.getEntityLiving();
+        if(!(event.getEntity() instanceof Player)) return;
+        Player player = (Player) event.getEntity();
         if(player.level.isClientSide) return;
         Level world = event.getEntity().level;
         if(event.getSource() == DamageSource.OUT_OF_WORLD &&
@@ -60,11 +58,11 @@ public class CommonEventsForge {
         }
     }
 
-    // Emerald Armor Bonus
+    // Emerald armour villager discount
     @SubscribeEvent
-    public static void emeraldArmorBonus(LivingEvent.LivingUpdateEvent event) {
-        if(!(event.getEntityLiving() instanceof Player)) return;
-        Player player = (Player) event.getEntityLiving();
+    public static void emeraldArmorBonus(LivingEvent.LivingTickEvent event) {
+        if(!(event.getEntity() instanceof Player)) return;
+        Player player = (Player) event.getEntity();
         if(player.level.isClientSide) return;
         if(player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.EMERALD_HELMET.get() &&
                 player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.EMERALD_CHESTPLATE.get() &&
@@ -74,7 +72,7 @@ public class CommonEventsForge {
         }
     }
 
-    // Mining Bonus XP
+    // Bonus XP (mining)
     @SubscribeEvent
     public static void miningBonusXP(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
@@ -83,7 +81,7 @@ public class CommonEventsForge {
         }
     }
 
-    // Mob Bonus XP
+    // Bonus XP (mobs)
     @SubscribeEvent
     public static void mobBonusXP(LivingExperienceDropEvent event) {
         if (event.getAttackingPlayer() == null) {
@@ -95,7 +93,7 @@ public class CommonEventsForge {
         }
     }
 
-    // Mob Lifesteal
+    // Lifesteal
     @SubscribeEvent
     public static void mobLifestealEvent(LivingDeathEvent event) {
         if(event.getSource().getEntity() instanceof Player) {
@@ -212,7 +210,7 @@ public class CommonEventsForge {
                                             if(blockToBreak.canHarvestBlock(world,pos,player)) {
                                                 blockToBreak.getBlock().playerDestroy(world, player, workQueue.get(i), blockToBreak, null, player.getMainHandItem());
                                                 blockToBreak.getBlock().playerWillDestroy(world, workQueue.get(i), blockToBreak, player);
-                                                int expDrop = blockToBreak.getBlock().getExpDrop(blockToBreak,world,workQueue.get(i),
+                                                int expDrop = blockToBreak.getBlock().getExpDrop(blockToBreak,world, RandomSource.create(),workQueue.get(i),
                                                         (EnchantmentHelper.getEnchantments(player.getMainHandItem()).containsKey(Enchantments.BLOCK_FORTUNE))?(EnchantmentHelper.getEnchantmentLevel(Enchantments.BLOCK_FORTUNE,player)):(0),
                                                         (EnchantmentHelper.getEnchantments(player.getMainHandItem()).containsKey(Enchantments.SILK_TOUCH))?(EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH,player)):(0));
                                                 if(expDrop>0)blockToBreak.getBlock().popExperience((ServerLevel)world,player.blockPosition().offset(0,1,0),expDrop);

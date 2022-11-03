@@ -3,14 +3,15 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
 import java.util.UUID;
 
 public class SapphireArmor extends ArmorItem {
@@ -19,6 +20,7 @@ public class SapphireArmor extends ArmorItem {
         super(materialIn, slot, builderIn);
     }
 
+    // UUIDs
     public static final UUID[] ARMOR_ATTACK_SPEED_UUIDS = new UUID[] {
             UUID.fromString("3f53e3b3-8a99-4956-b88a-bb76d15ed0d7"),
             UUID.fromString("52c0538f-7968-4221-8bee-d1b8540c0c8e"),
@@ -26,6 +28,7 @@ public class SapphireArmor extends ArmorItem {
             UUID.fromString("d263e3b7-1934-4938-8019-cfa281a8b5ee")
     };
 
+    // Attributes
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);

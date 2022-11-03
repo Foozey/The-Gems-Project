@@ -4,18 +4,14 @@ import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModBlocks;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.util.ModItemModelsOverrides;
-import com.foozey.gems.world.gen.OreGenHandler;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import com.foozey.gems.world.feature.ModConfiguredFeatures;
+import com.foozey.gems.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,51 +27,42 @@ public class Gems {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Listeners
-        bus.addListener(this::setup);
         bus.addListener(this::doClientStuff);
         bus.addListener(this::enqueueIMC);
-        bus.addListener(this::processIMC);
 
         // Registries
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModItems.REPLACE.register(bus);
         ModAttributes.ATTRIBUTES.register(bus);
+        ModConfiguredFeatures.CONFIGURED_FEATURES.register(bus);
+        ModPlacedFeatures.PLACED_FEATURES.register(bus);
 
-        // Generate Ore
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGenHandler::generateOre);
-
+        // Events
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        OreGenHandler.registerConfiguredFeatures();
-    }
-
+    // Item models overrides
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(Gems::addAllItemModelsOverrides);
     }
 
-    // Curios Slots
-    private void enqueueIMC(final InterModEnqueueEvent event) {
-
-        // Necklace Slot
-        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
-                new SlotTypeMessage.Builder("necklace").size(1).priority(1).build());
-
-        // Ring Slot
-        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
-                new SlotTypeMessage.Builder("ring").size(2).priority(2).build());
-    }
-
-    private void processIMC(final InterModProcessEvent event) { }
-
-    // Item Models Overrides
-    @OnlyIn(Dist.CLIENT)
     private static void addAllItemModelsOverrides() {
         ModItemModelsOverrides.BowItemModelsOverrides();
         ModItemModelsOverrides.CrossbowItemModelsOverrides();
         ModItemModelsOverrides.ShieldItemModelsOverrides();
+    }
+
+    // Curios slots (size = slot amount, priority = slot position)
+    private void enqueueIMC(final InterModEnqueueEvent event) {
+
+        // Necklace slot
+        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
+                new SlotTypeMessage.Builder("necklace").size(1).priority(1).build());
+
+        // Ring slot
+        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
+                new SlotTypeMessage.Builder("ring").size(1).priority(2).build());
     }
 
 }

@@ -2,12 +2,12 @@ package com.foozey.gems.util.tiers;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.init.ModItems;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 
 import java.util.function.Supplier;
 
@@ -36,7 +36,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
     private static final int[] durabilityBase = new int[] { 13, 15, 16, 11 };
     private final String name;
     private final int durabilityMultiplier; // Equation: durabilityBase * durabilityMultiplier = Durability
-    private final int[] armorVal; // damageReductionAmount int Order: Boots, Leggings, Chestplate, Helmet
+    private final int[] armorVal; // Order: Boots, Leggings, Chestplate, Helmet
     private final int enchantability;
     private final SoundEvent equipSound;
     private final float toughness;
@@ -93,4 +93,5 @@ public enum ModArmorMaterial implements ArmorMaterial {
     public Ingredient getRepairIngredient() {
         return this.repairIngredient;
     }
+
 }

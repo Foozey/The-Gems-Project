@@ -7,7 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -19,7 +19,7 @@ public class CrossbowDamageEvents {
 
     // Wooden Crossbow
     @SubscribeEvent
-    public static void WoodenCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void WoodenCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -35,7 +35,7 @@ public class CrossbowDamageEvents {
 
     // Iron Crossbow
     @SubscribeEvent
-    public static void IronCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void IronCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -51,7 +51,7 @@ public class CrossbowDamageEvents {
 
     // Golden Crossbow
     @SubscribeEvent
-    public static void GoldenCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void GoldenCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -67,7 +67,7 @@ public class CrossbowDamageEvents {
 
     // Diamond Crossbow
     @SubscribeEvent
-    public static void DiamondCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void DiamondCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -83,7 +83,7 @@ public class CrossbowDamageEvents {
 
     // Netherite Crossbow
     @SubscribeEvent
-    public static void NetheriteCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void NetheriteCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -99,7 +99,7 @@ public class CrossbowDamageEvents {
 
     // Topaz Crossbow
     @SubscribeEvent
-    public static void TopazCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void TopazCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -115,7 +115,7 @@ public class CrossbowDamageEvents {
 
     // Sapphire Crossbow
     @SubscribeEvent
-    public static void SapphireCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void SapphireCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -131,7 +131,7 @@ public class CrossbowDamageEvents {
 
     // Ruby Crossbow
     @SubscribeEvent
-    public static void RubyCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void RubyCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -147,7 +147,7 @@ public class CrossbowDamageEvents {
 
     // Infused Onyx Crossbow
     @SubscribeEvent
-    public static void InfusedOnyxCrossbowEntity(EntityJoinWorldEvent event) {
+    public static void InfusedOnyxCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
@@ -156,6 +156,22 @@ public class CrossbowDamageEvents {
                 LivingEntity livingShooter = (LivingEntity) shooter;
                 if (livingShooter.getMainHandItem().getItem() == ModItems.INFUSED_ONYX_CROSSBOW.get()) {
                     arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
+                }
+            }
+        }
+    }
+
+    // Emerald Crossbow
+    @SubscribeEvent
+    public static void EmeraldCrossbowEntity(EntityJoinLevelEvent event) {
+        Entity entity = event.getEntity();
+        if (entity instanceof AbstractArrow) {
+            AbstractArrow arrow = (AbstractArrow) entity;
+            Entity shooter = arrow.getOwner();
+            if (shooter instanceof LivingEntity) {
+                LivingEntity livingShooter = (LivingEntity) shooter;
+                if (livingShooter.getMainHandItem().getItem() == ModItems.EMERALD_CROSSBOW.get()) {
+                    arrow.setBaseDamage(arrow.getBaseDamage() * 1.5F);
                 }
             }
         }

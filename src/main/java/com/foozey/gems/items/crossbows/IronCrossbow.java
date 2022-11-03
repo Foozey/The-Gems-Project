@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 
 public class IronCrossbow extends CrossbowItem {
 
+    // Properties (stack size, durability, creative tab)
     public IronCrossbow(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -14,19 +15,22 @@ public class IronCrossbow extends CrossbowItem {
                 .tab(ModTab.TAB_GEMS));
     }
 
+    // Repair item
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
         return repairWith.getItem() == Items.IRON_INGOT.asItem() || super.isValidRepairItem(toRepair, repairWith);
     }
 
-    @Override
-    public boolean useOnRelease(ItemStack stack) {
-        return true;
-    }
-
+    // Enchantability
     @Override
     public int getEnchantmentValue() {
         return 14;
+    }
+
+    // Item is crossbow
+    @Override
+    public boolean useOnRelease(ItemStack stack) {
+        return true;
     }
 
 }

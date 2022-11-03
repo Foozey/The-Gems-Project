@@ -3,14 +3,15 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
 import java.util.UUID;
 
 public class RubyArmor extends ArmorItem {
@@ -19,6 +20,7 @@ public class RubyArmor extends ArmorItem {
         super(materialIn, slot, builderIn);
     }
 
+    // UUIDs
     public static final UUID[] ARMOR_ATTACK_DAMAGE_UUIDS = new UUID[] {
             UUID.fromString("19157d84-8cf3-41f0-bc9a-8486eef653b8"),
             UUID.fromString("7210c8a6-844b-4ae5-adb7-6a6f4bce07c6"),
@@ -26,6 +28,7 @@ public class RubyArmor extends ArmorItem {
             UUID.fromString("438ab357-364f-45fb-a06c-4f927b614504")
     };
 
+    // Attributes
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);

@@ -2,17 +2,16 @@ package com.foozey.gems.world.ore;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
-import java.util.Random;
+public class DeepslateGemsparkOre extends DropExperienceBlock {
 
-public class DeepslateGemsparkOre extends OreBlock {
-
-    // Block Properties
+    // Properties (material, hardness, sound, tool)
     public DeepslateGemsparkOre() {
         super(Properties
                 .of(Material.STONE)
@@ -21,10 +20,10 @@ public class DeepslateGemsparkOre extends OreBlock {
                 .requiresCorrectToolForDrops());
     }
 
-    // Experience Drop
+    // XP drop
     @Override
-    public int getExpDrop(BlockState state, LevelReader reader, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? Mth.nextInt(new Random(), 2, 5) : 0;
+    public int getExpDrop(BlockState state, LevelReader reader, RandomSource randomSource, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? Mth.nextInt(RandomSource.create(), 2, 5) : 0;
     }
 
 }

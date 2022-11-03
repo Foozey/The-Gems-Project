@@ -4,20 +4,21 @@ import com.foozey.gems.init.ModItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.datafixers.util.Pair;
+import net.minecraft.client.model.ShieldModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.entity.ItemRenderer;
-import net.minecraft.client.model.ShieldModel;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.client.renderer.blockentity.BannerRenderer;
+import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.core.Holder;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
-import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.level.block.entity.BannerBlockEntity;
+import net.minecraft.world.level.block.entity.BannerPattern;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.List;
@@ -37,7 +38,6 @@ public class ShieldRender extends ProvideISTER {
     public void renderByItem(@NonNull ItemStack stack, ItemTransforms.@NonNull TransformType transformType, @NonNull PoseStack matrix, @NonNull MultiBufferSource renderer, int light, int overlayLight) {
         Item item = stack.getItem();
         ShieldTextures textures;
-
         if (item == ModItems.IRON_SHIELD.get()) {
             textures = ShieldTextures.IRON;
         } else if (item == ModItems.GOLDEN_SHIELD.get()) {
@@ -59,7 +59,6 @@ public class ShieldRender extends ProvideISTER {
         } else {
             return;
         }
-
         boolean flag = stack.getTagElement("BlockEntityTag") != null;
         Material material = textures.getBase();
         matrix.pushPose();
@@ -67,7 +66,7 @@ public class ShieldRender extends ProvideISTER {
         VertexConsumer buffer = material.sprite().wrap(ItemRenderer.getFoilBufferDirect(renderer, shieldModel.renderType(material.atlasLocation()), true, stack.hasFoil()));
         if (flag) {
             shieldModel.handle().render(matrix, buffer, light, overlayLight, 1, 1, 1, 1);
-            List<Pair<BannerPattern,DyeColor>> list = BannerBlockEntity.createPatterns(ShieldItem.getColor(stack), BannerBlockEntity.getItemPatterns(stack));
+            List<Pair<Holder<BannerPattern>, DyeColor>> list = BannerBlockEntity.createPatterns(ShieldItem.getColor(stack), BannerBlockEntity.getItemPatterns(stack));
             BannerRenderer.renderPatterns(matrix, renderer, light, overlayLight, shieldModel.plate(), material, false, list);
         } else {
             shieldModel.renderToBuffer(matrix, buffer, light, overlayLight, 1, 1, 1, 1);

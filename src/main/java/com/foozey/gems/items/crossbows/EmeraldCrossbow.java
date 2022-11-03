@@ -5,17 +5,19 @@ import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+
 import java.util.UUID;
 
 public class EmeraldCrossbow extends CrossbowItem {
 
+    // Properties (stack size, durability, creative tab)
     public EmeraldCrossbow(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -23,23 +25,28 @@ public class EmeraldCrossbow extends CrossbowItem {
                 .tab(ModTab.TAB_GEMS));
     }
 
+    // Repair item
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
         return repairWith.getItem() == Items.EMERALD.asItem() || super.isValidRepairItem(toRepair, repairWith);
     }
 
-    @Override
-    public boolean useOnRelease(ItemStack stack) {
-        return true;
-    }
-
+    // Enchantability
     @Override
     public int getEnchantmentValue() {
         return 30;
     }
 
+    // Item is crossbow
+    @Override
+    public boolean useOnRelease(ItemStack stack) {
+        return true;
+    }
+
+    // UUIDs
     public static final UUID CROSSBOW_BONUS_XP_UUID = UUID.fromString("84978c14-19c8-468b-b029-7f65a50e3b85");
 
+    // Attributes
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
@@ -51,6 +58,5 @@ public class EmeraldCrossbow extends CrossbowItem {
         }
         return builder.build();
     }
-
 
 }

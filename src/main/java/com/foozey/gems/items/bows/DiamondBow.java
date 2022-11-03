@@ -8,6 +8,7 @@ import net.minecraft.world.item.Items;
 
 public class DiamondBow extends BowItem {
 
+    // Properties (stack size, durability, creative tab)
     public DiamondBow(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -15,20 +16,23 @@ public class DiamondBow extends BowItem {
                 .tab(ModTab.TAB_GEMS));
     }
 
+    // Repair item
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
         return repairWith.getItem() == Items.DIAMOND.asItem() || super.isValidRepairItem(toRepair, repairWith);
     }
 
+    // Enchantability
+    @Override
+    public int getEnchantmentValue() {
+        return 10;
+    }
+
+    // Arrow damage
     @Override
     public AbstractArrow customArrow(AbstractArrow arrow) {
         arrow.setBaseDamage(arrow.getBaseDamage() * 1.2F);
         return arrow;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return 10;
     }
 
 }

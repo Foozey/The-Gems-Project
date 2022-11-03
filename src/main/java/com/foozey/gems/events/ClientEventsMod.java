@@ -14,13 +14,13 @@ import net.minecraftforge.fml.common.Mod;
 
 public class ClientEventsMod {
 
-    // Shield Render
+    // Shield render
     @SubscribeEvent
     public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event) {
         event.registerReloadListener(ShieldRender.RENDERER);
     }
 
-    // Shield Textures
+    // Shield textures
     @SubscribeEvent
     public static void shieldStitch(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location().equals(TextureAtlas.LOCATION_BLOCKS)) {

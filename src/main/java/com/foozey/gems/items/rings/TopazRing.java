@@ -2,20 +2,16 @@ package com.foozey.gems.items.rings;
 
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.BlockPos;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
@@ -28,6 +24,7 @@ import java.util.UUID;
 
 public class TopazRing extends Item {
 
+    // Properties (stack size, durability, creative tab)
     public TopazRing(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -35,6 +32,7 @@ public class TopazRing extends Item {
                 .tab(ModTab.TAB_GEMS));
     }
 
+    // Repair item
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
         return repairWith.getItem() == ModItems.TOPAZ.get() || super.isValidRepairItem(toRepair, repairWith);
@@ -44,25 +42,24 @@ public class TopazRing extends Item {
     public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
         return new ICapabilityProvider() {
             private final LazyOptional<ICurio> lazyCurio = LazyOptional.of(() -> new ICurio() {
-
                 public ItemStack getStack() {
                     return stack;
                 }
 
-                // Right Click Equip
+                // Right click equip
                 @Override
                 public boolean canEquipFromUse(SlotContext slot) {
                     return true;
                 }
 
-                // Right Click Equip Sound
+                // Equip sound
                 @Nonnull
                 @Override
                 public SoundInfo getEquipSound(SlotContext slotContext) {
                     return new SoundInfo(SoundEvents.ARMOR_EQUIP_GOLD, 1.0f, 1.0f);
                 }
 
-                // Wearing Event
+                // Attributes
                 @Override
                 public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext, UUID uuid) {
                     Multimap<Attribute, AttributeModifier> modifiers = LinkedHashMultimap.create();

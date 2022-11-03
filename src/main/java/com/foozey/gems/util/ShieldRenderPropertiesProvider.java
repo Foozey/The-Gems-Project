@@ -1,10 +1,10 @@
 package com.foozey.gems.util;
 
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 
 public class ShieldRenderPropertiesProvider {
 
-    public static IItemRenderProperties shield() {
+    public static IClientItemExtensions shield() {
         return new RenderPropertiesProvider.ModRenderProperties(ShieldRender.RENDERER);
     }
 

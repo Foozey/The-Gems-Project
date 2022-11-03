@@ -1,17 +1,17 @@
 package com.foozey.gems.world.ore;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.OreBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
-import java.util.Random;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 
-public class ExperienceOre extends OreBlock {
+public class ExperienceOre extends DropExperienceBlock {
 
-    // Block Properties
+    // Properties (material, hardness, sound, tool)
     public ExperienceOre() {
         super(Properties
                 .of(Material.STONE)
@@ -20,10 +20,10 @@ public class ExperienceOre extends OreBlock {
                 .requiresCorrectToolForDrops());
     }
 
-    // Experience Drop
+    // XP drop
     @Override
-    public int getExpDrop(BlockState state, LevelReader reader, BlockPos pos, int fortune, int silktouch) {
-        return silktouch == 0 ? Mth.nextInt(new Random(), 5, 15) : 0;
+    public int getExpDrop(BlockState state, LevelReader reader, RandomSource randomSource, BlockPos pos, int fortune, int silktouch) {
+        return silktouch == 0 ? Mth.nextInt(RandomSource.create(), 5, 15) : 0;
     }
 
 }

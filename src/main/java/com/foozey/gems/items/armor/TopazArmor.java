@@ -3,14 +3,15 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+
 import java.util.UUID;
 
 public class TopazArmor extends ArmorItem {
@@ -19,6 +20,7 @@ public class TopazArmor extends ArmorItem {
         super(materialIn, slot, builderIn);
     }
 
+    // UUIDs
     public static final UUID[] ARMOR_ATTACK_KNOCKBACK_UUIDS = new UUID[] {
             UUID.fromString("4ec2b7fa-9f24-430d-b178-09a7f49b3f23"),
             UUID.fromString("b82c6339-c039-4b7b-a3a3-c7a07bdd213c"),
@@ -26,6 +28,7 @@ public class TopazArmor extends ArmorItem {
             UUID.fromString("1901c2fc-c7eb-49bb-9150-519b2d61e73a")
     };
 
+    // Attributes
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot equipmentSlot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);

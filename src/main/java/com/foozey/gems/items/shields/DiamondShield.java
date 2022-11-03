@@ -5,13 +5,14 @@ import com.foozey.gems.util.ShieldRenderPropertiesProvider;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ShieldItem;
-import net.minecraftforge.client.IItemRenderProperties;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.function.Consumer;
 
 public class DiamondShield extends ShieldItem {
 
+    // Properties (stack size, durability, creative tab)
     public DiamondShield(Properties properties) {
         super(properties
                 .stacksTo(1)
@@ -19,19 +20,22 @@ public class DiamondShield extends ShieldItem {
                 .tab(ModTab.TAB_GEMS));
     }
 
-    @Override
-    public void initializeClient(@NonNull Consumer<IItemRenderProperties> consumer) {
-        consumer.accept(ShieldRenderPropertiesProvider.shield());
-    }
-
+    // Repair item
     @Override
     public boolean isValidRepairItem(ItemStack toRepair, ItemStack repairWith) {
         return repairWith.getItem() == Items.DIAMOND.asItem() || super.isValidRepairItem(toRepair, repairWith);
     }
 
+    // Enchantability
     @Override
     public int getEnchantmentValue() {
         return 10;
+    }
+
+    // Render
+    @Override
+    public void initializeClient(@NonNull Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(ShieldRenderPropertiesProvider.shield());
     }
 
 }

@@ -103,7 +103,6 @@ mixin {
     debug.export = true
 }
 
-
 jar {
     manifest {
         attributes([
