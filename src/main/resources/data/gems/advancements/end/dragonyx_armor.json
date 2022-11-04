@@ -1,0 +1,56 @@
+{
+  "parent": "minecraft:end/root",
+  "display": {
+    "icon": {
+      "item": "gems:dragonyx_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.end.dragonyx_armor.title"
+    },
+    "description": {
+      "translate": "advancements.end.dragonyx_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "dragonyx_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:dragonyx_helmet"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_leggings"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dragonyx_armor"
+    ]
+  ]
+}

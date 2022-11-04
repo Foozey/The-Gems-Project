@@ -1,0 +1,14 @@
+{
+  "parent": "item/shield",
+  "textures": {
+    "particle": "gems:blocks/onyx_block"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "gems:item/dragonyx_shield_blocking"
+    }
+  ]
+}

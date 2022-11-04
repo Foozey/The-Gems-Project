@@ -1,0 +1,6 @@
+{
+    "parent": "item/crossbow",
+    "textures": {
+        "layer0": "gems:items/dragonyx_crossbow_pulling_0"
+    }
+}

@@ -52,8 +52,8 @@ public class ShieldRender extends ProvideISTER {
             textures = ShieldTextures.SAPPHIRE;
         } else if (item == ModItems.RUBY_SHIELD.get()) {
             textures = ShieldTextures.RUBY;
-        } else if (item == ModItems.INFUSED_ONYX_SHIELD.get()) {
-            textures = ShieldTextures.INFUSED_ONYX;
+        } else if (item == ModItems.DRAGONYX_SHIELD.get()) {
+            textures = ShieldTextures.DRAGONYX;
         } else if (item == ModItems.EMERALD_SHIELD.get()) {
             textures = ShieldTextures.EMERALD;
         } else {

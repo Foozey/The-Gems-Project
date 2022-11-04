@@ -49,7 +49,7 @@ public class HandItemRenderer {
                     pStack.is(ModItems.TOPAZ_CROSSBOW.get()) ||
                     pStack.is(ModItems.SAPPHIRE_CROSSBOW.get()) ||
                     pStack.is(ModItems.RUBY_CROSSBOW.get()) ||
-                    pStack.is(ModItems.INFUSED_ONYX_CROSSBOW.get()) ||
+                    pStack.is(ModItems.DRAGONYX_CROSSBOW.get()) ||
                     pStack.is(ModItems.EMERALD_CROSSBOW.get())
             ) {
                 boolean flag1 = CrossbowItem.isCharged(pStack);

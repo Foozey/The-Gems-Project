@@ -145,16 +145,16 @@ public class CrossbowDamageEvents {
         }
     }
 
-    // Infused Onyx Crossbow
+    // Dragonyx Crossbow
     @SubscribeEvent
-    public static void InfusedOnyxCrossbowEntity(EntityJoinLevelEvent event) {
+    public static void DragonyxCrossbowEntity(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
         if (entity instanceof AbstractArrow) {
             AbstractArrow arrow = (AbstractArrow) entity;
             Entity shooter = arrow.getOwner();
             if (shooter instanceof LivingEntity) {
                 LivingEntity livingShooter = (LivingEntity) shooter;
-                if (livingShooter.getMainHandItem().getItem() == ModItems.INFUSED_ONYX_CROSSBOW.get()) {
+                if (livingShooter.getMainHandItem().getItem() == ModItems.DRAGONYX_CROSSBOW.get()) {
                     arrow.setBaseDamage(arrow.getBaseDamage() * 2.0F);
                 }
             }

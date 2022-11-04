@@ -25,9 +25,9 @@ public enum ModArmorMaterial implements ArmorMaterial {
     RUBY(Gems.MOD_ID + ":ruby", 43, new int[] { 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () ->
             Ingredient.of(ModItems.RUBY.get())),
 
-    // Infused Onyx
-    INFUSED_ONYX(Gems.MOD_ID + ":infused_onyx", 50, new int[] { 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () ->
-            Ingredient.of(ModItems.INFUSED_ONYX_INGOT.get())),
+    // Dragonyx
+    DRAGONYX(Gems.MOD_ID + ":dragonyx", 50, new int[] { 3, 6, 8, 3 }, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () ->
+            Ingredient.of(ModItems.DRAGONYX_INGOT.get())),
 
     // Emerald
     EMERALD(Gems.MOD_ID + ":emerald", 15, new int[] { 2, 5, 6, 2 }, 30, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () ->

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gems:ruby_shovel"
+  },
+  "addition": {
+    "item": "gems:dragonyx_ingot"
+  },
+  "result": {
+    "item": "gems:dragonyx_shovel"
+  }
+}

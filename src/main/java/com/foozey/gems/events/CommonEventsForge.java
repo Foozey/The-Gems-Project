@@ -41,7 +41,7 @@ import java.util.List;
 
 public class CommonEventsForge {
 
-    // Infused Onyx void teleport
+    // Dragonyx void teleport
     @SubscribeEvent
     public static void infusedOnyxArmorBonus(LivingDamageEvent event) {
         if(!(event.getEntity() instanceof Player)) return;
@@ -49,10 +49,10 @@ public class CommonEventsForge {
         if(player.level.isClientSide) return;
         Level world = event.getEntity().level;
         if(event.getSource() == DamageSource.OUT_OF_WORLD &&
-                player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.INFUSED_ONYX_HELMET.get() &&
-                player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.INFUSED_ONYX_CHESTPLATE.get() &&
-                player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.INFUSED_ONYX_LEGGINGS.get() &&
-                player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.INFUSED_ONYX_BOOTS.get()) {
+                player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.DRAGONYX_HELMET.get() &&
+                player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.DRAGONYX_CHESTPLATE.get() &&
+                player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.DRAGONYX_LEGGINGS.get() &&
+                player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.DRAGONYX_BOOTS.get()) {
             player.heal(100);
             PlayerSpawnTeleport.teleportPlayerToSpawn(world, player);
         }

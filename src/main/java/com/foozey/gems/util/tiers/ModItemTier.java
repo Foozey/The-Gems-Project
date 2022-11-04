@@ -20,7 +20,7 @@ public class ModItemTier {
     public static final TagKey<Block> NEEDS_TOPAZ_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_topaz_tool"));
     public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_sapphire_tool"));
     public static final TagKey<Block> NEEDS_RUBY_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_ruby_tool"));
-    public static final TagKey<Block> NEEDS_INFUSED_ONYX_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_infused_onyx_tool"));
+    public static final TagKey<Block> NEEDS_DRAGONYX_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_dragonyx_tool"));
     public static final TagKey<Block> NEEDS_EMERALD_TOOL = BlockTags.create(new ResourceLocation("tag_based_tool_types:needs_emerald_tool"));
 
     // Topaz
@@ -35,9 +35,9 @@ public class ModItemTier {
     public static final Tier RUBY = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_RUBY_TOOL, () ->
             Ingredient.of(ModItems.RUBY.get())), new ResourceLocation("tag_based_tool_types:ruby"), List.of(Tiers.NETHERITE), List.of());
 
-    // Infused Onyx
-    public static final Tier INFUSED_ONYX = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_INFUSED_ONYX_TOOL, () ->
-            Ingredient.of(ModItems.INFUSED_ONYX_INGOT.get())), new ResourceLocation("tag_based_tool_types:infused_onyx"), List.of(Tiers.NETHERITE), List.of());
+    // Dragonyx
+    public static final Tier DRAGONYX = TierSortingRegistry.registerTier(new ForgeTier(4, 2031, 9.0F, 0.0F, 15, NEEDS_DRAGONYX_TOOL, () ->
+            Ingredient.of(ModItems.DRAGONYX_INGOT.get())), new ResourceLocation("tag_based_tool_types:dragonyx"), List.of(Tiers.NETHERITE), List.of());
 
     // Emerald
     public static final Tier EMERALD = TierSortingRegistry.registerTier(new ForgeTier(2, 250, 6.0F, 0.0F, 30, NEEDS_EMERALD_TOOL, () ->

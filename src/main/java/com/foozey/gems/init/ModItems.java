@@ -3,7 +3,7 @@ package com.foozey.gems.init;
 import com.foozey.gems.Gems;
 import com.foozey.gems.items.ModTab;
 import com.foozey.gems.items.amulets.*;
-import com.foozey.gems.items.armor.InfusedOnyxArmor;
+import com.foozey.gems.items.armor.DragonyxArmor;
 import com.foozey.gems.items.armor.RubyArmor;
 import com.foozey.gems.items.armor.SapphireArmor;
 import com.foozey.gems.items.armor.TopazArmor;
@@ -59,8 +59,8 @@ public class ModItems {
     // Onyx Shards
     public static final RegistryObject<Item> ONYX_SHARDS = ITEMS.register("onyx_shards", ModItemBase::new);
 
-    // Infused Onyx Ingot
-    public static final RegistryObject<Item> INFUSED_ONYX_INGOT = ITEMS.register("infused_onyx_ingot", ModItemBase::new);
+    // Dragonyx Ingot
+    public static final RegistryObject<Item> DRAGONYX_INGOT = ITEMS.register("dragonyx_ingot", ModItemBase::new);
 
     // Ender Bones
     public static final RegistryObject<Item> ENDER_BONES = ITEMS.register("ender_bones", ModItemBase::new);
@@ -326,33 +326,33 @@ public class ModItems {
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Sword
-    public static final RegistryObject<SwordItem>INFUSED_ONYX_SWORD = ITEMS.register("infused_onyx_sword", () ->
-            new InfusedOnyxSword(ModItemTier.INFUSED_ONYX, 7, -2.4F, new Item.Properties()
+    // Dragonyx Sword
+    public static final RegistryObject<SwordItem>DRAGONYX_SWORD = ITEMS.register("dragonyx_sword", () ->
+            new DragonyxSword(ModItemTier.DRAGONYX, 7, -2.4F, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Pickaxe
-    public static final RegistryObject<PickaxeItem>INFUSED_ONYX_PICKAXE = ITEMS.register("infused_onyx_pickaxe", () ->
-            new InfusedOnyxPickaxe(ModItemTier.INFUSED_ONYX, 5, -2.8F, new Item.Properties()
+    // Dragonyx Pickaxe
+    public static final RegistryObject<PickaxeItem>DRAGONYX_PICKAXE = ITEMS.register("dragonyx_pickaxe", () ->
+            new DragonyxPickaxe(ModItemTier.DRAGONYX, 5, -2.8F, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Axe
-    public static final RegistryObject<AxeItem>INFUSED_ONYX_AXE = ITEMS.register("infused_onyx_axe", () ->
-            new InfusedOnyxAxe(ModItemTier.INFUSED_ONYX, 9, -3.0F, new Item.Properties()
+    // Dragonyx Axe
+    public static final RegistryObject<AxeItem>DRAGONYX_AXE = ITEMS.register("dragonyx_axe", () ->
+            new DragonyxAxe(ModItemTier.DRAGONYX, 9, -3.0F, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Shovel
-    public static final RegistryObject<ShovelItem>INFUSED_ONYX_SHOVEL = ITEMS.register("infused_onyx_shovel", () ->
-            new InfusedOnyxShovel(ModItemTier.INFUSED_ONYX, 5.5F, -3.0F, new Item.Properties()
+    // Dragonyx Shovel
+    public static final RegistryObject<ShovelItem>DRAGONYX_SHOVEL = ITEMS.register("dragonyx_shovel", () ->
+            new DragonyxShovel(ModItemTier.DRAGONYX, 5.5F, -3.0F, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Hoe
-    public static final RegistryObject<HoeItem>INFUSED_ONYX_HOE = ITEMS.register("infused_onyx_hoe", () ->
-            new InfusedOnyxHoe(ModItemTier.INFUSED_ONYX, 0, 0.0F, new Item.Properties()
+    // Dragonyx Hoe
+    public static final RegistryObject<HoeItem>DRAGONYX_HOE = ITEMS.register("dragonyx_hoe", () ->
+            new DragonyxHoe(ModItemTier.DRAGONYX, 0, 0.0F, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
@@ -463,27 +463,27 @@ public class ModItems {
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Helmet
-    public static final RegistryObject<ArmorItem> INFUSED_ONYX_HELMET = ITEMS.register("infused_onyx_helmet", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.HEAD, new Item.Properties()
+    // Dragonyx Helmet
+    public static final RegistryObject<ArmorItem> DRAGONYX_HELMET = ITEMS.register("dragonyx_helmet", () ->
+            new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Chestplate
-    public static final RegistryObject<ArmorItem> INFUSED_ONYX_CHESTPLATE = ITEMS.register("infused_onyx_chestplate", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.CHEST, new Item.Properties()
+    // Dragonyx Chestplate
+    public static final RegistryObject<ArmorItem> DRAGONYX_CHESTPLATE = ITEMS.register("dragonyx_chestplate", () ->
+            new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Leggings
-    public static final RegistryObject<ArmorItem> INFUSED_ONYX_LEGGINGS = ITEMS.register("infused_onyx_leggings", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.LEGS, new Item.Properties()
+    // Dragonyx Leggings
+    public static final RegistryObject<ArmorItem> DRAGONYX_LEGGINGS = ITEMS.register("dragonyx_leggings", () ->
+            new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
-    // Infused Onyx Boots
-    public static final RegistryObject<ArmorItem> INFUSED_ONYX_BOOTS = ITEMS.register("infused_onyx_boots", () ->
-            new InfusedOnyxArmor(ModArmorMaterial.INFUSED_ONYX, EquipmentSlot.FEET, new Item.Properties()
+    // Dragonyx Boots
+    public static final RegistryObject<ArmorItem> DRAGONYX_BOOTS = ITEMS.register("dragonyx_boots", () ->
+            new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
@@ -548,9 +548,9 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_BOW = ITEMS.register("ruby_bow", () ->
             new RubyBow(new Item.Properties()));
 
-    // Infused Onyx Bow
-    public static final RegistryObject<Item> INFUSED_ONYX_BOW = ITEMS.register("infused_onyx_bow", () ->
-            new InfusedOnyxBow(new Item.Properties()));
+    // Dragonyx Bow
+    public static final RegistryObject<Item> DRAGONYX_BOW = ITEMS.register("dragonyx_bow", () ->
+            new DragonyxBow(new Item.Properties()));
 
     // Emerald Bow
     public static final RegistryObject<Item> EMERALD_BOW = ITEMS.register("emerald_bow", () ->
@@ -593,9 +593,9 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_CROSSBOW = ITEMS.register("ruby_crossbow", () ->
             new RubyCrossbow(new Item.Properties()));
 
-    // Infused Onyx Crossbow
-    public static final RegistryObject<Item> INFUSED_ONYX_CROSSBOW = ITEMS.register("infused_onyx_crossbow", () ->
-            new InfusedOnyxCrossbow(new Item.Properties()));
+    // Dragonyx Crossbow
+    public static final RegistryObject<Item> DRAGONYX_CROSSBOW = ITEMS.register("dragonyx_crossbow", () ->
+            new DragonyxCrossbow(new Item.Properties()));
 
     // Emerald Crossbow
     public static final RegistryObject<Item> EMERALD_CROSSBOW = ITEMS.register("emerald_crossbow", () ->
@@ -638,9 +638,9 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_SHIELD = ITEMS.register("ruby_shield", () ->
             new RubyShield(new Item.Properties()));
 
-    // Infused Onyx Shield
-    public static final RegistryObject<Item> INFUSED_ONYX_SHIELD = ITEMS.register("infused_onyx_shield", () ->
-            new InfusedOnyxShield(new Item.Properties()));
+    // Dragonyx Shield
+    public static final RegistryObject<Item> DRAGONYX_SHIELD = ITEMS.register("dragonyx_shield", () ->
+            new DragonyxShield(new Item.Properties()));
 
     // Emerald Shield
     public static final RegistryObject<Item> EMERALD_SHIELD = ITEMS.register("emerald_shield", () ->
@@ -671,9 +671,9 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor", () ->
             new RubyHorseArmor(new Item.Properties()));
 
-    // Infused Onyx Horse Armor
-    public static final RegistryObject<Item> INFUSED_ONYX_HORSE_ARMOR = ITEMS.register("infused_onyx_horse_armor", () ->
-            new InfusedOnyxHorseArmor(new Item.Properties()));
+    // Dragonyx Horse Armor
+    public static final RegistryObject<Item> DRAGONYX_HORSE_ARMOR = ITEMS.register("dragonyx_horse_armor", () ->
+            new DragonyxHorseArmor(new Item.Properties()));
 
     // Emerald Horse Armor
     public static final RegistryObject<Item> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () ->

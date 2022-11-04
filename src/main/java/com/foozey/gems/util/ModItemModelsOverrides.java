@@ -89,15 +89,15 @@ public class ModItemModelsOverrides {
         ItemProperties.register(ModItems.RUBY_BOW.get(), new ResourceLocation("pulling"), (stack, world, wielder, seed) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
-        // Infused Onyx Bow
-        ItemProperties.register(ModItems.INFUSED_ONYX_BOW.get(), new ResourceLocation("pull"), (stack, world, wielder, seed) -> {
+        // Dragonyx Bow
+        ItemProperties.register(ModItems.DRAGONYX_BOW.get(), new ResourceLocation("pull"), (stack, world, wielder, seed) -> {
             if (wielder == null) {
                 return 0.0F;
             } else {
                 return wielder.getUseItem() != stack ? 0.0F : (float)(stack.getUseDuration() - wielder.getUseItemRemainingTicks()) / 20.0F;
             }
         });
-        ItemProperties.register(ModItems.INFUSED_ONYX_BOW.get(), new ResourceLocation("pulling"), (stack, world, wielder, seed) ->
+        ItemProperties.register(ModItems.DRAGONYX_BOW.get(), new ResourceLocation("pulling"), (stack, world, wielder, seed) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
         // Emerald Bow
@@ -220,19 +220,19 @@ public class ModItemModelsOverrides {
         ItemProperties.register(ModItems.RUBY_CROSSBOW.get(), new ResourceLocation("firework"), (stack, world, wielder, seed) ->
                 wielder != null && CrossbowItem.isCharged(stack) && CrossbowItem.containsChargedProjectile(stack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F);
 
-        // Infused Onyx Crossbow
-        ItemProperties.register(ModItems.INFUSED_ONYX_CROSSBOW.get(), new ResourceLocation("pull"), (stack, world, wielder, seed) -> {
+        // Dragonyx Crossbow
+        ItemProperties.register(ModItems.DRAGONYX_CROSSBOW.get(), new ResourceLocation("pull"), (stack, world, wielder, seed) -> {
             if (wielder == null) {
                 return 0.0F;
             } else {
                 return CrossbowItem.isCharged(stack) ? 0.0F : (float)(stack.getUseDuration() - wielder.getUseItemRemainingTicks()) / (float)CrossbowItem.getChargeDuration(stack);
             }
         });
-        ItemProperties.register(ModItems.INFUSED_ONYX_CROSSBOW.get(), new ResourceLocation("pulling"), (stack, world, wielder, seed) ->
+        ItemProperties.register(ModItems.DRAGONYX_CROSSBOW.get(), new ResourceLocation("pulling"), (stack, world, wielder, seed) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack && !CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
-        ItemProperties.register(ModItems.INFUSED_ONYX_CROSSBOW.get(), new ResourceLocation("charged"), (stack, world, wielder, seed) ->
+        ItemProperties.register(ModItems.DRAGONYX_CROSSBOW.get(), new ResourceLocation("charged"), (stack, world, wielder, seed) ->
                 wielder != null && CrossbowItem.isCharged(stack) ? 1.0F : 0.0F);
-        ItemProperties.register(ModItems.INFUSED_ONYX_CROSSBOW.get(), new ResourceLocation("firework"), (stack, world, wielder, seed) ->
+        ItemProperties.register(ModItems.DRAGONYX_CROSSBOW.get(), new ResourceLocation("firework"), (stack, world, wielder, seed) ->
                 wielder != null && CrossbowItem.isCharged(stack) && CrossbowItem.containsChargedProjectile(stack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F);
 
         // Emerald Crossbow
@@ -282,8 +282,8 @@ public class ModItemModelsOverrides {
         ItemProperties.register(ModItems.RUBY_SHIELD.get(), new ResourceLocation("blocking"), (stack, world, wielder, seed) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
-        // Infused Onyx Shield
-        ItemProperties.register(ModItems.INFUSED_ONYX_SHIELD.get(), new ResourceLocation("blocking"), (stack, world, wielder, seed) ->
+        // Dragonyx Shield
+        ItemProperties.register(ModItems.DRAGONYX_SHIELD.get(), new ResourceLocation("blocking"), (stack, world, wielder, seed) ->
                 wielder != null && wielder.isUsingItem() && wielder.getUseItem() == stack ? 1.0F : 0.0F);
 
         // Emerald Shield

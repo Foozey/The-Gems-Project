@@ -14,7 +14,7 @@ public enum ShieldTextures {
     TOPAZ("topaz"),
     SAPPHIRE("sapphire"),
     RUBY("ruby"),
-    INFUSED_ONYX("infused_onyx"),
+    DRAGONYX("dragonyx"),
     EMERALD("emerald");
 
     private final Material base;
