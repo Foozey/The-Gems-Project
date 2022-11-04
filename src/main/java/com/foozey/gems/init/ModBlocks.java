@@ -63,20 +63,6 @@ public class ModBlocks {
     // Deepslate Ruby Ore
     public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = BLOCKS.register("deepslate_ruby_ore", DeepslateGenericOre::new);
 
-    // Gemspark Block
-    public static final RegistryObject<Block> GEMSPARK_BLOCK = BLOCKS.register("gemspark_block", () ->
-            new Block(BlockBehaviour.Properties
-                    .of(Material.METAL, MaterialColor.COLOR_MAGENTA)
-                    .strength(5.0f, 6.0f)
-                    .sound(SoundType.METAL)
-                    .requiresCorrectToolForDrops()));
-
-    // Gemspark Ore
-    public static final RegistryObject<Block> GEMSPARK_ORE = BLOCKS.register("gemspark_ore", GemsparkOre::new);
-
-    // Deepslate Gemspark Ore
-    public static final RegistryObject<Block> DEEPSLATE_GEMSPARK_ORE = BLOCKS.register("deepslate_gemspark_ore", DeepslateGemsparkOre::new);
-
     // Onyx Block
     public static final RegistryObject<Block> ONYX_BLOCK = BLOCKS.register("onyx_block", () ->
             new Block(BlockBehaviour.Properties

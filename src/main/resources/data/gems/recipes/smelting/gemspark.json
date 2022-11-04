@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "gems:gemspark_ore"
-  },
-  "result": "gems:gemspark",
-  "experience": 1.0,
-  "cookingtime": 200
-}

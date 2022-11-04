@@ -50,9 +50,6 @@ public class ModItems {
     // Ruby Shards
     public static final RegistryObject<Item> RUBY_SHARDS = ITEMS.register("ruby_shards", ModItemBase::new);
 
-    // Gemspark
-    public static final RegistryObject<Item> GEMSPARK = ITEMS.register("gemspark", ModItemBase::new);
-
     // Onyx
     public static final RegistryObject<Item> ONYX = ITEMS.register("onyx", ModItemBase::new);
 
@@ -114,18 +111,6 @@ public class ModItems {
     // Deepslate Ruby Ore
     public static final RegistryObject<Item> DEEPSLATE_RUBY_ORE_ITEM = ITEMS.register("deepslate_ruby_ore", () ->
             new ModBlockBase(ModBlocks.DEEPSLATE_RUBY_ORE.get()));
-
-    // Gemspark Block
-    public static final RegistryObject<Item> GEMSPARK_BLOCK_ITEM = ITEMS.register("gemspark_block", () ->
-            new ModBlockBase(ModBlocks.GEMSPARK_BLOCK.get()));
-
-    // Gemspark Ore
-    public static final RegistryObject<Item> GEMSPARK_ORE_ITEM = ITEMS.register("gemspark_ore", () ->
-            new ModBlockBase(ModBlocks.GEMSPARK_ORE.get()));
-
-    // Deepslate Gemspark Ore
-    public static final RegistryObject<Item> DEEPSLATE_GEMSPARK_ORE_ITEM = ITEMS.register("deepslate_gemspark_ore", () ->
-            new ModBlockBase(ModBlocks.DEEPSLATE_GEMSPARK_ORE.get()));
 
     // Onyx Block
     public static final RegistryObject<Item> ONYX_BLOCK_ITEM = ITEMS.register("onyx_block", () ->
@@ -688,10 +673,6 @@ public class ModItems {
     public static final RegistryObject<Item> GOLDEN_AMULET = ITEMS.register("golden_amulet", () ->
             new GoldenAmulet(new Item.Properties()));
 
-    // Gemspark Amulet
-    public static final RegistryObject<Item> GEMSPARK_AMULET = ITEMS.register("gemspark_amulet", () ->
-            new GemsparkAmulet(new Item.Properties()));
-
     // Topaz Amulet
     public static final RegistryObject<Item> TOPAZ_AMULET = ITEMS.register("topaz_amulet", () ->
             new TopazAmulet(new Item.Properties()));
@@ -712,10 +693,6 @@ public class ModItems {
     // Golden Ring
     public static final RegistryObject<Item> GOLDEN_RING = ITEMS.register("golden_ring", () ->
             new GoldenRing(new Item.Properties()));
-
-    // Gemspark Ring
-    public static final RegistryObject<Item> GEMSPARK_RING = ITEMS.register("gemspark_ring", () ->
-            new GemsparkRing(new Item.Properties()));
 
     // Topaz Ring
     public static final RegistryObject<Item> TOPAZ_RING = ITEMS.register("topaz_ring", () ->

@@ -5,12 +5,12 @@
       "item": "gems:golden_ring"
     },
     {
-      "item": "gems:gemspark"
+      "item": "gems:sapphire"
     }
   ],
   "result":
   {
-    "item": "gems:gemspark_ring",
+    "item": "gems:sapphire_ring",
     "count": 1
   }
 }

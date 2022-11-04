@@ -43,7 +43,7 @@ public class CommonEventsForge {
 
     // Dragonyx void teleport
     @SubscribeEvent
-    public static void infusedOnyxArmorBonus(LivingDamageEvent event) {
+    public static void dragonyxArmorBonus(LivingDamageEvent event) {
         if(!(event.getEntity() instanceof Player)) return;
         Player player = (Player) event.getEntity();
         if(player.level.isClientSide) return;

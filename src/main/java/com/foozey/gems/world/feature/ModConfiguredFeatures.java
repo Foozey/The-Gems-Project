@@ -42,11 +42,6 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.RUBY_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState())));
 
-    // Gemspark Ore
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> GEMSPARK_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.GEMSPARK_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_GEMSPARK_ORE.get().defaultBlockState())));
-
     // Onyx Ore
     public static final Supplier<List<OreConfiguration.TargetBlockState>> ONYX_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), ModBlocks.ONYX_ORE.get().defaultBlockState())));
@@ -145,10 +140,6 @@ public class ModConfiguredFeatures {
     // Ruby Ore
     public static final RegistryObject<ConfiguredFeature<?, ?>> RUBY_ORE = CONFIGURED_FEATURES.register("ruby_ore", () ->
             new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(RUBY_ORES.get(), 4)));
-
-    // Gemspark Ore
-    public static final RegistryObject<ConfiguredFeature<?, ?>> GEMSPARK_ORE = CONFIGURED_FEATURES.register("gemspark_ore", () ->
-            new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(GEMSPARK_ORES.get(), 6)));
 
     // Onyx Ore
     public static final RegistryObject<ConfiguredFeature<?, ?>> ONYX_ORE = CONFIGURED_FEATURES.register("onyx_ore", () ->

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:golden_ring"
+    },
+    {
+      "item": "gems:topaz"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:topaz_ring",
+    "count": 1
+  }
+}

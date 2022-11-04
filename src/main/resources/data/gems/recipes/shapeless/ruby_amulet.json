@@ -5,12 +5,12 @@
       "item": "gems:golden_amulet"
     },
     {
-      "item": "gems:gemspark"
+      "item": "gems:ruby"
     }
   ],
   "result":
   {
-    "item": "gems:gemspark_amulet",
+    "item": "gems:ruby_amulet",
     "count": 1
   }
 }

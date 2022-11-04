@@ -32,10 +32,6 @@ public class ModPlacedFeatures {
     public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed", () ->
             new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-96), VerticalAnchor.absolute(0)))));
 
-    // Gemspark Ore
-    public static final RegistryObject<PlacedFeature> GEMSPARK_ORE_PLACED = PLACED_FEATURES.register("gemspark_ore_placed", () ->
-            new PlacedFeature(ModConfiguredFeatures.GEMSPARK_ORE.getHolder().get(), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(64)))));
-
     // Onyx Ore
     public static final RegistryObject<PlacedFeature> ONYX_ORE_PLACED = PLACED_FEATURES.register("onyx_ore_placed", () ->
             new PlacedFeature(ModConfiguredFeatures.ONYX_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(320)))));

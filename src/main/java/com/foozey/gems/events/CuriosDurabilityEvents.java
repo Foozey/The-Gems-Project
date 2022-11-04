@@ -31,20 +31,6 @@ public class CuriosDurabilityEvents {
         }
     }
 
-    // Gemspark Amulet
-    @SubscribeEvent
-    public static void onGemsparkAmuletDamaged(LivingDamageEvent event) {
-        if(!(event.getEntity() instanceof Player)) return;
-        Player player = (Player) event.getEntity();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_AMULET.get(), event.getEntity()).isPresent()) {
-            ItemStack necklace = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_AMULET.get(), event.getEntity()).get().right;
-            necklace.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("necklace", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
     // Topaz Amulet
     @SubscribeEvent
     public static void onTopazAmuletDamaged(LivingDamageEvent event) {
@@ -94,20 +80,6 @@ public class CuriosDurabilityEvents {
         Player player = (Player) event.getEntity();
         if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_RING.get(), event.getEntity()).isPresent()) {
             ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GOLDEN_RING.get(), event.getEntity()).get().right;
-            ring.hurtAndBreak(1, player, (player2) -> {
-                CuriosApi.getCuriosHelper().onBrokenCurio("ring", 0, player2);
-                player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
-            });
-        }
-    }
-
-    // Gemspark Ring
-    @SubscribeEvent
-    public static void onGemsparkRingDamaged(LivingDamageEvent event) {
-        if(!(event.getEntity() instanceof Player)) return;
-        Player player = (Player) event.getEntity();
-        if(CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntity()).isPresent()) {
-            ItemStack ring = CuriosApi.getCuriosHelper().findEquippedCurio(ModItems.GEMSPARK_RING.get(), event.getEntity()).get().right;
             ring.hurtAndBreak(1, player, (player2) -> {
                 CuriosApi.getCuriosHelper().onBrokenCurio("ring", 0, player2);
                 player2.playSound(SoundEvents.ITEM_BREAK, 1.0F, 1.0F);
