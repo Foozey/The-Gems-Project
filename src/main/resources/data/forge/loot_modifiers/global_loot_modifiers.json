@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "entries": [
+    "gems:topaz_shards_mineshaft",
+    "gems:sapphire_shards_mineshaft",
+    "gems:ruby_shards_mineshaft",
+    "gems:topaz_ancient_city",
+    "gems:sapphire_ancient_city",
+    "gems:ruby_ancient_city",
+    "gems:chainmail_village_armorer",
+    "gems:chainmail_village_toolsmith",
+    "gems:chainmail_village_weaponsmith"
+  ]
+}

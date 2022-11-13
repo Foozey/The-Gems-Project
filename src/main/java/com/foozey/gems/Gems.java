@@ -3,6 +3,7 @@ package com.foozey.gems;
 import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModBlocks;
 import com.foozey.gems.init.ModItems;
+import com.foozey.gems.loot.ModLootModifiers;
 import com.foozey.gems.util.ModItemModelsOverrides;
 import com.foozey.gems.world.feature.ModConfiguredFeatures;
 import com.foozey.gems.world.feature.ModPlacedFeatures;
@@ -37,6 +38,7 @@ public class Gems {
         ModAttributes.ATTRIBUTES.register(bus);
         ModConfiguredFeatures.CONFIGURED_FEATURES.register(bus);
         ModPlacedFeatures.PLACED_FEATURES.register(bus);
+        ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(bus);
 
         // Events
         MinecraftForge.EVENT_BUS.register(this);

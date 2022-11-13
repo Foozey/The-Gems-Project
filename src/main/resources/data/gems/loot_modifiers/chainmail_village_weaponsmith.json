@@ -1,0 +1,10 @@
+{
+  "type": "gems:chainmail_village_weaponsmith",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_weaponsmith"
+    }
+  ],
+  "item": "gems:chainmail"
+}

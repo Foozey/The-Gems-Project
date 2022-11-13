@@ -1,0 +1,10 @@
+{
+  "type": "gems:topaz_shards_mineshaft",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+    }
+  ],
+  "item": "gems:topaz_shards"
+}
