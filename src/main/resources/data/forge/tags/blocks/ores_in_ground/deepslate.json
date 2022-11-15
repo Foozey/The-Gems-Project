@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "gems:deepslate_topaz_ore",
+    "gems:deepslate_sapphire_ore",
+    "gems:deepslate_ruby_ore",
+    "gems:deepslate_experience_ore"
+  ]
+}

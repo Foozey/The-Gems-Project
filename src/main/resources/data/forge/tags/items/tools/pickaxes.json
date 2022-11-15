@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "gems:topaz_pickaxe",
+    "gems:sapphire_pickaxe",
+    "gems:ruby_pickaxe",
+    "gems:dragonyx_pickaxe",
+    "gems:emerald_pickaxe"
+  ]
+}

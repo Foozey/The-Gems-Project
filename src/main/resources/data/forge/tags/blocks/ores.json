@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ores/topaz",
+    "#forge:ores/sapphire",
+    "#forge:ores/ruby",
+    "#forge:ores/onyx",
+    "#forge:ores/experience"
+  ]
+}

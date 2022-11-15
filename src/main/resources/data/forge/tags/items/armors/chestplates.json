@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "gems:topaz_chestplate",
+    "gems:sapphire_chestplate",
+    "gems:ruby_chestplate",
+    "gems:dragonyx_chestplate",
+    "gems:emerald_chestplate"
+  ]
+}

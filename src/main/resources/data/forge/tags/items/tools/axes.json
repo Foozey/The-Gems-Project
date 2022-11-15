@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "gems:topaz_axe",
+    "gems:sapphire_axe",
+    "gems:ruby_axe",
+    "gems:dragonyx_axe",
+    "gems:emerald_axe"
+  ]
+}

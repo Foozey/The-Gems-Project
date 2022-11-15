@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "gems:topaz_boots",
+    "gems:sapphire_boots",
+    "gems:ruby_boots",
+    "gems:dragonyx_boots",
+    "gems:emerald_boots"
+  ]
+}

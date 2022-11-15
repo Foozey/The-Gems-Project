@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "tag": "gems:topaz_ore"
+    "tag": "gems:topaz_ores"
   },
   "result": "gems:topaz_shards",
   "experience": 1.0,

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "tag": "gems:sapphire_ore"
+    "tag": "gems:sapphire_ores"
   },
   "result": "gems:sapphire_shards",
   "experience": 1.0,
