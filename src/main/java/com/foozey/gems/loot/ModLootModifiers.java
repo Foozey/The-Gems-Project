@@ -22,6 +22,11 @@ public class ModLootModifiers {
     // Registers
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Gems.MOD_ID);
 
+
+
+    // Loot modifiers
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     // Mineshaft
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> TOPAZ_SHARDS_MINESHAFT = LOOT_MODIFIER_SERIALIZERS.register("topaz_shards_mineshaft", TopazShardsMineshaftModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> SAPPHIRE_SHARDS_MINESHAFT = LOOT_MODIFIER_SERIALIZERS.register("sapphire_shards_mineshaft", SapphireShardsMineshaftModifier.CODEC);
@@ -36,6 +41,8 @@ public class ModLootModifiers {
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_ARMORER = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_armorer", ChainmailVillageArmorerModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_TOOLSMITH = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_toolsmith", ChainmailVillageToolsmithModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_WEAPONSMITH = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_weaponsmith", ChainmailVillageWeaponsmithModifier.CODEC);
+
+
 
     // Event bus
     public static void register(IEventBus eventBus) {

@@ -4,6 +4,7 @@
     "gems:golden_amulet",
     "gems:topaz_amulet",
     "gems:sapphire_amulet",
-    "gems:ruby_amulet"
+    "gems:ruby_amulet",
+    "gems:gem_amulet"
   ]
 }

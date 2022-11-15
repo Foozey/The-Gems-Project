@@ -141,11 +141,13 @@
   "item.gems.topaz_amulet": "Topaz Amulet",
   "item.gems.sapphire_amulet": "Sapphire Amulet",
   "item.gems.ruby_amulet": "Ruby Amulet",
+  "item.gems.gem_amulet": "Gem Amulet",
 
   "item.gems.golden_ring": "Golden Ring",
   "item.gems.topaz_ring": "Topaz Ring",
   "item.gems.sapphire_ring": "Sapphire Ring",
   "item.gems.ruby_ring": "Ruby Ring",
+  "item.gems.gem_ring": "Gem Ring",
 
   "advancements.story.extra_shiny_gems.title": "Finally Mine",
   "advancements.story.extra_shiny_gems.description": "Obtain an extra shiny gem",

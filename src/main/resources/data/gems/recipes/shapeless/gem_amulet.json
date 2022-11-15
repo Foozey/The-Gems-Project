@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gems:topaz_amulet"
+    },
+    {
+      "item": "gems:sapphire_amulet"
+    },
+    {
+      "item": "gems:ruby_amulet"
+    }
+  ],
+  "result":
+  {
+    "item": "gems:gem_amulet",
+    "count": 1
+  }
+}

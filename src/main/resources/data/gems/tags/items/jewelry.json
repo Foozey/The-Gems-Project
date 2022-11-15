@@ -8,6 +8,8 @@
     "gems:sapphire_amulet",
     "gems:sapphire_ring",
     "gems:ruby_amulet",
-    "gems:ruby_ring"
+    "gems:ruby_ring",
+    "gems:gem_amulet",
+    "gems:gem_ring"
   ]
 }

@@ -685,6 +685,10 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_AMULET = ITEMS.register("ruby_amulet", () ->
             new RubyAmulet(new Item.Properties()));
 
+    // Gem Amulet
+    public static final RegistryObject<Item> GEM_AMULET = ITEMS.register("gem_amulet", () ->
+            new GemAmulet(new Item.Properties()));
+
 
 
     // Rings
@@ -705,5 +709,9 @@ public class ModItems {
     // Ruby Ring
     public static final RegistryObject<Item> RUBY_RING = ITEMS.register("ruby_ring", () ->
             new RubyRing(new Item.Properties()));
+
+    // Gem Ring
+    public static final RegistryObject<Item> GEM_RING = ITEMS.register("gem_ring", () ->
+            new GemRing(new Item.Properties()));
 
 }
