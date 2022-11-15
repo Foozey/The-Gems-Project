@@ -57,16 +57,16 @@ public class ModItems {
     public static final RegistryObject<Item> ONYX_SHARDS = ITEMS.register("onyx_shards", ModItemBase::new);
 
     // Dragonyx Ingot
-    public static final RegistryObject<Item> DRAGONYX_INGOT = ITEMS.register("dragonyx_ingot", ModItemBase::new);
+    public static final RegistryObject<Item> DRAGONYX_INGOT = ITEMS.register("dragonyx_ingot", () -> new Item(new Item.Properties().rarity(Rarity.EPIC).tab(ModTab.TAB_GEMS)));
 
     // Ender Bones
-    public static final RegistryObject<Item> ENDER_BONES = ITEMS.register("ender_bones", ModItemBase::new);
+    public static final RegistryObject<Item> ENDER_BONES = ITEMS.register("ender_bones", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModTab.TAB_GEMS)));
 
     // Ender Scales
-    public static final RegistryObject<Item> ENDER_SCALES = ITEMS.register("ender_scales", ModItemBase::new);
+    public static final RegistryObject<Item> ENDER_SCALES = ITEMS.register("ender_scales", () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).tab(ModTab.TAB_GEMS)));
 
     // Infused Ender Scales
-    public static final RegistryObject<Item> INFUSED_ENDER_SCALES = ITEMS.register("infused_ender_scales", ModItemBase::new);
+    public static final RegistryObject<Item> INFUSED_ENDER_SCALES = ITEMS.register("infused_ender_scales", () -> new Item(new Item.Properties().rarity(Rarity.RARE).tab(ModTab.TAB_GEMS)));
 
     // Chainmail
     public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail", ModItemBase::new);
@@ -315,30 +315,35 @@ public class ModItems {
     public static final RegistryObject<SwordItem>DRAGONYX_SWORD = ITEMS.register("dragonyx_sword", () ->
             new DragonyxSword(ModItemTier.DRAGONYX, 7, -2.4F, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Pickaxe
     public static final RegistryObject<PickaxeItem>DRAGONYX_PICKAXE = ITEMS.register("dragonyx_pickaxe", () ->
             new DragonyxPickaxe(ModItemTier.DRAGONYX, 5, -2.8F, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Axe
     public static final RegistryObject<AxeItem>DRAGONYX_AXE = ITEMS.register("dragonyx_axe", () ->
             new DragonyxAxe(ModItemTier.DRAGONYX, 9, -3.0F, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Shovel
     public static final RegistryObject<ShovelItem>DRAGONYX_SHOVEL = ITEMS.register("dragonyx_shovel", () ->
             new DragonyxShovel(ModItemTier.DRAGONYX, 5.5F, -3.0F, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Hoe
     public static final RegistryObject<HoeItem>DRAGONYX_HOE = ITEMS.register("dragonyx_hoe", () ->
             new DragonyxHoe(ModItemTier.DRAGONYX, 0, 0.0F, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Sword
@@ -452,24 +457,28 @@ public class ModItems {
     public static final RegistryObject<ArmorItem> DRAGONYX_HELMET = ITEMS.register("dragonyx_helmet", () ->
             new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Chestplate
     public static final RegistryObject<ArmorItem> DRAGONYX_CHESTPLATE = ITEMS.register("dragonyx_chestplate", () ->
             new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Leggings
     public static final RegistryObject<ArmorItem> DRAGONYX_LEGGINGS = ITEMS.register("dragonyx_leggings", () ->
             new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Dragonyx Boots
     public static final RegistryObject<ArmorItem> DRAGONYX_BOOTS = ITEMS.register("dragonyx_boots", () ->
             new DragonyxArmor(ModArmorMaterial.DRAGONYX, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
+                    .rarity(Rarity.EPIC)
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Helmet

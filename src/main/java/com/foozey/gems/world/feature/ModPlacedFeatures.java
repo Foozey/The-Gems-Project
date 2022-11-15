@@ -4,7 +4,6 @@ import com.foozey.gems.Gems;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -14,7 +13,6 @@ public class ModPlacedFeatures {
 
     // Registers
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Gems.MOD_ID);
-
 
 
     // Ore placement (veins per chunk, minimum y-value, maximum y-value)
@@ -109,7 +107,6 @@ public class ModPlacedFeatures {
             new PlacedFeature(ModConfiguredFeatures.END_SHELL_FOSSIL.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(320)))));
 
 
-
     // Placement types
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -126,13 +123,6 @@ public class ModPlacedFeatures {
     // Rare
     public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
         return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
-    }
-
-
-
-    // Event bus
-    public static void register(IEventBus eventBus) {
-        PLACED_FEATURES.register(eventBus);
     }
 
 }

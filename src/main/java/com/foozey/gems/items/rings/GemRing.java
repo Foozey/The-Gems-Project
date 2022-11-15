@@ -12,6 +12,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
@@ -24,11 +25,12 @@ import java.util.UUID;
 
 public class GemRing extends Item {
 
-    // Properties (stack size, durability, creative tab)
+    // Properties (stack size, durability, rarity, creative tab)
     public GemRing(Properties properties) {
         super(properties
                 .stacksTo(1)
                 .durability(250)
+                .rarity(Rarity.RARE)
                 .tab(ModTab.TAB_GEMS));
     }
 

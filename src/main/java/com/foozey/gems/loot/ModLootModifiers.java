@@ -12,7 +12,6 @@ import com.foozey.gems.loot.village.ChainmailVillageToolsmithModifier;
 import com.foozey.gems.loot.village.ChainmailVillageWeaponsmithModifier;
 import com.mojang.serialization.Codec;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -21,7 +20,6 @@ public class ModLootModifiers {
 
     // Registers
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Gems.MOD_ID);
-
 
 
     // Loot modifiers
@@ -41,12 +39,5 @@ public class ModLootModifiers {
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_ARMORER = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_armorer", ChainmailVillageArmorerModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_TOOLSMITH = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_toolsmith", ChainmailVillageToolsmithModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> CHAINMAIL_VILLAGE_WEAPONSMITH = LOOT_MODIFIER_SERIALIZERS.register("chainmail_village_weaponsmith", ChainmailVillageWeaponsmithModifier.CODEC);
-
-
-
-    // Event bus
-    public static void register(IEventBus eventBus) {
-        LOOT_MODIFIER_SERIALIZERS.register(eventBus);
-    }
 
 }

@@ -11,6 +11,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -26,6 +27,7 @@ public class DragonyxShield extends ShieldItem {
                 .stacksTo(1)
                 .durability(2031)
                 .fireResistant()
+                .rarity(Rarity.EPIC)
                 .tab(ModTab.TAB_GEMS));
     }
 

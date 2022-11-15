@@ -13,17 +13,19 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 
 import java.util.UUID;
 
 public class DragonyxBow extends BowItem {
 
-    // Properties (stack size, durability, fire resistance, creative tab)
+    // Properties (stack size, durability, fire resistance, rarity, creative tab)
     public DragonyxBow(Properties properties) {
         super(properties
                 .stacksTo(1)
                 .durability(2031)
                 .fireResistant()
+                .rarity(Rarity.EPIC)
                 .tab(ModTab.TAB_GEMS));
     }
 

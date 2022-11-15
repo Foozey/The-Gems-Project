@@ -12,17 +12,19 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 
 import java.util.UUID;
 
 public class DragonyxCrossbow extends CrossbowItem {
 
-    // Properties (stack size, durability, fire resistance, creative tab)
+    // Properties (stack size, durability, fire resistance, rarity, creative tab)
     public DragonyxCrossbow(Properties properties) {
         super(properties
                 .stacksTo(1)
                 .durability(2031)
                 .fireResistant()
+                .rarity(Rarity.EPIC)
                 .tab(ModTab.TAB_GEMS));
     }
 
