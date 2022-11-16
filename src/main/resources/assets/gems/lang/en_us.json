@@ -164,5 +164,9 @@
   "attribute.name.generic.lifesteal": "Lifesteal",
   "attribute.name.generic.harvest_area": "Harvest Area",
 
+  "gems.set_bonus.tooltip": "Set Bonus: ",
+  "gems.dragonyx_armor.tooltip": "Safely fall into the void",
+  "gems.emerald_armor.tooltip": "Gain a level of Hero of the Village",
+
   "itemGroup.gems": "The Gems Project"
 }

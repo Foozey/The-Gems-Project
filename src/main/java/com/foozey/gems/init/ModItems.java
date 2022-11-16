@@ -3,10 +3,7 @@ package com.foozey.gems.init;
 import com.foozey.gems.Gems;
 import com.foozey.gems.items.ModTab;
 import com.foozey.gems.items.amulets.*;
-import com.foozey.gems.items.armor.DragonyxArmor;
-import com.foozey.gems.items.armor.RubyArmor;
-import com.foozey.gems.items.armor.SapphireArmor;
-import com.foozey.gems.items.armor.TopazArmor;
+import com.foozey.gems.items.armor.*;
 import com.foozey.gems.items.bows.*;
 import com.foozey.gems.items.crossbows.*;
 import com.foozey.gems.items.horse.*;
@@ -483,25 +480,25 @@ public class ModItems {
 
     // Emerald Helmet
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.HEAD, new Item.Properties()
+            new EmeraldArmor(ModArmorMaterial.EMERALD, EquipmentSlot.HEAD, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Chestplate
     public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.CHEST, new Item.Properties()
+            new EmeraldArmor(ModArmorMaterial.EMERALD, EquipmentSlot.CHEST, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Leggings
     public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.LEGS, new Item.Properties()
+            new EmeraldArmor(ModArmorMaterial.EMERALD, EquipmentSlot.LEGS, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 
     // Emerald Boots
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
-            new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlot.FEET, new Item.Properties()
+            new EmeraldArmor(ModArmorMaterial.EMERALD, EquipmentSlot.FEET, new Item.Properties()
                     .fireResistant()
                     .tab(ModTab.TAB_GEMS)));
 

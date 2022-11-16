@@ -3,15 +3,17 @@ package com.foozey.gems.items.armor;
 import com.foozey.gems.init.ModItems;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.UUID;
 
 public class DragonyxArmor extends ArmorItem {
@@ -78,6 +80,13 @@ public class DragonyxArmor extends ArmorItem {
             builder.put(Attributes.MAX_HEALTH, new AttributeModifier(COMBINED_MAX_HEALTH_UUIDS[equipmentSlot.getIndex()], "Max Health", 2.00, AttributeModifier.Operation.ADDITION));
         }
         return builder.build();
+    }
+
+    // Tooltip
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(Component.translatable("gems.set_bonus.tooltip").withStyle(ChatFormatting.GOLD).append(Component.translatable("gems.dragonyx_armor.tooltip").withStyle(ChatFormatting.YELLOW)));
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
 }
