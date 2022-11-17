@@ -20,15 +20,15 @@ public class ModPlacedFeatures {
 
     // Topaz Ore
     public static final RegistryObject<PlacedFeature> TOPAZ_ORE_PLACED = PLACED_FEATURES.register("topaz_ore_placed", () ->
-            new PlacedFeature(ModConfiguredFeatures.TOPAZ_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-96), VerticalAnchor.absolute(0)))));
+            new PlacedFeature(ModConfiguredFeatures.TOPAZ_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-112), VerticalAnchor.absolute(16)))));
 
     // Sapphire Ore
     public static final RegistryObject<PlacedFeature> SAPPHIRE_ORE_PLACED = PLACED_FEATURES.register("sapphire_ore_placed", () ->
-            new PlacedFeature(ModConfiguredFeatures.SAPPHIRE_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-96), VerticalAnchor.absolute(0)))));
+            new PlacedFeature(ModConfiguredFeatures.SAPPHIRE_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-112), VerticalAnchor.absolute(16)))));
 
     // Ruby Ore
     public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed", () ->
-            new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-96), VerticalAnchor.absolute(0)))));
+            new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.absolute(-112), VerticalAnchor.absolute(16)))));
 
     // Onyx Ore
     public static final RegistryObject<PlacedFeature> ONYX_ORE_PLACED = PLACED_FEATURES.register("onyx_ore_placed", () ->
