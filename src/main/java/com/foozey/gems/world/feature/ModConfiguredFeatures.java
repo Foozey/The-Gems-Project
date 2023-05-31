@@ -51,7 +51,7 @@ public class ModConfiguredFeatures {
 
     // Nether Experience Ore
     public static final Supplier<List<OreConfiguration.TargetBlockState>> NETHER_EXPERIENCE_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.EXPERIENCE_ORE.get().defaultBlockState())));
+            OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_EXPERIENCE_ORE.get().defaultBlockState())));
 
     // End Experience Ore
     public static final Supplier<List<OreConfiguration.TargetBlockState>> END_EXPERIENCE_ORES = Suppliers.memoize(() -> List.of(
