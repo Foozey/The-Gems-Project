@@ -3,8 +3,12 @@ package com.foozey.gems.items.crossbows;
 import com.foozey.gems.init.ModAttributes;
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
+import com.foozey.gems.util.CustomArmPoseItem;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -13,10 +17,11 @@ import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
-public class DragonyxCrossbow extends CrossbowItem {
+public class DragonyxCrossbow extends CrossbowItem implements CustomArmPoseItem {
 
     // Properties (stack size, durability, fire resistance, rarity, creative tab)
     public DragonyxCrossbow(Properties properties) {
@@ -66,6 +71,16 @@ public class DragonyxCrossbow extends CrossbowItem {
             builder.put(ModAttributes.LIFESTEAL.get(), new AttributeModifier(COMBINED_CROSSBOW_LIFESTEAL_UUID, "Lifesteal", 2.00, AttributeModifier.Operation.ADDITION));
         }
         return builder.build();
+    }
+
+    // Mixin
+    @Nullable
+    @Override
+    public HumanoidModel.ArmPose getArmPose(ItemStack stack, AbstractClientPlayer player, InteractionHand hand) {
+        if (!player.swinging) {
+            return HumanoidModel.ArmPose.CROSSBOW_HOLD;
+        }
+        return null;
     }
 
 }

@@ -1,11 +1,16 @@
 package com.foozey.gems.items.crossbows;
 
 import com.foozey.gems.items.ModTab;
+import com.foozey.gems.util.CustomArmPoseItem;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import org.jetbrains.annotations.Nullable;
 
-public class NetheriteCrossbow extends CrossbowItem {
+public class NetheriteCrossbow extends CrossbowItem implements CustomArmPoseItem {
 
     // Properties (stack size, durability, fire resistance, creative tab)
     public NetheriteCrossbow(Properties properties) {
@@ -32,6 +37,16 @@ public class NetheriteCrossbow extends CrossbowItem {
     @Override
     public boolean useOnRelease(ItemStack stack) {
         return true;
+    }
+
+    // Mixin
+    @Nullable
+    @Override
+    public HumanoidModel.ArmPose getArmPose(ItemStack stack, AbstractClientPlayer player, InteractionHand hand) {
+        if (!player.swinging) {
+            return HumanoidModel.ArmPose.CROSSBOW_HOLD;
+        }
+        return null;
     }
 
 }

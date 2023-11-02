@@ -2,8 +2,12 @@ package com.foozey.gems.items.crossbows;
 
 import com.foozey.gems.init.ModItems;
 import com.foozey.gems.items.ModTab;
+import com.foozey.gems.util.CustomArmPoseItem;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -11,10 +15,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
-public class RubyCrossbow extends CrossbowItem {
+public class RubyCrossbow extends CrossbowItem implements CustomArmPoseItem {
 
     // Properties (stack size, durability, fire resistance, creative tab)
     public RubyCrossbow(Properties properties) {
@@ -57,6 +62,16 @@ public class RubyCrossbow extends CrossbowItem {
             builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(CROSSBOW_ATTACK_DAMAGE_UUID, "Attack Damage", 0.50, AttributeModifier.Operation.ADDITION));
         }
         return builder.build();
+    }
+
+    // Mixin
+    @Nullable
+    @Override
+    public HumanoidModel.ArmPose getArmPose(ItemStack stack, AbstractClientPlayer player, InteractionHand hand) {
+        if (!player.swinging) {
+            return HumanoidModel.ArmPose.CROSSBOW_HOLD;
+        }
+        return null;
     }
 
 }
