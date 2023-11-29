@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "tag": "gems:sapphire_ores"
-  },
-  "result": "gems:sapphire_shards",
-  "experience": 1.0,
-  "cookingtime": 100
-}

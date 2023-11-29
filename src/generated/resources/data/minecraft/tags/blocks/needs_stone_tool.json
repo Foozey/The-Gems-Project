@@ -1,0 +1,28 @@
+{
+  "values": [
+    "gems:experience_ore",
+    "gems:deepslate_experience_ore",
+    "gems:nether_experience_ore",
+    "gems:end_experience_ore",
+    "gems:bone_fossil",
+    "gems:deepslate_bone_fossil",
+    "gems:nether_bone_fossil",
+    "gems:end_bone_fossil",
+    "gems:rib_fossil",
+    "gems:deepslate_rib_fossil",
+    "gems:nether_rib_fossil",
+    "gems:end_rib_fossil",
+    "gems:skull_fossil",
+    "gems:deepslate_skull_fossil",
+    "gems:nether_skull_fossil",
+    "gems:end_skull_fossil",
+    "gems:fish_fossil",
+    "gems:deepslate_fish_fossil",
+    "gems:nether_fish_fossil",
+    "gems:end_fish_fossil",
+    "gems:shell_fossil",
+    "gems:deepslate_shell_fossil",
+    "gems:nether_shell_fossil",
+    "gems:end_shell_fossil"
+  ]
+}

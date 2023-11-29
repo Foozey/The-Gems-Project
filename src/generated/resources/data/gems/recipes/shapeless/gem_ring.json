@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gems:topaz_ring"
+    },
+    {
+      "item": "gems:sapphire_ring"
+    },
+    {
+      "item": "gems:ruby_ring"
+    }
+  ],
+  "result": {
+    "item": "gems:gem_ring"
+  }
+}

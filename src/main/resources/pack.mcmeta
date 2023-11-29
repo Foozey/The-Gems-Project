@@ -1,7 +1,6 @@
 {
-    "pack": {
-        "description": "The Gems Project - Mod Resources",
-        "pack_format": 9,
-        "_comment": "by Fooze"
-    }
+  "pack": {
+    "description": "The Gems Project - Mod Resources",
+    "pack_format": 15
+  }
 }

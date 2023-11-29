@@ -1,26 +1,10 @@
-buildscript {
-    repositories {
-        maven {
-            url = 'https://maven.minecraftforge.net'
-        }
-        maven {
-            url = 'https://maven.parchmentmc.org'
-        }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+'
-        classpath 'org.spongepowered:mixingradle:0.7.+'
-    }
+plugins {
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version "${forgegradle_version}"
+    id 'org.spongepowered.mixin' version "${mixingradle_version}"
+    id 'org.parchmentmc.librarian.forgegradle' version "${librarian_version}"
 }
-
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-apply plugin: 'org.spongepowered.mixin'
 
 version = "${mc_version}-${mod_version}"
 group = "com.foozey.${modid}"
@@ -30,43 +14,31 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 minecraft {
-    // Mappings
-    mappings channel: "${mapping_type}", version: "${mapping}"
-
-    // Runtime
+    mappings channel: "${mapping_type}", version: "${mapping_version}-${mc_version}"
+    copyIdeResources = true
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                "${modid}" {
+                    source sourceSets.main
+                }
+            }
+        }
         client {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
+            property 'forge.enabledGameTestNamespaces', modid
         }
-
         server {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
+            property 'forge.enabledGameTestNamespaces', modid
+            args '--nogui'
         }
-
         data {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
-            property 'forge.logging.console.level', 'debug'
             args '--mod', 'gems', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
         }
     }
 }
@@ -76,48 +48,51 @@ sourceSets.main.resources {
 }
 
 repositories {
-    // Curios API
     maven {
+        name = "Illusive Soulworks"
         url = "https://maven.theillusivec4.top/"
     }
 }
 
 dependencies {
-    // Forge
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-
-    // Curios API
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${mc_version}-${curios_version}")
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${mc_version}-${curios_version}:api")
-
-    // Sponge Mixin
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
 }
 
 mixin {
-    // Sponge Mixin Settings
     add sourceSets.main, "mixins.${modid}.refmap.json"
     config "mixins.${modid}.json"
-
-    debug.verbose = true
-    debug.export = true
 }
 
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "${modid}",
-            "Specification-Vendor": "Fooze",
-            "Specification-Version": "1",
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${mc_version}-${mod_version}",
-            "Implementation-Vendor" :"Fooze",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-        ])
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            modid: modid, mod_version: mod_version,
+            mc_version: mc_version, mc_version_range: mc_version_range,
+            forge_version: forge_version, forge_version_range: forge_version_range,
+            curios_version: curios_version, curios_version_range: curios_version_range,
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
     }
 }
 
-jar.finalizedBy('reobfJar')
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                "Specification-Title": "${modid}",
+                "Specification-Vendor": "Fooze",
+                "Specification-Version": "1",
+                "Implementation-Title": "${modid}",
+                "Implementation-Version": "${mc_version}-${mod_version}",
+                "Implementation-Vendor" :"Fooze",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+        ])
+    }
+    finalizedBy 'reobfjar'
+}
 
 publishing {
     publications {

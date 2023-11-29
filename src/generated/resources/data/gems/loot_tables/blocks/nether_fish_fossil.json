@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gems:nether_fish_fossil"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "gems:blocks/nether_fish_fossil"
+}

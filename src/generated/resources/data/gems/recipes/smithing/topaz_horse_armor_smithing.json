@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "base": {
+    "item": "gems:netherite_horse_armor"
+  },
+  "result": {
+    "item": "gems:topaz_horse_armor"
+  },
+  "template": {
+    "item": "gems:topaz_upgrade_smithing_template"
+  }
+}

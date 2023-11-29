@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "gems:topaz_ores"
-  },
-  "result": "gems:topaz_shards",
-  "experience": 1.0,
-  "cookingtime": 200
-}

@@ -1,0 +1,57 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_emerald_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:emerald_helmet"
+            ]
+          },
+          {
+            "items": [
+              "gems:emerald_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "gems:emerald_leggings"
+            ]
+          },
+          {
+            "items": [
+              "gems:emerald_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.emerald_armor.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "gems:emerald_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.emerald_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_emerald_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/crossbow",
+  "textures": {
+    "layer0": "gems:item/sapphire_crossbow_arrow"
+  }
+}

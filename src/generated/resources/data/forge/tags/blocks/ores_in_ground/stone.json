@@ -1,0 +1,13 @@
+{
+  "values": [
+    "gems:topaz_ore",
+    "gems:sapphire_ore",
+    "gems:ruby_ore",
+    "gems:experience_ore",
+    "gems:bone_fossil",
+    "gems:rib_fossil",
+    "gems:skull_fossil",
+    "gems:fish_fossil",
+    "gems:shell_fossil"
+  ]
+}

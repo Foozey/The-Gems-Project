@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:topaz"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "gems:topaz_sword"
+  },
+  "template": {
+    "item": "gems:topaz_upgrade_smithing_template"
+  }
+}

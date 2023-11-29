@@ -1,0 +1,36 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_fossil": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:ores/fossils"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.fossils.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:fish_fossil"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.fossils.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_fossil"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

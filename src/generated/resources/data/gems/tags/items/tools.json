@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#gems:tools/swords",
+    "#gems:tools/pickaxes",
+    "#gems:tools/axes",
+    "#gems:tools/shovels",
+    "#gems:tools/hoes",
+    "#gems:tools/bows",
+    "#gems:tools/crossbows",
+    "#gems:tools/shields"
+  ]
+}

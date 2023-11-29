@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:onyx"
+    },
+    {
+      "item": "gems:ender_matter"
+    },
+    {
+      "item": "gems:ender_matter"
+    },
+    {
+      "item": "gems:ender_matter"
+    },
+    {
+      "item": "gems:ender_matter"
+    }
+  ],
+  "result": {
+    "item": "gems:dragonyx_ingot"
+  }
+}

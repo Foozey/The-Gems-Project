@@ -1,0 +1,9 @@
+{
+  "asset_name": "sapphire",
+  "description": {
+    "color": "#3955E3",
+    "translate": "trim_material.gems.sapphire"
+  },
+  "ingredient": "gems:sapphire",
+  "item_model_index": 0.02
+}

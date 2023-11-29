@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "b": {
+      "item": "gems:ender_bones"
+    },
+    "c": {
+      "item": "gems:ender_scales"
+    }
+  },
+  "pattern": [
+    "bab",
+    "aca",
+    "bab"
+  ],
+  "result": {
+    "item": "gems:ender_matter"
+  },
+  "show_notification": true
+}

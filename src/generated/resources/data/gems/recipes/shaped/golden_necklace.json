@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "aaa",
+    "a a",
+    " a "
+  ],
+  "result": {
+    "item": "gems:golden_necklace"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:smithing_templates"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.smithing_templates.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:topaz_upgrade_smithing_template"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.smithing_templates.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_smithing_template"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

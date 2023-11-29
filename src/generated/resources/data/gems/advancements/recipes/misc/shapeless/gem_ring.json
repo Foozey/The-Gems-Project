@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ruby_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:ruby_ring"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sapphire_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:sapphire_ring"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gems:shapeless/gem_ring"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_topaz_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:topaz_ring"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_topaz_ring",
+      "has_sapphire_ring",
+      "has_ruby_ring",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gems:shapeless/gem_ring"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,103 @@
+{
+  "parent": "minecraft:item/generated",
+  "forge_data": {
+    "layers": {
+      "1": {
+        "block_light": 15,
+        "sky_light": 15
+      }
+    }
+  },
+  "loader": "forge:item_layers",
+  "overrides": [
+    {
+      "model": "gems:item/dragonyx_boots_topaz_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.01
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_sapphire_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.02
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_ruby_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.03
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_onyx_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.04
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_quartz_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_iron_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_netherite_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_redstone_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_copper_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_gold_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_emerald_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_diamond_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_lapis_trim",
+      "predicate": {
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_boots_amethyst_trim",
+      "predicate": {
+        "minecraft:trim_type": 1.0
+      }
+    }
+  ],
+  "render_types": {},
+  "textures": {
+    "layer0": "gems:item/dragonyx_boots",
+    "layer1": "gems:item/dragonyx_boots_overlay"
+  }
+}

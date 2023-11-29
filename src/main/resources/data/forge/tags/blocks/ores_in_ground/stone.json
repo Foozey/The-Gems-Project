@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "gems:topaz_ore",
-    "gems:sapphire_ore",
-    "gems:ruby_ore",
-    "gems:experience_ore"
-  ]
-}

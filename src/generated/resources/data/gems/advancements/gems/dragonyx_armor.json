@@ -1,0 +1,57 @@
+{
+  "parent": "gems:gems/dragonyx",
+  "criteria": {
+    "get_dragonyx_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:dragonyx_helmet"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_leggings"
+            ]
+          },
+          {
+            "items": [
+              "gems:dragonyx_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.dragonyx_armor.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "gems:dragonyx_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.dragonyx_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_dragonyx_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

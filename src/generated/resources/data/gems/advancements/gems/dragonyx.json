@@ -1,0 +1,38 @@
+{
+  "parent": "gems:gems/gems",
+  "criteria": {
+    "get_dragonyx": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:dragonyx_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.dragonyx.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:dragonyx_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.dragonyx.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_dragonyx"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_horse_armor": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:armor/entities/horse_armor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.horse_armor.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:netherite_horse_armor"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.horse_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_horse_armor"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

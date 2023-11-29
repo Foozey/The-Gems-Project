@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "gems:ruby_upgrade_smithing_template"
+    },
+    "c": {
+      "item": "minecraft:deepslate"
+    }
+  },
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "result": {
+    "count": 2,
+    "item": "gems:ruby_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

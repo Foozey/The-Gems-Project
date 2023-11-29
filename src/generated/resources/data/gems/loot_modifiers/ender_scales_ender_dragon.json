@@ -1,0 +1,13 @@
+{
+  "type": "gems:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/ender_dragon"
+    }
+  ],
+  "item": "gems:ender_scales",
+  "maxItems": 8,
+  "minItems": 4,
+  "probability": 1.0
+}

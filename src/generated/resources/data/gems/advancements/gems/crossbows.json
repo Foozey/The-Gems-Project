@@ -1,0 +1,37 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_crossbow": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:tools/crossbows"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.crossbows.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:diamond_crossbow",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.crossbows.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_crossbow"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

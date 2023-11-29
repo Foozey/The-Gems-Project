@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "pattern": [
+    "a a",
+    "aaa",
+    "a a"
+  ],
+  "result": {
+    "item": "gems:emerald_horse_armor"
+  },
+  "show_notification": true
+}

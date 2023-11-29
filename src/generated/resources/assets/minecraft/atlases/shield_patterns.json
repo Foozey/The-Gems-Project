@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/iron_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/golden_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/diamond_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/netherite_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/topaz_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/sapphire_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/ruby_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/dragonyx_shield"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/dragonyx_shield_overlay"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "gems:entity/emerald_shield"
+    }
+  ]
+}

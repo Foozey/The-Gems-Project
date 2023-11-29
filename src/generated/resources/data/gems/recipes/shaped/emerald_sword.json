@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "pattern": [
+    " b ",
+    " b ",
+    " a "
+  ],
+  "result": {
+    "item": "gems:emerald_sword"
+  },
+  "show_notification": true
+}

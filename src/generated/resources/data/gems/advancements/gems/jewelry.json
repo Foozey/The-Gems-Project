@@ -1,0 +1,37 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_jewelry": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:curios"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.jewelry.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:topaz_necklace",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.jewelry.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_jewelry"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

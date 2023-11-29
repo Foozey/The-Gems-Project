@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:paletted_permutations",
+      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "permutations": {
+        "onyx": "gems:trims/color_palettes/onyx",
+        "ruby": "gems:trims/color_palettes/ruby",
+        "sapphire": "gems:trims/color_palettes/sapphire",
+        "topaz": "gems:trims/color_palettes/topaz"
+      },
+      "textures": [
+        "minecraft:trims/items/leggings_trim",
+        "minecraft:trims/items/chestplate_trim",
+        "minecraft:trims/items/helmet_trim",
+        "minecraft:trims/items/boots_trim"
+      ]
+    }
+  ]
+}

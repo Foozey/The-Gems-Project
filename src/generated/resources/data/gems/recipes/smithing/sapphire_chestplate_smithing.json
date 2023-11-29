@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:sapphire"
+  },
+  "base": {
+    "item": "gems:topaz_chestplate"
+  },
+  "result": {
+    "item": "gems:sapphire_chestplate"
+  },
+  "template": {
+    "item": "gems:sapphire_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_gems": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:materials/shards"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.gems.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:topaz_shards"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.gems.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_gems"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

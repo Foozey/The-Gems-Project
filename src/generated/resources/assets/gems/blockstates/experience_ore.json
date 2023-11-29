@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gems:block/experience_ore"
+    }
+  }
+}

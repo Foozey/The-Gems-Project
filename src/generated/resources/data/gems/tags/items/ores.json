@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#gems:ores/topaz_ores",
+    "#gems:ores/sapphire_ores",
+    "#gems:ores/ruby_ores",
+    "#gems:ores/onyx_ores",
+    "#gems:ores/experience_ores",
+    "#gems:ores/fossils"
+  ]
+}

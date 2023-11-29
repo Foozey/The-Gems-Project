@@ -1,70 +1,63 @@
 package com.foozey.gems;
 
-import com.foozey.gems.init.ModAttributes;
-import com.foozey.gems.init.ModBlocks;
-import com.foozey.gems.init.ModItems;
-import com.foozey.gems.loot.ModLootModifiers;
-import com.foozey.gems.util.ModItemModelsOverrides;
-import com.foozey.gems.world.feature.ModConfiguredFeatures;
-import com.foozey.gems.world.feature.ModPlacedFeatures;
+import com.foozey.gems.registry.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.SlotTypeMessage;
+import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod("gems")
 public class Gems {
-    public static final Logger LOGGER = LogManager.getLogger();
+
     public static final String MOD_ID = "gems";
 
     public Gems() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Listeners
-        bus.addListener(this::doClientStuff);
-        bus.addListener(this::enqueueIMC);
-
         // Registries
-        ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
         ModItems.REPLACE.register(bus);
+        ModBlocks.BLOCKS.register(bus);
+        ModCreativeTabs.TABS.register(bus);
         ModAttributes.ATTRIBUTES.register(bus);
-        ModConfiguredFeatures.CONFIGURED_FEATURES.register(bus);
-        ModPlacedFeatures.PLACED_FEATURES.register(bus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(bus);
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(bus);
 
         // Events
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    // Item models overrides
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        event.enqueueWork(Gems::addAllItemModelsOverrides);
+    // Util Methods
+    public static ResourceLocation rl(String path) {
+        return new ResourceLocation(Gems.MOD_ID, path);
     }
 
-    private static void addAllItemModelsOverrides() {
-        ModItemModelsOverrides.BowItemModelsOverrides();
-        ModItemModelsOverrides.CrossbowItemModelsOverrides();
-        ModItemModelsOverrides.ShieldItemModelsOverrides();
+    public static String getNamespace(Item item) {
+        return ForgeRegistries.ITEMS.getKey(item).getNamespace();
     }
 
-    // Curios slots (size = slot amount, priority = slot position)
-    private void enqueueIMC(final InterModEnqueueEvent event) {
+    public static String getNamespace(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block).getNamespace();
+    }
 
-        // Necklace slot
-        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
-                new SlotTypeMessage.Builder("necklace").size(1).priority(1).build());
+    public static String getPath(Item item) {
+        return ForgeRegistries.ITEMS.getKey(item).getPath();
+    }
 
-        // Ring slot
-        InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () ->
-                new SlotTypeMessage.Builder("ring").size(1).priority(2).build());
+    public static String getPath(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block).getPath();
+    }
+
+    public static boolean isModid(Item item) {
+        return getNamespace(item).equals(Gems.MOD_ID);
+    }
+
+    public static boolean isModid(Block block) {
+        return getNamespace(block).equals(Gems.MOD_ID);
     }
 
 }

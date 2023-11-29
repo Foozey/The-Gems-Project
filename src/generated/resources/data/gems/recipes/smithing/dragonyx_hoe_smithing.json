@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:dragonyx_ingot"
+  },
+  "base": {
+    "item": "gems:ruby_hoe"
+  },
+  "result": {
+    "item": "gems:dragonyx_hoe"
+  },
+  "template": {
+    "item": "gems:dragonyx_upgrade_smithing_template"
+  }
+}

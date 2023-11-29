@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "tag": "gems:ruby_ores"
-  },
-  "result": "gems:ruby_shards",
-  "experience": 1.0,
-  "cookingtime": 200
-}

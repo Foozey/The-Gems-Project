@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:sapphire"
+  },
+  "base": {
+    "item": "gems:topaz_shield"
+  },
+  "result": {
+    "item": "gems:sapphire_shield"
+  },
+  "template": {
+    "item": "gems:sapphire_upgrade_smithing_template"
+  }
+}

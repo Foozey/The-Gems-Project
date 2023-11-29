@@ -1,48 +1,38 @@
 modLoader="javafml"
-
-loaderVersion="[43,)"
-
+loaderVersion="${forge_version_range}"
 license="LGPL-3.0-or-later"
-
-issueTrackerURL="https://github.com/foozey/The-Gems-Project/issues"
+issueTrackerURL="https://github.com/Foozey/The-Gems-Project/issues/"
 
 [[mods]]
-
-modId="gems"
-
-version="1.19.2-3.0.1"
-
+modId="${modid}"
+version="${mc_version}-${mod_version}"
 displayName="The Gems Project"
-
-displayURL="https://www.curseforge.com/minecraft/mc-mods/the-gems-project"
-
+updateJSONURL="https://github.com/Foozey/The-Gems-Project/raw/1.20.x/update.json/"
+displayURL="https://curseforge.com/minecraft/mc-mods/the-gems-project/"
 logoFile="Header.png"
-
-credits="Thanks to the Forge Project, the modding community, and Mojang!"
-
+credits="Thanks to the modding community, Minecraft Forge, and Mojang!"
 authors="Fooze"
-
 description='''
 A mod that focuses on adding more progression to Minecraft.
 '''
 
-[[dependencies.gems]]
-    modId="forge"
-    mandatory=true
-    versionRange="[43,)"
-    ordering="NONE"
-    side="BOTH"
+[[dependencies.${modid}]]
+modId="minecraft"
+mandatory=true
+versionRange="${mc_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.gems]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.19,)"
-    ordering="NONE"
-    side="BOTH"
+[[dependencies.${modid}]]
+modId="forge"
+mandatory=true
+versionRange="${forge_version_range}"
+ordering="NONE"
+side="BOTH"
 
-[[dependencies.gems]]
-	modId="curios"
-    mandatory=true
-    versionRange="[1.19.2-5.1.1.0,)"
-    ordering="NONE"
-    side="BOTH"
+[[dependencies.${modid}]]
+modId="curios"
+mandatory=true
+versionRange="${curios_version_range}"
+ordering="NONE"
+side="BOTH"

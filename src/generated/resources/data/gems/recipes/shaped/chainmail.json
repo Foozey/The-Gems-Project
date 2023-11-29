@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " aa",
+    "a a",
+    "aa "
+  ],
+  "result": {
+    "item": "gems:chainmail"
+  },
+  "show_notification": true
+}

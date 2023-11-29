@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#forge:gems/topaz",
-    "#forge:gems/sapphire",
-    "#forge:gems/ruby",
-    "#forge:gems/onyx"
-  ]
-}

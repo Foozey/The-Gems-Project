@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_fish_fossil": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:deepslate_fish_fossil"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gems:blasting/bone_from_blasting_deepslate_fish_fossil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_fish_fossil",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gems:blasting/bone_from_blasting_deepslate_fish_fossil"
+    ]
+  },
+  "sends_telemetry_event": false
+}

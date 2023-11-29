@@ -1,0 +1,52 @@
+{
+  "parent": "minecraft:item/crossbow",
+  "forge_data": {
+    "layers": {
+      "1": {
+        "block_light": 15,
+        "sky_light": 15
+      }
+    }
+  },
+  "loader": "forge:item_layers",
+  "overrides": [
+    {
+      "model": "gems:item/dragonyx_crossbow_pulling_0",
+      "predicate": {
+        "minecraft:pulling": 1.0
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_crossbow_pulling_1",
+      "predicate": {
+        "minecraft:pull": 0.58,
+        "minecraft:pulling": 1.0
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_crossbow_pulling_2",
+      "predicate": {
+        "minecraft:pull": 1.0,
+        "minecraft:pulling": 1.0
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_crossbow_arrow",
+      "predicate": {
+        "minecraft:charged": 1.0
+      }
+    },
+    {
+      "model": "gems:item/dragonyx_crossbow_firework",
+      "predicate": {
+        "minecraft:charged": 1.0,
+        "minecraft:firework": 1.0
+      }
+    }
+  ],
+  "render_types": {},
+  "textures": {
+    "layer0": "gems:item/dragonyx_crossbow_standby",
+    "layer1": "gems:item/dragonyx_crossbow_standby_overlay"
+  }
+}

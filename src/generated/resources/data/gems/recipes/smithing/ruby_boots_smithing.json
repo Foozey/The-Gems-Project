@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "gems:ruby"
+  },
+  "base": {
+    "item": "gems:sapphire_boots"
+  },
+  "result": {
+    "item": "gems:ruby_boots"
+  },
+  "template": {
+    "item": "gems:ruby_upgrade_smithing_template"
+  }
+}

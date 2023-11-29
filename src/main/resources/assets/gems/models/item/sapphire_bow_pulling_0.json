@@ -1,6 +1,0 @@
-{
-    "parent": "item/bow",
-    "textures": {
-        "layer0": "gems:items/sapphire_bow_pulling_0"
-    }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/crossbow",
+  "textures": {
+    "layer0": "gems:item/netherite_crossbow_firework"
+  }
+}

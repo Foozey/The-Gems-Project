@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " ba",
+    "b a",
+    " ba"
+  ],
+  "result": {
+    "item": "gems:diamond_bow"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:string"
+    },
+    "b": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " ba",
+    "b a",
+    " ba"
+  ],
+  "result": {
+    "item": "gems:golden_bow"
+  },
+  "show_notification": true
+}

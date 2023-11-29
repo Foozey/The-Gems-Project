@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_fish_fossil": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gems:end_fish_fossil"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gems:smelting/bone_from_smelting_end_fish_fossil"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_end_fish_fossil",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gems:smelting/bone_from_smelting_end_fish_fossil"
+    ]
+  },
+  "sends_telemetry_event": false
+}

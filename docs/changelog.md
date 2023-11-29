@@ -1,8 +1,18 @@
 ﻿# Changelog
 
-## Version 1.19.2-3.0.1
-- Fixed crossbow rendering
-- Fixed Nether Experience Ore generation
-
-## Version 1.19.2-3.0.0
-- Initial release for 1.19.2
+## Version 1.20.1-4.0.0
+- Initial release for 1.20.1
+- Added Ender Matter (replaces Infused Ender Scales)
+- Added Arrow Damage attribute
+- Added Block Strength attribute
+- Added Topaz, Sapphire, Ruby, and Dragonyx upgrade smithing templates
+- Added trims for all armor
+- Added trim materials for all gems
+- Added shield banner crafting
+- Added emissive rendering
+- Added animation for Experience Ore
+- Added more items to chest loot
+- Added more advancements
+- Changed texture for Dragonyx Shield
+- Fixed some minor balancing issues
+- Fixed many code-based issues

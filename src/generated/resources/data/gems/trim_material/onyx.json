@@ -1,0 +1,9 @@
+{
+  "asset_name": "onyx",
+  "description": {
+    "color": "#756080",
+    "translate": "trim_material.gems.onyx"
+  },
+  "ingredient": "gems:onyx",
+  "item_model_index": 0.04
+}

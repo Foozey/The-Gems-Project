@@ -1,0 +1,37 @@
+{
+  "parent": "gems:gems/root",
+  "criteria": {
+    "get_bow": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "gems:tools/bows"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.gems.bows.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gems:diamond_bow",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.gems.bows.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_bow"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

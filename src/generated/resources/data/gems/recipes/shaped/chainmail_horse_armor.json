@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "gems:chainmail"
+    }
+  },
+  "pattern": [
+    "a a",
+    "aaa",
+    "a a"
+  ],
+  "result": {
+    "item": "gems:chainmail_horse_armor"
+  },
+  "show_notification": true
+}

@@ -3,6 +3,6 @@
     "package": "com.foozey.gems.mixin",
     "refmap": "",
     "mixins": [],
-    "client": ["PlayerRendererMixin"],
+    "client": ["SmithingTemplateItemMixin"],
     "server": []
 }
