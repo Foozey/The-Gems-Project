@@ -1,6 +1,4 @@
-﻿# Changelog
-
-## Version 1.20.1-4.0.0
+﻿## The Gems Project 1.20.1-1.0.0
 - Initial release for 1.20.1
 - Added Ender Matter (replaces Infused Ender Scales)
 - Added Arrow Damage attribute

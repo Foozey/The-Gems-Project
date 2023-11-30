@@ -3,15 +3,15 @@ pluginManagement {
         gradlePluginPortal()
         maven {
             name = 'Minecraft Forge'
-            url = 'https://maven.minecraftforge.net/'
+            url = 'https://maven.minecraftforge.net'
         }
         maven {
             name = 'Spongepowered'
-            url = 'https://repo.spongepowered.org/maven/'
+            url = 'https://repo.spongepowered.org/maven'
         }
         maven {
             name = 'ParchmentMC'
-            url = 'https://maven.parchmentmc.org/'
+            url = 'https://maven.parchmentmc.org'
         }
     }
 }

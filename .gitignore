@@ -11,6 +11,3 @@ build
 
 # other
 run
-
-# Gems
-src/generated/resources/.cache
