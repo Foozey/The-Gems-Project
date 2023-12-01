@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="${forge_version_range}"
-license="LGPL-3.0-or-later"
+license="GNU GPLv3"
 issueTrackerURL="https://github.com/Foozey/The-Gems-Project/issues"
 
 [[mods]]
