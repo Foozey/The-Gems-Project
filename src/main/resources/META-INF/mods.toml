@@ -9,7 +9,7 @@ version="${mc_version}-${mod_version}"
 displayName="The Gems Project"
 updateJSONURL="https://github.com/Foozey/The-Gems-Project/raw/1.20.x/update.json"
 displayURL="https://curseforge.com/minecraft/mc-mods/the-gems-project"
-logoFile="Header.png"
+logoFile="banner.png"
 credits="Thanks to the modding community, Minecraft Forge, and Mojang!"
 authors="Fooze"
 description='''
@@ -36,3 +36,6 @@ mandatory=true
 versionRange="${curios_version_range}"
 ordering="NONE"
 side="BOTH"
+
+[modproperties.${modid}]
+catalogueImageIcon="icon.png"
