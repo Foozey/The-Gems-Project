@@ -10,7 +10,7 @@ displayName="The Gems Project"
 updateJSONURL="https://github.com/Foozey/The-Gems-Project/raw/1.20.x/update.json"
 displayURL="https://curseforge.com/minecraft/mc-mods/the-gems-project"
 logoFile="banner.png"
-credits="Thanks to the modding community, Minecraft Forge, and Mojang!"
+credits="The modding community, Minecraft Forge, and Mojang."
 authors="Fooze"
 description='''
 A Minecraft mod focused on progression.
