@@ -16,10 +16,15 @@ public enum ShieldTextures {
     DRAGONYX("dragonyx"),
     EMERALD("emerald");
 
-    private final Material base;
-    private final Material overlay;
+    private final String name;
+    private Material base;
+    private Material overlay;
 
     ShieldTextures(String name) {
+        this.name = name;
+    }
+
+    public void initialize() {
         base = new Material(Sheets.SHIELD_SHEET, Gems.rl("entity/" + name + "_shield"));
         overlay = new Material(Sheets.SHIELD_SHEET, Gems.rl("entity/" + name + "_shield_overlay"));
     }

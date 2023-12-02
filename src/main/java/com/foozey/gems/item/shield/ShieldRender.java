@@ -63,4 +63,10 @@ public class ShieldRender extends BlockEntityWithoutLevelRenderer {
         matrix.popPose();
     }
 
+    public static void initializeTextures() {
+        for (ShieldTextures texture : ShieldTextures.values()) {
+            texture.initialize();
+        }
+    }
+
 }
