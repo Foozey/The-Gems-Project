@@ -37,6 +37,7 @@ public class ClientEventsMod {
             ItemModelPropertiesProvider.bow();
             ItemModelPropertiesProvider.crossbow();
             ItemModelPropertiesProvider.shield();
+            ShieldRender.initializeTextures();
         });
     }
 

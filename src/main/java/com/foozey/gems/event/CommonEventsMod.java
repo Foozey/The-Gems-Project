@@ -2,7 +2,6 @@ package com.foozey.gems.event;
 
 import com.foozey.gems.Gems;
 import com.foozey.gems.data.*;
-import com.foozey.gems.item.shield.ShieldRender;
 import com.foozey.gems.registry.ModAttributes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -14,7 +13,6 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -47,12 +45,6 @@ public class CommonEventsMod {
         generator.addProvider(event.includeServer(), new ModRegistrySetProvider(output, lookupProvider));
         generator.addProvider(event.includeServer(), new ModAdvancementProvider(output, lookupProvider, existingFileHelper));
 
-    }
-
-    // Common Setup
-    @SubscribeEvent
-    public static void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(ShieldRender::initializeTextures);
     }
 
     // Attributes
